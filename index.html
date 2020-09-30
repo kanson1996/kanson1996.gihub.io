@@ -994,7 +994,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kanson.net/2019/11/30/JDK源码分析之Concurrent/">
+    <link itemprop="mainEntityOfPage" href="http://kanson.net/2019/12/03/《深入理解Java虚拟机》之Java内存模型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kanson Boy">
@@ -1013,7 +1013,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/11/30/JDK源码分析之Concurrent/" itemprop="url">Java 并发包(JUC)源码分析</a></h1>
+                <a class="post-title-link" href="/2019/12/03/《深入理解Java虚拟机》之Java内存模型/" itemprop="url">《深入理解Java虚拟机》之Java内存模型</a></h1>
         
 
         <div class="post-meta">
@@ -1025,8 +1025,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-30T17:31:01+08:00">
-                2019-11-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-03T20:19:00+08:00">
+                2019-12-03
               </time>
             
 
@@ -1057,7 +1057,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  643
+                  716
                 </span>
               
 
@@ -1095,20 +1095,382 @@
 
       
         
-          <h3 id="Java-并发包-JUC-下面的工具类，在实际工作中都有哪些应用场景呢？"><a href="#Java-并发包-JUC-下面的工具类，在实际工作中都有哪些应用场景呢？" class="headerlink" title="Java 并发包(JUC)下面的工具类，在实际工作中都有哪些应用场景呢？"></a>Java 并发包(JUC)下面的工具类，在实际工作中都有哪些应用场景呢？</h3><p>考察点：多线程并发编程的技术广度，实践经验</p>
-<p>具体某个类的原理，比如ThreadPoolExcecutor</p>
-<p>为什么要看ConcurrentHashMap</p>
-<p>JUC 下有哪些工具类？</p>
-<p>我自己用过的场景。用过countdownlatch 多接口并发调用，还有Fork join做过并行计算，用过atomicinteger 并发下载数量限制。。</p>
-<p>ConcurrentSkipListMap 用来存一致性hash的环；</p>
-<p>Countdownlatch 一个服务需要多个模块（线程）时，都启动才宣布服务启动；</p>
-<p>atomicinteger做在线数量统计；</p>
-<p>ScheduledThreadPoolExecutor  做定时任务；</p>
-<p>ReentrantLock 做可中断锁，避免死锁；</p>
-<p>这下面可以主要分几类吧</p>
+          <h3 id="一、内存模型"><a href="#一、内存模型" class="headerlink" title="一、内存模型"></a>一、内存模型</h3><p>1.分为主内存和工作内存，分别对应虚拟机内存的堆内存、栈内存、方法区</p>
+<p>2.8大基本操作：lock-&gt;unlock, read-&gt;load-&gt;use-&gt;assign-&gt;store-&gt;write</p>
+<p>3.原子性、可见性、有序性</p>
+<h3 id="二、线程安全与高效并发："><a href="#二、线程安全与高效并发：" class="headerlink" title="二、线程安全与高效并发："></a>二、线程安全与高效并发：</h3><p>线程调度：</p>
+<p>1.内核线程（KLT）</p>
+<p>2.用户线程（UT）</p>
+<p>3.用户线程（UT）与轻量级进程（LWP)的混合模式</p>
+<p>高效并发：</p>
+<p>多线程环境下，线程资源的安全调用：</p>
+<p>先行发生原则：happens before原则：</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/11/30/JDK源码分析之Concurrent/#more" rel="contents">
+            <a class="btn" href="/2019/12/03/《深入理解Java虚拟机》之Java内存模型/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+    
+    <div>
+        
+    </div>
+    
+    
+    
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://kanson.net/2019/10/24/Spring事务传播机制/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kanson Boy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kanson_Boy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/24/Spring事务传播机制/" itemprop="url">Spring事务传播机制</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-24T21:51:12+08:00">
+                2019-10-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  662
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="Spring事务传播机制"><a href="#Spring事务传播机制" class="headerlink" title="Spring事务传播机制"></a>Spring事务传播机制</h4><p>1、事务抽象，特性：</p>
+<p>①REQUIRED：如果当前没有事务就<strong>需要</strong>创建一个新事务，否则就加入该事务，最常用也是Spring默认设置</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/24/Spring事务传播机制/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+    
+    <div>
+        
+    </div>
+    
+    
+    
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://kanson.net/2019/10/23/Spring设计模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kanson Boy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kanson_Boy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/23/Spring设计模式/" itemprop="url">Spring设计模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-23T21:51:12+08:00">
+                2019-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  339
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="Spring设计模式"><a href="#Spring设计模式" class="headerlink" title="Spring设计模式"></a>Spring设计模式</h3><h4 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h4><p>spring ioc的核心设计模式的思想体现，本身就是一个大的工厂，把所有的bean实例都放在了spring 容器里（大工厂），如果要使用bean就直接找spring容器就好了，自己不用创建对象。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/23/Spring设计模式/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1226,7 +1588,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  926
+                  2k
                 </span>
               
 
@@ -1242,7 +1604,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  7
                 </span>
               
             </div>
@@ -1647,497 +2009,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kanson.net/2019/07/20/Vue_cli脚手架配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kanson Boy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kanson_Boy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/20/Vue_cli脚手架配置/" itemprop="url">Vue_cli脚手架配置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-20T18:23:09+08:00">
-                2019-07-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  985
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>npm uninstall vue-cli -g 卸载旧版本，在安装新版本。</p>
-<p>npm install –global vue-cli</p>
-<p>Vue前端开发环境：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">技术</th>
-<th>版本</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">node</td>
-<td>v10.16.0</td>
-<td>node编译环境</td>
-</tr>
-<tr>
-<td style="text-align:left">npm</td>
-<td>6.9.0</td>
-<td>npm包管理工具</td>
-</tr>
-<tr>
-<td style="text-align:left">Vue</td>
-<td>2.9.6</td>
-<td>前端框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Vue-router</td>
-<td>3.0.2</td>
-<td>前端路由框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Vuex</td>
-<td>3.1.0</td>
-<td>vue状态管理组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Vue-cli</td>
-<td>————</td>
-<td>Vue脚手架</td>
-</tr>
-<tr>
-<td style="text-align:left">Element-ui</td>
-<td>2.7.0</td>
-<td>前端UI框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Echarts</td>
-<td>4.2.1</td>
-<td>数据可视化框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Uni-app</td>
-<td>————</td>
-<td>跨平台前端框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Mockjs</td>
-<td>1.0.1-beta3</td>
-<td>模拟后端数据</td>
-</tr>
-<tr>
-<td style="text-align:left">Axios</td>
-<td>0.18.0</td>
-<td>基于Promise的Http库</td>
-</tr>
-<tr>
-<td style="text-align:left">Js-cookie</td>
-<td>2.2.0</td>
-<td>Cookie组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Jsonlint</td>
-<td>1.6.3</td>
-<td>Json解析组件</td>
-</tr>
-<tr>
-<td style="text-align:left">screenfull</td>
-<td>4.2.0</td>
-<td>全屏组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Xlsx</td>
-<td>0.14.1</td>
-<td>Excel表导出组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Webpack</td>
-<td>————</td>
-<td>模板打包器</td>
-</tr>
-</tbody>
-</table>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/20/Vue_cli脚手架配置/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-    
-    <div>
-        
-    </div>
-    
-    
-    
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kanson.net/2019/07/14/微服务Web开发技术栈/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kanson Boy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kanson_Boy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/14/微服务Web开发技术栈/" itemprop="url">微服务技术栈</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-14T03:25:52+08:00">
-                2019-07-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  456
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="前端技术栈"><a href="#前端技术栈" class="headerlink" title="前端技术栈"></a>前端技术栈</h3><table>
-<thead>
-<tr>
-<th>技术</th>
-<th>版本</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Vue</td>
-<td>2.6.10</td>
-<td>前端框架</td>
-</tr>
-<tr>
-<td>Vue-router</td>
-<td>3.0.2</td>
-<td>前端路由框架</td>
-</tr>
-<tr>
-<td>Vuex</td>
-<td>3.1.0</td>
-<td>vue状态管理组件</td>
-</tr>
-<tr>
-<td>Vue-cli</td>
-<td>————</td>
-<td>Vue脚手架</td>
-</tr>
-<tr>
-<td>Element-ui</td>
-<td>2.7.0</td>
-<td>前端UI框架</td>
-</tr>
-<tr>
-<td>Echarts</td>
-<td>4.2.1</td>
-<td>数据可视化框架</td>
-</tr>
-<tr>
-<td>Uni-app</td>
-<td>————</td>
-<td>跨平台前端框架</td>
-</tr>
-<tr>
-<td>Mockjs</td>
-<td>1.0.1-beta3</td>
-<td>模拟后端数据</td>
-</tr>
-<tr>
-<td>Axios</td>
-<td>0.18.0</td>
-<td>基于Promise的Http库</td>
-</tr>
-<tr>
-<td>Js-cookie</td>
-<td>2.2.0</td>
-<td>Cookie组件</td>
-</tr>
-<tr>
-<td>Jsonlint</td>
-<td>1.6.3</td>
-<td>Json解析组件</td>
-</tr>
-<tr>
-<td>screenfull</td>
-<td>4.2.0</td>
-<td>全屏组件</td>
-</tr>
-<tr>
-<td>Xlsx</td>
-<td>0.14.1</td>
-<td>Excel表导出组件</td>
-</tr>
-<tr>
-<td>Webpack</td>
-<td>————</td>
-<td>模板打包器</td>
-</tr>
-</tbody>
-</table>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/14/微服务Web开发技术栈/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-    
-    <div>
-        
-    </div>
-    
-    
-    
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2214,7 +2085,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2353,7 +2224,7 @@ show_date_time();
 
 <div class="theme-info">
   <span class="post-meta-divider">|</span>
-  <span class="post-count">博客全站共14.7k字</span>
+  <span class="post-count">博客全站共16.9k字</span>
 </div>
         
 <div class="busuanzi-count">

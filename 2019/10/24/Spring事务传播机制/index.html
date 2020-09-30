@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="面经," />
+  <meta name="keywords" content="Spring,事务," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Java 并发包(JUC)下面的工具类，在实际工作中都有哪些应用场景呢？考察点：多线程并发编程的技术广度，实践经验 具体某个类的原理，比如ThreadPoolExcecutor 为什么要看ConcurrentHashMap JUC 下有哪些工具类？ 我自己用过的场景。用过countdownlatch 多接口并发调用，还有Fork join做过并行计算，用过atomicinteger 并发下载数量限">
-<meta name="keywords" content="面经">
+<meta name="description" content="Spring事务传播机制1、事务抽象，特性： ①REQUIRED：如果当前没有事务就需要创建一个新事务，否则就加入该事务，最常用也是Spring默认设置">
+<meta name="keywords" content="Spring,事务">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 并发包(JUC)源码分析">
-<meta property="og:url" content="http://kanson.net/2019/11/30/JDK源码分析之Concurrent/index.html">
+<meta property="og:title" content="Spring事务传播机制">
+<meta property="og:url" content="http://kanson.net/2019/10/24/Spring事务传播机制/index.html">
 <meta property="og:site_name" content="Kanson_Boy&#39;s Blog">
-<meta property="og:description" content="Java 并发包(JUC)下面的工具类，在实际工作中都有哪些应用场景呢？考察点：多线程并发编程的技术广度，实践经验 具体某个类的原理，比如ThreadPoolExcecutor 为什么要看ConcurrentHashMap JUC 下有哪些工具类？ 我自己用过的场景。用过countdownlatch 多接口并发调用，还有Fork join做过并行计算，用过atomicinteger 并发下载数量限">
+<meta property="og:description" content="Spring事务传播机制1、事务抽象，特性： ①REQUIRED：如果当前没有事务就需要创建一个新事务，否则就加入该事务，最常用也是Spring默认设置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-02T05:30:56.266Z">
+<meta property="og:updated_time" content="2020-09-30T14:49:37.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java 并发包(JUC)源码分析">
-<meta name="twitter:description" content="Java 并发包(JUC)下面的工具类，在实际工作中都有哪些应用场景呢？考察点：多线程并发编程的技术广度，实践经验 具体某个类的原理，比如ThreadPoolExcecutor 为什么要看ConcurrentHashMap JUC 下有哪些工具类？ 我自己用过的场景。用过countdownlatch 多接口并发调用，还有Fork join做过并行计算，用过atomicinteger 并发下载数量限">
+<meta name="twitter:title" content="Spring事务传播机制">
+<meta name="twitter:description" content="Spring事务传播机制1、事务抽象，特性： ①REQUIRED：如果当前没有事务就需要创建一个新事务，否则就加入该事务，最常用也是Spring默认设置">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://kanson.net/2019/11/30/JDK源码分析之Concurrent/"/>
+  <link rel="canonical" href="http://kanson.net/2019/10/24/Spring事务传播机制/"/>
 
 
 
 
 
-  <title>Java 并发包(JUC)源码分析 | Kanson_Boy's Blog</title>
+  <title>Spring事务传播机制 | Kanson_Boy's Blog</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kanson.net/2019/11/30/JDK源码分析之Concurrent/">
+    <link itemprop="mainEntityOfPage" href="http://kanson.net/2019/10/24/Spring事务传播机制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kanson Boy">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java 并发包(JUC)源码分析</h1>
+          <h1 class="post-title" itemprop="name headline">Spring事务传播机制</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-30T17:31:01+08:00">
-                2019-11-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-24T21:51:12+08:00">
+                2019-10-24
               </time>
             
 
@@ -336,6 +336,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -363,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  643
+                  662
                 </span>
               
 
@@ -400,37 +422,29 @@
       
 
       
-        <h3 id="Java-并发包-JUC-下面的工具类，在实际工作中都有哪些应用场景呢？"><a href="#Java-并发包-JUC-下面的工具类，在实际工作中都有哪些应用场景呢？" class="headerlink" title="Java 并发包(JUC)下面的工具类，在实际工作中都有哪些应用场景呢？"></a>Java 并发包(JUC)下面的工具类，在实际工作中都有哪些应用场景呢？</h3><p>考察点：多线程并发编程的技术广度，实践经验</p>
-<p>具体某个类的原理，比如ThreadPoolExcecutor</p>
-<p>为什么要看ConcurrentHashMap</p>
-<p>JUC 下有哪些工具类？</p>
-<p>我自己用过的场景。用过countdownlatch 多接口并发调用，还有Fork join做过并行计算，用过atomicinteger 并发下载数量限制。。</p>
-<p>ConcurrentSkipListMap 用来存一致性hash的环；</p>
-<p>Countdownlatch 一个服务需要多个模块（线程）时，都启动才宣布服务启动；</p>
-<p>atomicinteger做在线数量统计；</p>
-<p>ScheduledThreadPoolExecutor  做定时任务；</p>
-<p>ReentrantLock 做可中断锁，避免死锁；</p>
-<p>这下面可以主要分几类吧</p>
+        <h4 id="Spring事务传播机制"><a href="#Spring事务传播机制" class="headerlink" title="Spring事务传播机制"></a>Spring事务传播机制</h4><p>1、事务抽象，特性：</p>
+<p>①REQUIRED：如果当前没有事务就<strong>需要</strong>创建一个新事务，否则就加入该事务，最常用也是Spring默认设置</p>
 <a id="more"></a>
-<ol>
-<li>线程间通信工具类，如Semaphore ,、CountDownLatch、Future等等，这种也经常用，特别是在写多线程高并发的程序时，结合通信工具和锁把线程编排的符合你的预期执行</li>
-</ol>
-<ol>
-<li>锁，JUC提供了各种在某些场景下比synchronized更合适的高级锁实现，包括读写锁，互斥锁等等，因其多数基于CAS这种乐观锁实现，性能一般要由于synchronized内置锁，而且结合Cdondition更灵活可控。 不过个人觉得，这些锁除了jdk以及一些知名框架中使用外，我们日常工作synchronized就已经够用了，很少会用到，就算为了追求极致的性能，也往往先从架构方面入手</li>
-</ol>
-<ol>
-<li>原子包装类 ，这个经常用，一两行代码既可以保证线程安全，又可以获得比synchronized内置锁更好的性能，何乐而不为呢</li>
-</ol>
-<ol>
-<li>线程安全的集合， 这里面包含了一些基于锁分解、分段锁、CAS等机制性能优良且线程安全的集合类，一般在多线程业务中，只要有共享访问的集合，可能不管三七二十一直接用这些同步集合</li>
-</ol>
-<ol>
-<li>线程池工具类，这就更不用说了，目前几乎很少有项目不用线程池的</li>
-</ol>
-<p>场景的话，非常多</p>
-<p>1.生产消费问题，这是大头，大到转账取钱问题，小到并发读写队列，只要有对共享数据的并发读写访问，都可以算</p>
-<p>2.秒杀场景，红包、促销等等，其实这也勉强可以算生产消费问题</p>
-<p>3.研发框架，目前各种web  服务 、rpc服务、schedule服务等等，都是多线程服务，JUC的工具是保证并发服务高可用高性能的基础</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   <span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">       methodB();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="comment">// do something</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>使用默认的事务传播机制，执行过程如下：调用A方法开启一个事务执行方法A的代码，紧接着执行方法B的代码，提交或者回滚事务（如果方法B出现了异常，则方法A最终回滚整体单个事务）</p>
+<p>②SUPPORTS：<strong>支持</strong>当前事务，如果当前存在事务，就加入该事务，否则以非事务执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>直接调用方法B不会执行事务</p>
+<p>③MANDATORY：支持当前事务，如果当前存在事务，就加入该事务，否则就<strong>强制</strong>抛出异常</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>直接调用方法B会报错</p>
+<p>④REQUIRES_NEW：创建新事务，无论是否存在事务，都创建新事务</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRES_NEW)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用方法A会开启事务1，执行完A里面的代码后，开启事务2执行方法B里面的代码，提交或回滚事务2，最后提交或回滚事务1。事务1和事务2互不影响</p>
+<p>⑤NOT_SUPPORTED：以非事务方式执行操作，如果当前存在事务，则把当前事务<strong>挂起</strong>（一般很少用到）</p>
+<p>⑥NEVER：以非事务方式执行操作，如果当前存在事务，则抛出异常</p>
+<p>⑦NESTED：嵌套事务：外层的事务如果回滚，会导致内层的事务也回滚，但内层的事务如果回滚仅仅回滚自己的代码</p>
+<h4 id="相关思考："><a href="#相关思考：" class="headerlink" title="相关思考："></a>相关思考：</h4><p>1.有一段业务逻辑，A调用B，如果A出错了仅仅回滚A，不能回滚B，这时必须得用REQUIRES_NEW传播机制，让A和B的事务是不同的两个事务</p>
+<p>2.A调用B，如果出错，B只能回滚自己，而A可以带着B一起回滚，这时得用NESTED来嵌套事务</p>
+<p>Tips: Spring事务隔离级别</p>
+<blockquote>
+<p> Spring默认的是数据库存储引擎的事务隔离级别，mysql默认隔离级别为可重复读</p>
+</blockquote>
 
       
     </div>
@@ -483,7 +497,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/面经/" rel="tag"><i class="fa fa-tag"></i> 面经</a>
+            <a href="/tags/Spring/" rel="tag"><i class="fa fa-tag"></i> Spring</a>
+          
+            <a href="/tags/事务/" rel="tag"><i class="fa fa-tag"></i> 事务</a>
           
         </div>
       
@@ -496,8 +512,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/09/JDK源码分析之Map/" rel="next" title="JDK源码分析之Map">
-                <i class="fa fa-chevron-left"></i> JDK源码分析之Map
+              <a href="/2019/10/23/Spring设计模式/" rel="next" title="Spring设计模式">
+                <i class="fa fa-chevron-left"></i> Spring设计模式
               </a>
             
           </div>
@@ -506,8 +522,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/12/05/《深入理解Java虚拟机》之GC/" rel="prev" title="《深入理解Java虚拟机》之GC">
-                《深入理解Java虚拟机》之GC <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/03/《深入理解Java虚拟机》之Java内存模型/" rel="prev" title="《深入理解Java虚拟机》之Java内存模型">
+                《深入理解Java虚拟机》之Java内存模型 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -616,7 +632,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -708,7 +724,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-并发包-JUC-下面的工具类，在实际工作中都有哪些应用场景呢？"><span class="nav-number">1.</span> <span class="nav-text">Java 并发包(JUC)下面的工具类，在实际工作中都有哪些应用场景呢？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring事务传播机制"><span class="nav-number">1.</span> <span class="nav-text">Spring事务传播机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关思考："><span class="nav-number">2.</span> <span class="nav-text">相关思考：</span></a></li></ol></div>
             
 
           </div>
@@ -771,7 +787,7 @@ show_date_time();
 
 <div class="theme-info">
   <span class="post-meta-divider">|</span>
-  <span class="post-count">博客全站共14.7k字</span>
+  <span class="post-count">博客全站共16.9k字</span>
 </div>
         
 <div class="busuanzi-count">

@@ -88,7 +88,7 @@
 <meta property="og:description" content="集合的继承关系图中，看出集合的根节点是 Collection，而 Collection 下又提供了两大常用集合，分别是：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://images.gitbook.cn/ae489970-ca62-11e9-bd50-998f3938aecb">
-<meta property="og:updated_time" content="2019-11-25T13:56:26.095Z">
+<meta property="og:updated_time" content="2020-09-22T01:49:03.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDK源码分析之Collection">
 <meta name="twitter:description" content="集合的继承关系图中，看出集合的根节点是 Collection，而 Collection 下又提供了两大常用集合，分别是：">
@@ -410,12 +410,13 @@
 <li>Set：集合不允许有重复的元素，在许多需要保证元素唯一性的场景中使用。</li>
 </ul>
 <p>集合使用：</p>
-<h4 id="1）Vector"><a href="#1）Vector" class="headerlink" title="1）Vector"></a>1）Vector</h4><p>Vector 是 Java 早期提供的线程安全的有序集合，如果不需要线程安全，不建议使用此集合，毕竟同步是有线程开销的。Stack继承了Vector</p>
+<h4 id="1）Vector"><a href="#1）Vector" class="headerlink" title="1）Vector"></a>1）Vector</h4><p>Vector 是 Java 早期提供的线程安全的有序集合，实现了同步但是效率低已经不用了，如果不需要线程安全，不建议使用此集合，毕竟同步是有线程开销的。Stack继承了Vector</p>
 <p>使用示例代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Vector vector = <span class="keyword">new</span> Vector();</span><br><span class="line">vector.add(<span class="string">"dog"</span>);</span><br><span class="line">vector.add(<span class="string">"cat"</span>);</span><br><span class="line">vector.remove(<span class="string">"cat"</span>);</span><br><span class="line">System.out.println(vector);</span><br></pre></td></tr></table></figure>
 <p>程序执行结果：<code>[dog]</code></p>
 <h4 id="2）ArrayList"><a href="#2）ArrayList" class="headerlink" title="2）ArrayList"></a>2）ArrayList</h4><p>ArrayList 是最常见的非线程安全的有序集合，因为内部是<strong>数组</strong>存储的，所以<strong>随机访问</strong>效率很高，但非尾部的插入和删除性能较低，如果在中间插入元素，之后的所有元素都要后移。ArrayList 的使用与 Vector 类似。</p>
 <h4 id="3）LinkedList"><a href="#3）LinkedList" class="headerlink" title="3）LinkedList"></a>3）LinkedList</h4><p>LinkedList 是使用<strong>双向链表</strong>数据结构实现的，因此<strong>增加和删除</strong>效率比较高，而随机访问效率较差。</p>
+<p>LinkedList是个双向链表，它同样可以被当作<strong>栈、队列或双端队列</strong>来使用</p>
 <p>LinkedList 除了包含以上两个类的操作方法之外，还新增了几个操作方法，如 offer() 、peek() 等，具体详情，请参考以下代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">LinkedList linkedList = <span class="keyword">new</span> LinkedList();</span><br><span class="line"><span class="comment">// 添加元素</span></span><br><span class="line">linkedList.offer(<span class="string">"bird"</span>);</span><br><span class="line">linkedList.push(<span class="string">"cat"</span>);</span><br><span class="line">linkedList.push(<span class="string">"dog"</span>);</span><br><span class="line"><span class="comment">// 获取第一个元素</span></span><br><span class="line">System.out.println(linkedList.peek());</span><br><span class="line"><span class="comment">// 获取第一个元素，并删除此元素</span></span><br><span class="line">System.out.println(linkedList.poll());</span><br><span class="line">System.out.println(linkedList);</span><br></pre></td></tr></table></figure>
 <p>程序的执行结果：</p>
@@ -432,7 +433,7 @@
 <p>程序执行结果：<code>[ant, camel, cat, dog]</code></p>
 <p>可以看出，TreeSet 的使用与 Vector 类似，只是实现了自动排序。</p>
 <h4 id="6）LinkedHashSet"><a href="#6）LinkedHashSet" class="headerlink" title="6）LinkedHashSet"></a>6）LinkedHashSet</h4><p>LinkedHashSet 是按照元素的 hashCode 值来决定元素的存储位置，但同时又使用链表来维护元素的次序，这样使得它看起来像是按照插入顺序保存的。</p>
-<h3 id="相关面试题"><a href="#相关面试题" class="headerlink" title="相关面试题"></a>相关面试题</h3><h4 id="1-List-和-Set-有什么区别？"><a href="#1-List-和-Set-有什么区别？" class="headerlink" title="1.List 和 Set 有什么区别？"></a>1.List 和 Set 有什么区别？</h4><ul>
+<h3 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h3><h4 id="1-List-和-Set-有什么区别？"><a href="#1-List-和-Set-有什么区别？" class="headerlink" title="1.List 和 Set 有什么区别？"></a>1.List 和 Set 有什么区别？</h4><ul>
 <li>List 允许有多个 null 值，Set 只允许有一个 null 值；</li>
 <li>List 允许有重复元素，Set 不允许有重复元素；</li>
 <li>List 可以保证每个元素的存储顺序，Set 无法保证元素的存储顺序。</li>
@@ -631,7 +632,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -723,7 +724,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）Vector"><span class="nav-number">1.</span> <span class="nav-text">1）Vector</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）ArrayList"><span class="nav-number">2.</span> <span class="nav-text">2）ArrayList</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3）LinkedList"><span class="nav-number">3.</span> <span class="nav-text">3）LinkedList</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4）HashSet"><span class="nav-number">4.</span> <span class="nav-text">4）HashSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5）TreeSet"><span class="nav-number">5.</span> <span class="nav-text">5）TreeSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6）LinkedHashSet"><span class="nav-number">6.</span> <span class="nav-text">6）LinkedHashSet</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关面试题"><span class="nav-number"></span> <span class="nav-text">相关面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-List-和-Set-有什么区别？"><span class="nav-number">1.</span> <span class="nav-text">1.List 和 Set 有什么区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Collection-和-Collections-有什么区别？"><span class="nav-number">2.</span> <span class="nav-text">2.Collection 和 Collections 有什么区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-LinkedHashSet-如何保证有序和唯一性？"><span class="nav-number">3.</span> <span class="nav-text">3.LinkedHashSet 如何保证有序和唯一性？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-HashSet-是如何保证数据不可重复的？"><span class="nav-number">4.</span> <span class="nav-text">4.HashSet 是如何保证数据不可重复的？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）Vector"><span class="nav-number">1.</span> <span class="nav-text">1）Vector</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）ArrayList"><span class="nav-number">2.</span> <span class="nav-text">2）ArrayList</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3）LinkedList"><span class="nav-number">3.</span> <span class="nav-text">3）LinkedList</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4）HashSet"><span class="nav-number">4.</span> <span class="nav-text">4）HashSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5）TreeSet"><span class="nav-number">5.</span> <span class="nav-text">5）TreeSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6）LinkedHashSet"><span class="nav-number">6.</span> <span class="nav-text">6）LinkedHashSet</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关问题"><span class="nav-number"></span> <span class="nav-text">相关问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-List-和-Set-有什么区别？"><span class="nav-number">1.</span> <span class="nav-text">1.List 和 Set 有什么区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Collection-和-Collections-有什么区别？"><span class="nav-number">2.</span> <span class="nav-text">2.Collection 和 Collections 有什么区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-LinkedHashSet-如何保证有序和唯一性？"><span class="nav-number">3.</span> <span class="nav-text">3.LinkedHashSet 如何保证有序和唯一性？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-HashSet-是如何保证数据不可重复的？"><span class="nav-number">4.</span> <span class="nav-text">4.HashSet 是如何保证数据不可重复的？</span></a></li></ol></div>
             
 
           </div>
@@ -786,7 +787,7 @@ show_date_time();
 
 <div class="theme-info">
   <span class="post-meta-divider">|</span>
-  <span class="post-count">博客全站共14.7k字</span>
+  <span class="post-count">博客全站共16.9k字</span>
 </div>
         
 <div class="busuanzi-count">
