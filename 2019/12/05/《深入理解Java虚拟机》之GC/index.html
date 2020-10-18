@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Kanson_Boy&#39;s Blog">
 <meta property="og:description" content="内存动态分配和垃圾收集技术GC：哪些内存需要回收？什么时候回收？如何回收？ 当需要排查各种内存溢出、内存泄露问题时，当垃圾收集成为系统达到更高并发量的瓶颈时，就需要对内存动态分配和垃圾收集技术实施必要的监控和调节。 垃圾收集器关注的是Java堆和方法区中的动态分配和回收的内存。 判断对象存活与否？ 1、引用计数算法：主流的Java虚拟机未采用，很难解决对象之间相互循环引用的问题 2、可达性分析算法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-22T02:22:29.861Z">
+<meta property="og:updated_time" content="2020-10-08T08:08:45.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《深入理解Java虚拟机》之GC">
 <meta name="twitter:description" content="内存动态分配和垃圾收集技术GC：哪些内存需要回收？什么时候回收？如何回收？ 当需要排查各种内存溢出、内存泄露问题时，当垃圾收集成为系统达到更高并发量的瓶颈时，就需要对内存动态分配和垃圾收集技术实施必要的监控和调节。 垃圾收集器关注的是Java堆和方法区中的动态分配和回收的内存。 判断对象存活与否？ 1、引用计数算法：主流的Java虚拟机未采用，很难解决对象之间相互循环引用的问题 2、可达性分析算法">
@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.6k
+                  3.7k
                 </span>
               
 
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12
+                  13
                 </span>
               
             </div>
@@ -410,14 +410,15 @@
 <hr>
 <h3 id="一、垃圾收集算法："><a href="#一、垃圾收集算法：" class="headerlink" title="一、垃圾收集算法："></a>一、垃圾收集算法：</h3><h5 id="1-标记-清除算法-Mark-and-Sweep"><a href="#1-标记-清除算法-Mark-and-Sweep" class="headerlink" title="1.标记-清除算法 Mark and Sweep"></a>1.标记-清除算法 Mark and Sweep</h5><p>分为标记和清除两个阶段，是最基础的收集算法，主要不足：1、效率问题；2、空间问题：标记清除之后会产生大量不连续的内存碎片，导致之后在程序运行过程中需要分配较大对象时，无法找到足够的连续内存而不得不提前触发另一次GC。</p>
 <a id="more"></a>
-<h5 id="2-复制算法-Copying"><a href="#2-复制算法-Copying" class="headerlink" title="2.复制算法 Copying"></a>2.复制算法 Copying</h5><p>一块内存平均划分为2块，一块空闲，一块存储，当回收的时候，把另一半中仍然存活的复制过来，并将其内存全部收回</p>
-<p>Eden:Survivor = 8:1</p>
-<h5 id="3-标记-整理算法-Mark-Compact"><a href="#3-标记-整理算法-Mark-Compact" class="headerlink" title="3.标记-整理算法 Mark-Compact"></a>3.标记-整理算法 Mark-Compact</h5><p>标记以后，让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。</p>
+<h5 id="2-复制算法-Copying"><a href="#2-复制算法-Copying" class="headerlink" title="2.复制算法 Copying"></a>2.复制算法 Copying</h5><p>一块内存平均划分为2块，一块空闲，一块存储，当回收的时候，把另一半中仍然存活的复制过来，并将其内存全部收回——解决了效率问题（每次都是对半个区域进行内存回收，内存分配时也不用考虑内存碎片等复杂情况，只要移动堆顶指针，按顺序分配内存即可，实现简单运行高效）。比较适合“朝生夕死”的新生代对象。</p>
+<p>Eden:Survivor0:Survivor = 8:1:1</p>
+<h5 id="3-标记-整理算法-Mark-Compact"><a href="#3-标记-整理算法-Mark-Compact" class="headerlink" title="3.标记-整理算法 Mark-Compact"></a>3.标记-整理算法 Mark-Compact</h5><p>标记以后，让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。适用于老年代，绝大多数对象都存活的情况。</p>
 <h5 id="4-分代收集算法"><a href="#4-分代收集算法" class="headerlink" title="4.分代收集算法"></a>4.分代收集算法</h5><p>一般将Java堆分为新生代和老年代，对于新生代，每次收集时都发现有大批对象死去，只有少量存活，就选用复制算法，只需付出少量复制成本即可完成回收。而老年代中对象存活率高，没有额外空间对其进行担保，就必须使用“标记清除”或者“标记整理”算法回收。</p>
-<p>Young区（新生代代），Elden区（老年代），Survive区（永久代）：S0，S1，Meta Space，S0:S1=9:1</p>
+<p>一般新生代触发内存回收称之为Yong GC，而老年代大对象触发内存回收称之为Full GC</p>
+<p>Young区（新生代），Elden区（老年代），Survivor区（永久代）：S0，S1，Meta Space，S0:S1=9:1</p>
 <hr>
 <p>Java内存：堆内存、栈内存、方法区</p>
-<p>堆内存：基本数据类型，引用类型</p>
+<p>堆内存：基本数据类型，引用类型，Java8之后常量池移动堆中</p>
 <p>栈内存：递归无终止条件会导致StackOverFlowError，栈空间的耗尽</p>
 <p>方法区：函数，方法名</p>
 <hr>
@@ -663,7 +664,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -685,7 +686,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -840,7 +841,7 @@ show_date_time();
 
 <div class="theme-info">
   <span class="post-meta-divider">|</span>
-  <span class="post-count">博客全站共16.9k字</span>
+  <span class="post-count">博客全站共23.4k字</span>
 </div>
         
 <div class="busuanzi-count">

@@ -81,15 +81,15 @@
 
 <meta name="description" content="一、SpringSpring的核心是IoC/DI的容器，它可以帮程序员完成组件之间的依赖关系注入，使得组件之间的依赖达到最小，进而提高组件的重用性，Spring是个低侵入性（invasive）的框架，Spring中的组件并不会意识到它正置身于Spring中，这使得组件可以轻易的从框架中脱离，而几乎不用任何修改，反过来说，组件也可以简单的方式加入至框架中，使得组件甚至框架的整合变得容易。 Sprin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java EE开发常用框架梳理">
-<meta property="og:url" content="http://kanson.net/2019/07/13/JavaEE开发常用框架梳理/index.html">
+<meta property="og:title" content="Spring IOC和AOP">
+<meta property="og:url" content="http://kanson.net/2019/07/13/Spring IOC和AOP/index.html">
 <meta property="og:site_name" content="Kanson_Boy&#39;s Blog">
 <meta property="og:description" content="一、SpringSpring的核心是IoC/DI的容器，它可以帮程序员完成组件之间的依赖关系注入，使得组件之间的依赖达到最小，进而提高组件的重用性，Spring是个低侵入性（invasive）的框架，Spring中的组件并不会意识到它正置身于Spring中，这使得组件可以轻易的从框架中脱离，而几乎不用任何修改，反过来说，组件也可以简单的方式加入至框架中，使得组件甚至框架的整合变得容易。 Sprin">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://images2017.cnblogs.com/blog/1170065/201708/1170065-20170822171719871-436013565.png">
-<meta property="og:updated_time" content="2019-07-13T06:49:33.750Z">
+<meta property="og:updated_time" content="2020-10-18T04:08:47.991Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java EE开发常用框架梳理">
+<meta name="twitter:title" content="Spring IOC和AOP">
 <meta name="twitter:description" content="一、SpringSpring的核心是IoC/DI的容器，它可以帮程序员完成组件之间的依赖关系注入，使得组件之间的依赖达到最小，进而提高组件的重用性，Spring是个低侵入性（invasive）的框架，Spring中的组件并不会意识到它正置身于Spring中，这使得组件可以轻易的从框架中脱离，而几乎不用任何修改，反过来说，组件也可以简单的方式加入至框架中，使得组件甚至框架的整合变得容易。 Sprin">
 <meta name="twitter:image" content="https://images2017.cnblogs.com/blog/1170065/201708/1170065-20170822171719871-436013565.png">
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://kanson.net/2019/07/13/JavaEE开发常用框架梳理/"/>
+  <link rel="canonical" href="http://kanson.net/2019/07/13/Spring IOC和AOP/"/>
 
 
 
 
 
-  <title>Java EE开发常用框架梳理 | Kanson_Boy's Blog</title>
+  <title>Spring IOC和AOP | Kanson_Boy's Blog</title>
   
 
 
@@ -298,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kanson.net/2019/07/13/JavaEE开发常用框架梳理/">
+    <link itemprop="mainEntityOfPage" href="http://kanson.net/2019/07/13/Spring IOC和AOP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kanson Boy">
@@ -315,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java EE开发常用框架梳理</h1>
+          <h1 class="post-title" itemprop="name headline">Spring IOC和AOP</h1>
         
 
         <div class="post-meta">
@@ -432,6 +432,7 @@
 <p><strong>2.基于setter方法</strong>：实现特定属性的public set方法，来让外部容器调用，以传入所依赖类型的对象。</p>
 <p><strong>3.基于构造函数</strong>：实现特定参数的构造函数，在新建对象时传入所依赖类型的对象。</p>
 <p><strong>4.基于注解</strong>：基于Java的注解功能，在私有变量前加“@Autowired”等注解，不需要显式的定义以上三种代码，便可以让外部容器传入对应的对象。该方案相当于定义了public 的set方法，但是因为没有真正的set方法，从而不会为了实现依赖注入导致暴露了不该暴露的接口（因为set方法只想让容器访问来注入而不希望其他依赖此类的对象访问）。</p>
+<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>面向切面编程，</p>
 
       
     </div>
@@ -589,7 +590,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -611,7 +612,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -703,7 +704,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Spring"><span class="nav-number">1.</span> <span class="nav-text">一、Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制反转："><span class="nav-number">1.1.</span> <span class="nav-text">控制反转：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖注入："><span class="nav-number">1.2.</span> <span class="nav-text">依赖注入：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Spring"><span class="nav-number">1.</span> <span class="nav-text">一、Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制反转："><span class="nav-number">1.1.</span> <span class="nav-text">控制反转：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖注入："><span class="nav-number">1.2.</span> <span class="nav-text">依赖注入：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AOP"><span class="nav-number">2.</span> <span class="nav-text">AOP</span></a></li></ol></div>
             
 
           </div>
@@ -766,7 +767,7 @@ show_date_time();
 
 <div class="theme-info">
   <span class="post-meta-divider">|</span>
-  <span class="post-count">博客全站共16.9k字</span>
+  <span class="post-count">博客全站共23.4k字</span>
 </div>
         
 <div class="busuanzi-count">

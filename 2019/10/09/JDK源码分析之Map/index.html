@@ -90,7 +90,7 @@
 <meta property="og:image" content="https://images.gitbook.cn/Fpy4Na_uWi3rK9M8kOcgYK7_uXrK">
 <meta property="og:image" content="https://images.gitbook.cn/54a52ca0-ccc7-11e9-b229-e35eb1d6e740">
 <meta property="og:image" content="https://images.gitbook.cn/727836f0-ccc7-11e9-a9bd-857608719494">
-<meta property="og:updated_time" content="2020-09-30T13:45:24.631Z">
+<meta property="og:updated_time" content="2020-10-10T08:23:58.662Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDK源码分析之Map">
 <meta name="twitter:description" content="java.util.Map">
@@ -453,7 +453,7 @@
 <h3 id="寻址算法优化"><a href="#寻址算法优化" class="headerlink" title="寻址算法优化"></a>寻址算法优化</h3><p>(n-1) &amp; hash -&gt; 数组中的某个位置</p>
 <p>直接用哈希值对数组长度取模，性能比较差，为了优化这个寻址过程，确保hash&amp;(n-1)和hash%n效果是一样的，但是与运算的性能要比hash对n取模高很多。</p>
 <h3 id="hash碰撞"><a href="#hash碰撞" class="headerlink" title="hash碰撞"></a>hash碰撞</h3><p>数组 + 链表， 遍历一遍是O(n)，链表很长的话，性能比较差。</p>
-<p>优化：链表长度达到8之后，会把链表转换为红黑树，遍历红黑树查找某个元素时，需要O(logn)，性能比链表更高一些。</p>
+<p>优化：链表长度达到8之后，会把链表转换为红黑树，遍历<strong>红黑树</strong>查找某个元素时，需要O(logn)，性能比链表更高一些。</p>
 <h3 id="HashMap-重要方法"><a href="#HashMap-重要方法" class="headerlink" title="HashMap 重要方法"></a>HashMap 重要方法</h3><h4 id="1）添加方法：put-Object-key-Object-value"><a href="#1）添加方法：put-Object-key-Object-value" class="headerlink" title="1）添加方法：put(Object key, Object value)"></a>1）添加方法：put(Object key, Object value)</h4><p>执行流程如下：</p>
 <ul>
 <li>对 key 进行 hash 操作，计算存储 index；</li>
@@ -640,7 +640,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -662,7 +662,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -817,7 +817,7 @@ show_date_time();
 
 <div class="theme-info">
   <span class="post-meta-divider">|</span>
-  <span class="post-count">博客全站共16.9k字</span>
+  <span class="post-count">博客全站共23.4k字</span>
 </div>
         
 <div class="busuanzi-count">
