@@ -1,78 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>今日春分，现在是2022年3月20日星期天，凌晨5:30</title>
-    <url>/2022/03/20/2022-03-20/</url>
-    <content><![CDATA[<p>刚刷到了一个关于什么语言适合做GUI的知乎问题，想到了原生开发在底层性能优化上能做的比混合开发（运行时需预先编译为目标语言）高出很多倍。其实，是一个关于技术选型的话题。由此，我联想到了当前工作中遇到的一些问题和两年前在一家创业公司的工作经历。</p>
-<a id="more"></a>
-<p>当初是面临node server和java server的跨语言服务交互，涉及一些数据处理、实时交互，用户体验优化相关。今天是面临python server整体向java server过渡，其中一个用户界面需要用到两个接口进行完整的交互，一个主接口已经完全迁移到了java，另一个提供参数列表的接口还是python，界面进行了很大幅度的改变，而原先的接口交互逻辑已不适用于新的界面，同时这段时间99%精力都用在了迁移上面，迁移的目标是：100%复制原先的代码逻辑，使得每一个子流程和整体流程的输入输出保持一致。很需要细心，也需要花大量时间来完成工程量，按这个惯性思维，就会尽最大可能去适配原先的逻辑。而当新的需求接入时，很容易会有一种路径依赖，保留了原先的调用方式，反而对于新功能造成一定的冗余，画蛇添足，对于用户体验是一个很大的负面效果。</p>
-<p>另外，python端的分支版本管理做的也很不规范，无法一键回滚到上一个线上版本，测试和线上使用了两个分支，并且最终rebase之后reset到了线上，管理比较混乱，导致不得不进行增量更新以实现回滚的逻辑。小改动还可以这么干，大的代码量没法这么来，风险不可控了。后面得尽快把分支规范化，线上master，开发dev，新功能feature，问题修复bugfix，不要有测试和线上不同分支的巨大分歧，起码从版本、分支上面做到合理化、规范化。</p>
-<p>感悟：<br>现在是一个很难兼顾的状态，不能两全其美。感觉生活在重复上演同类境遇，这一次，愿自己全力以赴，做到最好！</p>
-<p>时常去梳理当前现状，改变现状要有方案先出来。最近一两年接触的都是大量工程上的琐碎问题，技术上倒是没啥太大长进，除了21年新学习了Golang并且实际开发过一个后端项目，对于Python的开发有了更深入的理解与心得体会。对于自己的主开发语言Java，很久没有进行过更深入的学习了。今年的目标是把后端技术体系完整的梳理一遍，总结和分享相关技术，持续输出，争取产生一定的影响力。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-        <tag>思考</tag>
-        <tag>自我审视</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JDK源码分析之Collection</title>
-    <url>/2019/10/08/JDK%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B9%8BCollection/</url>
-    <content><![CDATA[<p><img src="https://images.gitbook.cn/ae489970-ca62-11e9-bd50-998f3938aecb" alt="enter image description here"></p>
-<p>集合的继承关系图中，看出集合的根节点是 Collection，而 Collection 下又提供了两大常用集合，分别是：</p>
-<a id="more"></a>
-<ul>
-<li>List：使用最多的有序集合，提供方便的新增、修改、删除的操作；</li>
-<li>Set：集合不允许有重复的元素，在许多需要保证元素唯一性的场景中使用。</li>
-</ul>
-<p>集合使用：</p>
-<h4 id="1）Vector"><a href="#1）Vector" class="headerlink" title="1）Vector"></a>1）Vector</h4><p>Vector 是 Java 早期提供的线程安全的有序集合，实现了同步但是效率低已经不用了，如果不需要线程安全，不建议使用此集合，毕竟同步是有线程开销的。Stack继承了Vector</p>
-<p>使用示例代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Vector vector = <span class="keyword">new</span> Vector();</span><br><span class="line">vector.add(<span class="string">"dog"</span>);</span><br><span class="line">vector.add(<span class="string">"cat"</span>);</span><br><span class="line">vector.remove(<span class="string">"cat"</span>);</span><br><span class="line">System.out.println(vector);</span><br></pre></td></tr></table></figure>
-<p>程序执行结果：<code>[dog]</code></p>
-<h4 id="2）ArrayList"><a href="#2）ArrayList" class="headerlink" title="2）ArrayList"></a>2）ArrayList</h4><p>ArrayList 是最常见的非线程安全的有序集合，因为内部是<strong>数组</strong>存储的，所以<strong>随机访问</strong>效率很高，但非尾部的插入和删除性能较低，如果在中间插入元素，之后的所有元素都要后移。ArrayList 的使用与 Vector 类似。</p>
-<h4 id="3）LinkedList"><a href="#3）LinkedList" class="headerlink" title="3）LinkedList"></a>3）LinkedList</h4><p>LinkedList 是使用<strong>双向链表</strong>数据结构实现的，因此<strong>增加和删除</strong>效率比较高，而随机访问效率较差。</p>
-<p>LinkedList是个双向链表，它同样可以被当作<strong>栈、队列或双端队列</strong>来使用</p>
-<p>LinkedList 除了包含以上两个类的操作方法之外，还新增了几个操作方法，如 offer() 、peek() 等，具体详情，请参考以下代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">LinkedList linkedList = <span class="keyword">new</span> LinkedList();</span><br><span class="line"><span class="comment">// 添加元素</span></span><br><span class="line">linkedList.offer(<span class="string">"bird"</span>);</span><br><span class="line">linkedList.push(<span class="string">"cat"</span>);</span><br><span class="line">linkedList.push(<span class="string">"dog"</span>);</span><br><span class="line"><span class="comment">// 获取第一个元素</span></span><br><span class="line">System.out.println(linkedList.peek());</span><br><span class="line"><span class="comment">// 获取第一个元素，并删除此元素</span></span><br><span class="line">System.out.println(linkedList.poll());</span><br><span class="line">System.out.println(linkedList);</span><br></pre></td></tr></table></figure>
-<p>程序的执行结果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dog</span><br><span class="line">dog</span><br><span class="line">[cat, bird]</span><br></pre></td></tr></table></figure>
-<h4 id="4）HashSet"><a href="#4）HashSet" class="headerlink" title="4）HashSet"></a>4）HashSet</h4><p>HashSet 是一个没有重复元素的集合。虽然它是 Set 集合的子类，实际却为 <strong>HashMap</strong> 的实例，相关源码如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public HashSet() &#123;</span><br><span class="line">    map = new HashMap&lt;&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>因此 HashSet 是<strong>无序集合</strong>，没有办法保证元素的顺序性。</p>
-<p>HashSet 默认容量为 <strong>16</strong>，每次扩充 <strong>0.75</strong> 倍，相关源码如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public HashSet(Collection&lt;? extends E&gt; c) &#123;</span><br><span class="line">    map = new HashMap&lt;&gt;(Math.max((int) (c.size()/.75f) + 1, 16));</span><br><span class="line">    addAll(c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>HashSet 的使用与 Vector 类似。</p>
-<h4 id="5）TreeSet"><a href="#5）TreeSet" class="headerlink" title="5）TreeSet"></a>5）TreeSet</h4><p>TreeSet 集合实现了<strong>自动排序</strong>，也就是说 TreeSet 会把你插入数据进行自动排序。</p>
-<p>示例代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TreeSet treeSet = new TreeSet();</span><br><span class="line">treeSet.add(&quot;dog&quot;);</span><br><span class="line">treeSet.add(&quot;camel&quot;);</span><br><span class="line">treeSet.add(&quot;cat&quot;);</span><br><span class="line">treeSet.add(&quot;ant&quot;);</span><br><span class="line">System.out.println(treeSet);</span><br></pre></td></tr></table></figure>
-<p>程序执行结果：<code>[ant, camel, cat, dog]</code></p>
-<p>可以看出，TreeSet 的使用与 Vector 类似，只是实现了自动排序。</p>
-<h4 id="6）LinkedHashSet"><a href="#6）LinkedHashSet" class="headerlink" title="6）LinkedHashSet"></a>6）LinkedHashSet</h4><p>LinkedHashSet 是按照元素的 hashCode 值来决定元素的存储位置，但同时又使用链表来维护元素的次序，这样使得它看起来像是按照插入顺序保存的。</p>
-<h3 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h3><h4 id="1-List-和-Set-有什么区别？"><a href="#1-List-和-Set-有什么区别？" class="headerlink" title="1.List 和 Set 有什么区别？"></a>1.List 和 Set 有什么区别？</h4><ul>
-<li>List 允许有多个 null 值，Set 只允许有一个 null 值；</li>
-<li>List 允许有重复元素，Set 不允许有重复元素；</li>
-<li>List 可以保证每个元素的存储顺序，Set 无法保证元素的存储顺序。</li>
-</ul>
-<h4 id="2-Collection-和-Collections-有什么区别？"><a href="#2-Collection-和-Collections-有什么区别？" class="headerlink" title="2.Collection 和 Collections 有什么区别？"></a>2.Collection 和 Collections 有什么区别？</h4><p>答：Collection 和 Collections 的区别如下：</p>
-<ul>
-<li>Collection 是集合类的上级接口，继承它的主要有 List 和 Set；</li>
-<li>Collections 是针对集合类的一个帮助类，它提供了一些列的静态方法实现，如 Collections.sort() 排序、Collections.reverse() 逆序等。</li>
-</ul>
-<h4 id="3-LinkedHashSet-如何保证有序和唯一性？"><a href="#3-LinkedHashSet-如何保证有序和唯一性？" class="headerlink" title="3.LinkedHashSet 如何保证有序和唯一性？"></a>3.LinkedHashSet 如何保证有序和唯一性？</h4><p>答：LinkedHashSet 底层数据结构由哈希表和链表组成，链表保证了元素的有序即存储和取出一致，哈希表保证了元素的唯一性。</p>
-<h4 id="4-HashSet-是如何保证数据不可重复的？"><a href="#4-HashSet-是如何保证数据不可重复的？" class="headerlink" title="4.HashSet 是如何保证数据不可重复的？"></a>4.HashSet 是如何保证数据不可重复的？</h4><p>答：HashSet 的底层其实就是 HashMap，只不过 HashSet 实现了 Set 接口并且把数据作为 K 值，而 V 值一直使用一个相同的虚值来保存，我们可以看到源码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> map.put(e, PRESENT)==<span class="keyword">null</span>;<span class="comment">// 调用 HashMap 的 put 方法,PRESENT 是一个至始至终都相同的虚值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>由于 HashMap 的 K 值本身就不允许重复，并且在 HashMap 中如果 K/V 相同时，会用新的 V 覆盖掉旧的 V，然后返回旧的 V，那么在 HashSet 中执行这一句话始终会返回一个 false，导致插入失败，这样就保证了数据的不可重复性。</p>
-]]></content>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo+GitHub博客管理命令汇总</title>
     <url>/2018/03/06/Hexo-GitHub%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/</url>
     <content><![CDATA[<h2 id="Hexo-部署博客及更新博文"><a href="#Hexo-部署博客及更新博文" class="headerlink" title="[Hexo]部署博客及更新博文"></a>[Hexo]部署博客及更新博文</h2><h3 id="新建博文"><a href="#新建博文" class="headerlink" title="新建博文"></a>新建博文</h3><p>使用 Git Shell 进入本地 Blog 文件夹，输入以下命令：</p>
@@ -134,152 +62,57 @@ hexo s --port=4100
       </tags>
   </entry>
   <entry>
-    <title>Java核心技术001</title>
-    <url>/2018/08/02/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF001/</url>
-    <content><![CDATA[<h3 id="Java八大基本类型"><a href="#Java八大基本类型" class="headerlink" title="Java八大基本类型"></a>Java八大基本类型</h3><p>8种基本数据类型，其中4种整型，2种浮点类型，1种用于表示Unicode编码的字符单元的字符类型和1种用于表示真值的boolean类型。</p>
-<p>int / short / long / byte / float / double / char / boolean</p>
+    <title>JDK源码分析之Collection</title>
+    <url>/2019/10/08/JDK%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B9%8BCollection/</url>
+    <content><![CDATA[<p><img src="https://images.gitbook.cn/ae489970-ca62-11e9-bd50-998f3938aecb" alt="enter image description here"></p>
+<p>集合的继承关系图中，看出集合的根节点是 Collection，而 Collection 下又提供了两大常用集合，分别是：</p>
 <a id="more"></a>
-<p>1字节=8位，即1byte = 8bit，有符号整数，取值范围要先去掉符号位再计算数值大小</p>
 <ul>
-<li>整型</li>
+<li>List：使用最多的有序集合，提供方便的新增、修改、删除的操作；</li>
+<li>Set：集合不允许有重复的元素，在许多需要保证元素唯一性的场景中使用。</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>存储需求</th>
-<th>bit数</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>int</td>
-<td>4 byte</td>
-<td>32</td>
-<td>-2^31 ~ 2^31-1（有符号整数）</td>
-</tr>
-<tr>
-<td>short</td>
-<td>2 byte</td>
-<td>16</td>
-<td>-2^15 ~ 2^15-1</td>
-</tr>
-<tr>
-<td>long</td>
-<td>8 byte</td>
-<td>64</td>
-<td></td>
-</tr>
-<tr>
-<td>byte</td>
-<td>1 byte</td>
-<td>8</td>
-<td>－128～127</td>
-</tr>
-</tbody>
-</table>
+<p>集合使用：</p>
+<h4 id="1）Vector"><a href="#1）Vector" class="headerlink" title="1）Vector"></a>1）Vector</h4><p>Vector 是 Java 早期提供的线程安全的有序集合，实现了同步但是效率低已经不用了，如果不需要线程安全，不建议使用此集合，毕竟同步是有线程开销的。Stack继承了Vector</p>
+<p>使用示例代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Vector vector = <span class="keyword">new</span> Vector();</span><br><span class="line">vector.add(<span class="string">"dog"</span>);</span><br><span class="line">vector.add(<span class="string">"cat"</span>);</span><br><span class="line">vector.remove(<span class="string">"cat"</span>);</span><br><span class="line">System.out.println(vector);</span><br></pre></td></tr></table></figure>
+<p>程序执行结果：<code>[dog]</code></p>
+<h4 id="2）ArrayList"><a href="#2）ArrayList" class="headerlink" title="2）ArrayList"></a>2）ArrayList</h4><p>ArrayList 是最常见的非线程安全的有序集合，因为内部是<strong>数组</strong>存储的，所以<strong>随机访问</strong>效率很高，但非尾部的插入和删除性能较低，如果在中间插入元素，之后的所有元素都要后移。ArrayList 的使用与 Vector 类似。</p>
+<h4 id="3）LinkedList"><a href="#3）LinkedList" class="headerlink" title="3）LinkedList"></a>3）LinkedList</h4><p>LinkedList 是使用<strong>双向链表</strong>数据结构实现的，因此<strong>增加和删除</strong>效率比较高，而随机访问效率较差。</p>
+<p>LinkedList是个双向链表，它同样可以被当作<strong>栈、队列或双端队列</strong>来使用</p>
+<p>LinkedList 除了包含以上两个类的操作方法之外，还新增了几个操作方法，如 offer() 、peek() 等，具体详情，请参考以下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">LinkedList linkedList = <span class="keyword">new</span> LinkedList();</span><br><span class="line"><span class="comment">// 添加元素</span></span><br><span class="line">linkedList.offer(<span class="string">"bird"</span>);</span><br><span class="line">linkedList.push(<span class="string">"cat"</span>);</span><br><span class="line">linkedList.push(<span class="string">"dog"</span>);</span><br><span class="line"><span class="comment">// 获取第一个元素</span></span><br><span class="line">System.out.println(linkedList.peek());</span><br><span class="line"><span class="comment">// 获取第一个元素，并删除此元素</span></span><br><span class="line">System.out.println(linkedList.poll());</span><br><span class="line">System.out.println(linkedList);</span><br></pre></td></tr></table></figure>
+<p>程序的执行结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dog</span><br><span class="line">dog</span><br><span class="line">[cat, bird]</span><br></pre></td></tr></table></figure>
+<h4 id="4）HashSet"><a href="#4）HashSet" class="headerlink" title="4）HashSet"></a>4）HashSet</h4><p>HashSet 是一个没有重复元素的集合。虽然它是 Set 集合的子类，实际却为 <strong>HashMap</strong> 的实例，相关源码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public HashSet() &#123;</span><br><span class="line">    map = new HashMap&lt;&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>因此 HashSet 是<strong>无序集合</strong>，没有办法保证元素的顺序性。</p>
+<p>HashSet 默认容量为 <strong>16</strong>，每次扩充 <strong>0.75</strong> 倍，相关源码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public HashSet(Collection&lt;? extends E&gt; c) &#123;</span><br><span class="line">    map = new HashMap&lt;&gt;(Math.max((int) (c.size()/.75f) + 1, 16));</span><br><span class="line">    addAll(c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>HashSet 的使用与 Vector 类似。</p>
+<h4 id="5）TreeSet"><a href="#5）TreeSet" class="headerlink" title="5）TreeSet"></a>5）TreeSet</h4><p>TreeSet 集合实现了<strong>自动排序</strong>，也就是说 TreeSet 会把你插入数据进行自动排序。</p>
+<p>示例代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TreeSet treeSet = new TreeSet();</span><br><span class="line">treeSet.add(&quot;dog&quot;);</span><br><span class="line">treeSet.add(&quot;camel&quot;);</span><br><span class="line">treeSet.add(&quot;cat&quot;);</span><br><span class="line">treeSet.add(&quot;ant&quot;);</span><br><span class="line">System.out.println(treeSet);</span><br></pre></td></tr></table></figure>
+<p>程序执行结果：<code>[ant, camel, cat, dog]</code></p>
+<p>可以看出，TreeSet 的使用与 Vector 类似，只是实现了自动排序。</p>
+<h4 id="6）LinkedHashSet"><a href="#6）LinkedHashSet" class="headerlink" title="6）LinkedHashSet"></a>6）LinkedHashSet</h4><p>LinkedHashSet 是按照元素的 hashCode 值来决定元素的存储位置，但同时又使用链表来维护元素的次序，这样使得它看起来像是按照插入顺序保存的。</p>
+<h3 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h3><h4 id="1-List-和-Set-有什么区别？"><a href="#1-List-和-Set-有什么区别？" class="headerlink" title="1.List 和 Set 有什么区别？"></a>1.List 和 Set 有什么区别？</h4><ul>
+<li>List 允许有多个 null 值，Set 只允许有一个 null 值；</li>
+<li>List 允许有重复元素，Set 不允许有重复元素；</li>
+<li>List 可以保证每个元素的存储顺序，Set 无法保证元素的存储顺序。</li>
+</ul>
+<h4 id="2-Collection-和-Collections-有什么区别？"><a href="#2-Collection-和-Collections-有什么区别？" class="headerlink" title="2.Collection 和 Collections 有什么区别？"></a>2.Collection 和 Collections 有什么区别？</h4><p>答：Collection 和 Collections 的区别如下：</p>
 <ul>
-<li>浮点型</li>
+<li>Collection 是集合类的上级接口，继承它的主要有 List 和 Set；</li>
+<li>Collections 是针对集合类的一个帮助类，它提供了一些列的静态方法实现，如 Collections.sort() 排序、Collections.reverse() 逆序等。</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>存储</th>
-<th>bit</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>float</td>
-<td>4 byte</td>
-<td>32</td>
-<td>float类型的数值有一个后缀F(例如：3.14F)</td>
-</tr>
-<tr>
-<td>double</td>
-<td>8 byte</td>
-<td>64</td>
-<td>没有后缀F的浮点数值(如3.14)默认为double类型</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>char类型</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>存储</th>
-<th>bit</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>char</td>
-<td>2 byte</td>
-<td>16</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>boolean类型</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>存储</th>
-<th>bit</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>boolean</td>
-<td>1 byte</td>
-<td>8</td>
-<td>false、true</td>
-</tr>
-</tbody>
-</table>
-<p>Java有一个能够表示任意精度的数学包，通常称为“大数值”(big number)。虽然被称为大数值，但它并不是一种Java类型，而是一个Java对象。如果基本的整数和浮点数精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger，BigDecimal。这两个类可以处理包含<strong>任意长度数字序列</strong>的数值。BigInteger类实现了任意精度的整数运算，BigDecimal实现了任意精度的浮点数运算。具体的用法可以参见Java API。</p>
-<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><h4 id="long转int"><a href="#long转int" class="headerlink" title="long转int"></a>long转int</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">long</span> a = <span class="number">100L</span>;</span><br><span class="line"><span class="keyword">int</span> b = (<span class="keyword">int</span>)a;</span><br></pre></td></tr></table></figure>
-<h3 id="反射原理"><a href="#反射原理" class="headerlink" title="反射原理"></a>反射原理</h3><p>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法；这种动态获取的以及动态调用对象的方法的功能称为Java的反射机制。</p>
-<p>Java学习之反射机制及应用场景 - 对你说早安 - 博客园<a href="https://www.cnblogs.com/lzfsuifeng/p/9590705.html" target="_blank" rel="noopener">https://www.cnblogs.com/lzfsuifeng/p/9590705.html</a></p>
-<h3 id="反射机制提供了哪些功能？"><a href="#反射机制提供了哪些功能？" class="headerlink" title="反射机制提供了哪些功能？"></a>反射机制提供了哪些功能？</h3><ul>
-<li>在运行时判定任意一个对象所属的类</li>
-<li>在运行时判定任意一个类所具有的成员变量和方法；</li>
-<li>在运行时构造任意一个类的对象；</li>
-<li>在运行时调用任意一个对象的方法；</li>
-<li>生成动态代理；</li>
-</ul>
-<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>Java运行时的原理？</p>
-<p>动态代理</p>
-<ul>
-<li>逆向代码 ，例如反编译</li>
-<li>与注解相结合的框架 例如Retrofit</li>
-<li>单纯的反射机制应用框架 例如EventBus 2.x</li>
-<li>动态生成类框架 例如Gson</li>
-</ul>
-<h3 id="反射机制的优缺点："><a href="#反射机制的优缺点：" class="headerlink" title="反射机制的优缺点："></a>反射机制的优缺点：</h3><p> <strong>优点：</strong></p>
-<p>  运行期类型的判断，动态类加载，动态代理使用反射。</p>
-<p> <strong>缺点：</strong></p>
-<p>  性能是一个问题，反射相当于一系列解释操作，通知jvm要做的事情，性能比直接的java代码要慢很多。</p>
-<p>Java中的静态变量和静态代码块是在类加载的时候就执行的，实例化对象时，先声明并实例化变量再执行构造函数。如果子类继承父类，则先执行父类的静态变量和静态代码块，再执行子类的静态变量和静态代码块。同样，接着在执行父类和子类非静态代码块和构造函数。</p>
-<p>注意：（静态）变量和（静态）代码块的也是有执行顺序的，与代码书写的顺序一致。在（静态）代码块中可以使用（静态）变量，但是被使用的（静态）变量必须在（静态）代码块前面声明。</p>
-<p> 最后给出执行步骤：</p>
-<p><strong>1、父类静态变量和静态代码块（先声明的先执行）；</strong></p>
-<p><strong>2、子类静态变量和静态代码块（先声明的先执行）；</strong></p>
-<p><strong>3、父类的变量和代码块（先声明的先执行）；</strong></p>
-<p><strong>4、父类的构造函数；</strong></p>
-<p><strong>5、子类的变量和代码块（先声明的先执行）；</strong></p>
-<p><strong>6、子类的构造函数。</strong></p>
+<h4 id="3-LinkedHashSet-如何保证有序和唯一性？"><a href="#3-LinkedHashSet-如何保证有序和唯一性？" class="headerlink" title="3.LinkedHashSet 如何保证有序和唯一性？"></a>3.LinkedHashSet 如何保证有序和唯一性？</h4><p>答：LinkedHashSet 底层数据结构由哈希表和链表组成，链表保证了元素的有序即存储和取出一致，哈希表保证了元素的唯一性。</p>
+<h4 id="4-HashSet-是如何保证数据不可重复的？"><a href="#4-HashSet-是如何保证数据不可重复的？" class="headerlink" title="4.HashSet 是如何保证数据不可重复的？"></a>4.HashSet 是如何保证数据不可重复的？</h4><p>答：HashSet 的底层其实就是 HashMap，只不过 HashSet 实现了 Set 接口并且把数据作为 K 值，而 V 值一直使用一个相同的虚值来保存，我们可以看到源码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> map.put(e, PRESENT)==<span class="keyword">null</span>;<span class="comment">// 调用 HashMap 的 put 方法,PRESENT 是一个至始至终都相同的虚值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由于 HashMap 的 K 值本身就不允许重复，并且在 HashMap 中如果 K/V 相同时，会用新的 V 覆盖掉旧的 V，然后返回旧的 V，那么在 HashSet 中执行这一句话始终会返回一个 false，导致插入失败，这样就保证了数据的不可重复性。</p>
 ]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java中接口和抽象类的分析</title>
@@ -312,6 +145,97 @@ hexo s --port=4100
       <tags>
         <tag>Java</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>今日春分，现在是2022年3月20日星期天，凌晨5:30</title>
+    <url>/2022/03/20/2022-03-20/</url>
+    <content><![CDATA[<p>刚刷到了一个关于什么语言适合做GUI的知乎问题，想到了原生开发在底层性能优化上能做的比混合开发（运行时需预先编译为目标语言）高出很多倍。其实，是一个关于技术选型的话题。由此，我联想到了当前工作中遇到的一些问题和两年前在一家创业公司的工作经历。</p>
+<a id="more"></a>
+<p>当初是面临node server和java server的跨语言服务交互，涉及一些数据处理、实时交互，用户体验优化相关。今天是面临python server整体向java server过渡，其中一个用户界面需要用到两个接口进行完整的交互，一个主接口已经完全迁移到了java，另一个提供参数列表的接口还是python，界面进行了很大幅度的改变，而原先的接口交互逻辑已不适用于新的界面，同时这段时间99%精力都用在了迁移上面，迁移的目标是：100%复制原先的代码逻辑，使得每一个子流程和整体流程的输入输出保持一致。很需要细心，也需要花大量时间来完成工程量，按这个惯性思维，就会尽最大可能去适配原先的逻辑。而当新的需求接入时，很容易会有一种路径依赖，保留了原先的调用方式，反而对于新功能造成一定的冗余，画蛇添足，对于用户体验是一个很大的负面效果。</p>
+<p>另外，python端的分支版本管理做的也很不规范，无法一键回滚到上一个线上版本，测试和线上使用了两个分支，并且最终rebase之后reset到了线上，管理比较混乱，导致不得不进行增量更新以实现回滚的逻辑。小改动还可以这么干，大的代码量没法这么来，风险不可控了。后面得尽快把分支规范化，线上master，开发dev，新功能feature，问题修复bugfix，不要有测试和线上不同分支的巨大分歧，起码从版本、分支上面做到合理化、规范化。</p>
+<p>感悟：<br>现在是一个很难兼顾的状态，不能两全其美。感觉生活在重复上演同类境遇，这一次，愿自己全力以赴，做到最好！</p>
+<p>时常去梳理当前现状，改变现状要有方案先出来。最近一两年接触的都是大量工程上的琐碎问题，技术上倒是没啥太大长进，除了21年新学习了Golang并且实际开发过一个后端项目，对于Python的开发有了更深入的理解与心得体会。对于自己的主开发语言Java，很久没有进行过更深入的学习了。今年的目标是把后端技术体系完整的梳理一遍，总结和分享相关技术，持续输出，争取产生一定的影响力。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+        <tag>思考</tag>
+        <tag>自我审视</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring事务传播机制</title>
+    <url>/2019/10/24/Spring%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD%E6%9C%BA%E5%88%B6/</url>
+    <content><![CDATA[<h4 id="Spring事务传播机制"><a href="#Spring事务传播机制" class="headerlink" title="Spring事务传播机制"></a>Spring事务传播机制</h4><p>1、事务抽象，特性：</p>
+<p>①REQUIRED：如果当前没有事务就<strong>需要</strong>创建一个新事务，否则就加入该事务，最常用也是Spring默认设置</p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">   <span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">       methodB();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="comment">// do something</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>使用默认的事务传播机制，执行过程如下：调用A方法开启一个事务执行方法A的代码，紧接着执行方法B的代码，提交或者回滚事务（如果方法B出现了异常，则方法A最终回滚整体单个事务）</p>
+<p>②SUPPORTS：<strong>支持</strong>当前事务，如果当前存在事务，就加入该事务，否则以非事务执行</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>直接调用方法B不会执行事务</p>
+<p>③MANDATORY：支持当前事务，如果当前存在事务，就加入该事务，否则就<strong>强制</strong>抛出异常</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>直接调用方法B会报错</p>
+<p>④REQUIRES_NEW：创建新事务，无论是否存在事务，都创建新事务</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRES_NEW)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用方法A会开启事务1，执行完A里面的代码后，开启事务2执行方法B里面的代码，提交或回滚事务2，最后提交或回滚事务1。事务1和事务2互不影响</p>
+<p>⑤NOT_SUPPORTED：以非事务方式执行操作，如果当前存在事务，则把当前事务<strong>挂起</strong>（一般很少用到）</p>
+<p>⑥NEVER：以非事务方式执行操作，如果当前存在事务，则抛出异常</p>
+<p>⑦NESTED：嵌套事务：外层的事务如果回滚，会导致内层的事务也回滚，但内层的事务如果回滚仅仅回滚自己的代码</p>
+<h4 id="相关思考："><a href="#相关思考：" class="headerlink" title="相关思考："></a>相关思考：</h4><p>1.有一段业务逻辑，A调用B，如果A出错了仅仅回滚A，不能回滚B，这时必须得用REQUIRES_NEW传播机制，让A和B的事务是不同的两个事务</p>
+<p>2.A调用B，如果出错，B只能回滚自己，而A可以带着B一起回滚，这时得用NESTED来嵌套事务</p>
+<p>Tips: Spring事务隔离级别</p>
+<blockquote>
+<p> Spring默认的是数据库存储引擎的事务隔离级别，mysql默认隔离级别为可重复读</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>事务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring IOC和AOP</title>
+    <url>/2019/07/13/Spring%20IOC%E5%92%8CAOP/</url>
+    <content><![CDATA[<h3 id="一、Spring"><a href="#一、Spring" class="headerlink" title="一、Spring"></a>一、Spring</h3><p>Spring的核心是IoC/DI的容器，它可以帮程序员完成组件之间的依赖关系注入，使得组件之间的依赖达到最小，进而提高组件的重用性，Spring是个低侵入性（invasive）的框架，Spring中的组件并不会意识到它正置身于Spring中，这使得组件可以轻易的从框架中脱离，而几乎不用任何修改，反过来说，组件也可以简单的方式加入至框架中，使得组件甚至框架的整合变得容易。</p>
+<p>Spring最为人重视的另一方面是支持AOP（Aspect-Oriented Programming），然而AOP框架只是Spring支持的一个子框架，说Spring框架是AOP框架并不是一件适当的描述，人们对于新奇的 AOP关注映射至Spring上，使得人们对于Spring的关注集中在它的AOP框架上，虽然有所误解，但也突显了Spring的另一个令人关注的特色。</p>
+<a id="more"></a>
+<p>Spring是一个开源框架，是一个轻量级的控制反转（IOC）和面向切面（AOP）的容器框架。</p>
+<p>（1）通过控制反转（IOC）达到松耦合，IOC也就是把控制权交出去，在使用中直接得到对象</p>
+<p>（2）提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑与系统级服务进行内聚性的开发（例如，商品的入库和出库是业务逻辑，而商品的入库和出库需要统一的日志记录和事务的管理是系统服务，与具体的业务无关，也就是无论业务如何，都要用到系统服务）</p>
+<p>（3）包含并管理应用对象的配置和生命周期，也就是容器的作用</p>
+<p>（4）将简单的组件配置、组合成为复杂的应用，也就是框架的作用</p>
+<p>框架与类库的区别：</p>
+<ul>
+<li><p>框架一般是封装了逻辑、高内聚的，类库则是松散的工具组合</p>
+</li>
+<li><p>框架专注于某一领域，类库则是更通用的</p>
+</li>
+</ul>
+<p><strong>Spring是一系列轻量级Java EE框架的集合：核心容器，Spring上下文，Spring AOP, Spring DAO, Spring ORM, Spring Web, Spring MVC。</strong></p>
+<p>IOC：控制反转，控制权的转移，应用程序本身不负责依赖对象的创建和维护，而是由外部容器负责创建和维护，也就是不显示的进行new创建对象</p>
+<p>DI（依赖注入）：<strong>是控制反转的一种实现方式</strong>，由IOC容器在运行期间，动态地将某种依赖关系注入到对象之中。也就是获得依赖对象的过程由自身管理变为由IOC容器主动注入。通过<a href="https://blog.csdn.net/sinat_38259539/article/details/71799078" target="_blank" rel="noopener">反射机制</a>实现。</p>
+<h4 id="控制反转："><a href="#控制反转：" class="headerlink" title="控制反转："></a>控制反转：</h4><p>控制反转的目的：创建对象并组装对象之间的关系。</p>
+<p>IOC容器初始化时创建一系列对象，并把对象之间的依赖关系通过注入的方式组织起来，当一个类A中有另外一个B，实例化时，先实例化A这个对象，再实例化B这个对象，然后把B这个对象赋值给A，这就是IOC的组装对象，具体如下图</p>
+<p><img src="https://images2017.cnblogs.com/blog/1170065/201708/1170065-20170822171719871-436013565.png" alt="img"></p>
+<p>图解：业务对象进入Spring容器，然后通过配置的元数据，生产出符合我们需要的对象，当我们需要用的时候，直接从Spring容器中取出来用即可，这也就是IOC，应用程序只关心对象的使用，而不关心对象的创建</p>
+<p>在IOC容器中，把所有对象称为Bean，Spring利用Bean来管理这些对象，Spring对于Bean和其他的使用有两种方式，一种是基于xml的配置，一种是注解方式。</p>
+<h4 id="依赖注入："><a href="#依赖注入：" class="headerlink" title="依赖注入："></a>依赖注入：</h4><p>借鉴<a href="http://blog.csdn.net/zhoudaxia/article/details/31763677" target="_blank" rel="noopener">http://blog.csdn.net/zhoudaxia/article/details/31763677</a></p>
+<p>控制反转：把传统上由程序代码直接操控的对象的调用权交给外部容器，通过容器来实现对象组件的装配和管理。所谓的“控制反转”就是组件对象的控制权转移了，从程序代码本身转移到了外部容器。</p>
+<p>实现控制反转的两种方式：依赖注入和依赖查找。</p>
+<p>依赖注入有四种实现方式：</p>
+<p><strong>1.基于接口</strong>：实现特定接口以供外部容器注入所依赖类型的对象，接口中定义要注入依赖对象的方法。</p>
+<p><strong>2.基于setter方法</strong>：实现特定属性的public set方法，来让外部容器调用，以传入所依赖类型的对象。</p>
+<p><strong>3.基于构造函数</strong>：实现特定参数的构造函数，在新建对象时传入所依赖类型的对象。</p>
+<p><strong>4.基于注解</strong>：基于Java的注解功能，在私有变量前加“@Autowired”等注解，不需要显式的定义以上三种代码，便可以让外部容器传入对应的对象。该方案相当于定义了public 的set方法，但是因为没有真正的set方法，从而不会为了实现依赖注入导致暴露了不该暴露的接口（因为set方法只想让容器访问来注入而不希望其他依赖此类的对象访问）。</p>
+<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>面向切面编程，</p>
+]]></content>
   </entry>
   <entry>
     <title>JDK源码分析之Map</title>
@@ -395,177 +319,6 @@ hexo s --port=4100
       </tags>
   </entry>
   <entry>
-    <title>Spring事务传播机制</title>
-    <url>/2019/10/24/Spring%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD%E6%9C%BA%E5%88%B6/</url>
-    <content><![CDATA[<h4 id="Spring事务传播机制"><a href="#Spring事务传播机制" class="headerlink" title="Spring事务传播机制"></a>Spring事务传播机制</h4><p>1、事务抽象，特性：</p>
-<p>①REQUIRED：如果当前没有事务就<strong>需要</strong>创建一个新事务，否则就加入该事务，最常用也是Spring默认设置</p>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">   <span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">       methodB();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="comment">// do something</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<p>使用默认的事务传播机制，执行过程如下：调用A方法开启一个事务执行方法A的代码，紧接着执行方法B的代码，提交或者回滚事务（如果方法B出现了异常，则方法A最终回滚整体单个事务）</p>
-<p>②SUPPORTS：<strong>支持</strong>当前事务，如果当前存在事务，就加入该事务，否则以非事务执行</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>直接调用方法B不会执行事务</p>
-<p>③MANDATORY：支持当前事务，如果当前存在事务，就加入该事务，否则就<strong>强制</strong>抛出异常</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>直接调用方法B会报错</p>
-<p>④REQUIRES_NEW：创建新事务，无论是否存在事务，都创建新事务</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRES_NEW)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>调用方法A会开启事务1，执行完A里面的代码后，开启事务2执行方法B里面的代码，提交或回滚事务2，最后提交或回滚事务1。事务1和事务2互不影响</p>
-<p>⑤NOT_SUPPORTED：以非事务方式执行操作，如果当前存在事务，则把当前事务<strong>挂起</strong>（一般很少用到）</p>
-<p>⑥NEVER：以非事务方式执行操作，如果当前存在事务，则抛出异常</p>
-<p>⑦NESTED：嵌套事务：外层的事务如果回滚，会导致内层的事务也回滚，但内层的事务如果回滚仅仅回滚自己的代码</p>
-<h4 id="相关思考："><a href="#相关思考：" class="headerlink" title="相关思考："></a>相关思考：</h4><p>1.有一段业务逻辑，A调用B，如果A出错了仅仅回滚A，不能回滚B，这时必须得用REQUIRES_NEW传播机制，让A和B的事务是不同的两个事务</p>
-<p>2.A调用B，如果出错，B只能回滚自己，而A可以带着B一起回滚，这时得用NESTED来嵌套事务</p>
-<p>Tips: Spring事务隔离级别</p>
-<blockquote>
-<p> Spring默认的是数据库存储引擎的事务隔离级别，mysql默认隔离级别为可重复读</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>事务</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring IOC和AOP</title>
-    <url>/2019/07/13/Spring%20IOC%E5%92%8CAOP/</url>
-    <content><![CDATA[<h3 id="一、Spring"><a href="#一、Spring" class="headerlink" title="一、Spring"></a>一、Spring</h3><p>Spring的核心是IoC/DI的容器，它可以帮程序员完成组件之间的依赖关系注入，使得组件之间的依赖达到最小，进而提高组件的重用性，Spring是个低侵入性（invasive）的框架，Spring中的组件并不会意识到它正置身于Spring中，这使得组件可以轻易的从框架中脱离，而几乎不用任何修改，反过来说，组件也可以简单的方式加入至框架中，使得组件甚至框架的整合变得容易。</p>
-<p>Spring最为人重视的另一方面是支持AOP（Aspect-Oriented Programming），然而AOP框架只是Spring支持的一个子框架，说Spring框架是AOP框架并不是一件适当的描述，人们对于新奇的 AOP关注映射至Spring上，使得人们对于Spring的关注集中在它的AOP框架上，虽然有所误解，但也突显了Spring的另一个令人关注的特色。</p>
-<a id="more"></a>
-<p>Spring是一个开源框架，是一个轻量级的控制反转（IOC）和面向切面（AOP）的容器框架。</p>
-<p>（1）通过控制反转（IOC）达到松耦合，IOC也就是把控制权交出去，在使用中直接得到对象</p>
-<p>（2）提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑与系统级服务进行内聚性的开发（例如，商品的入库和出库是业务逻辑，而商品的入库和出库需要统一的日志记录和事务的管理是系统服务，与具体的业务无关，也就是无论业务如何，都要用到系统服务）</p>
-<p>（3）包含并管理应用对象的配置和生命周期，也就是容器的作用</p>
-<p>（4）将简单的组件配置、组合成为复杂的应用，也就是框架的作用</p>
-<p>框架与类库的区别：</p>
-<ul>
-<li><p>框架一般是封装了逻辑、高内聚的，类库则是松散的工具组合</p>
-</li>
-<li><p>框架专注于某一领域，类库则是更通用的</p>
-</li>
-</ul>
-<p><strong>Spring是一系列轻量级Java EE框架的集合：核心容器，Spring上下文，Spring AOP, Spring DAO, Spring ORM, Spring Web, Spring MVC。</strong></p>
-<p>IOC：控制反转，控制权的转移，应用程序本身不负责依赖对象的创建和维护，而是由外部容器负责创建和维护，也就是不显示的进行new创建对象</p>
-<p>DI（依赖注入）：<strong>是控制反转的一种实现方式</strong>，由IOC容器在运行期间，动态地将某种依赖关系注入到对象之中。也就是获得依赖对象的过程由自身管理变为由IOC容器主动注入。通过<a href="https://blog.csdn.net/sinat_38259539/article/details/71799078" target="_blank" rel="noopener">反射机制</a>实现。</p>
-<h4 id="控制反转："><a href="#控制反转：" class="headerlink" title="控制反转："></a>控制反转：</h4><p>控制反转的目的：创建对象并组装对象之间的关系。</p>
-<p>IOC容器初始化时创建一系列对象，并把对象之间的依赖关系通过注入的方式组织起来，当一个类A中有另外一个B，实例化时，先实例化A这个对象，再实例化B这个对象，然后把B这个对象赋值给A，这就是IOC的组装对象，具体如下图</p>
-<p><img src="https://images2017.cnblogs.com/blog/1170065/201708/1170065-20170822171719871-436013565.png" alt="img"></p>
-<p>图解：业务对象进入Spring容器，然后通过配置的元数据，生产出符合我们需要的对象，当我们需要用的时候，直接从Spring容器中取出来用即可，这也就是IOC，应用程序只关心对象的使用，而不关心对象的创建</p>
-<p>在IOC容器中，把所有对象称为Bean，Spring利用Bean来管理这些对象，Spring对于Bean和其他的使用有两种方式，一种是基于xml的配置，一种是注解方式。</p>
-<h4 id="依赖注入："><a href="#依赖注入：" class="headerlink" title="依赖注入："></a>依赖注入：</h4><p>借鉴<a href="http://blog.csdn.net/zhoudaxia/article/details/31763677" target="_blank" rel="noopener">http://blog.csdn.net/zhoudaxia/article/details/31763677</a></p>
-<p>控制反转：把传统上由程序代码直接操控的对象的调用权交给外部容器，通过容器来实现对象组件的装配和管理。所谓的“控制反转”就是组件对象的控制权转移了，从程序代码本身转移到了外部容器。</p>
-<p>实现控制反转的两种方式：依赖注入和依赖查找。</p>
-<p>依赖注入有四种实现方式：</p>
-<p><strong>1.基于接口</strong>：实现特定接口以供外部容器注入所依赖类型的对象，接口中定义要注入依赖对象的方法。</p>
-<p><strong>2.基于setter方法</strong>：实现特定属性的public set方法，来让外部容器调用，以传入所依赖类型的对象。</p>
-<p><strong>3.基于构造函数</strong>：实现特定参数的构造函数，在新建对象时传入所依赖类型的对象。</p>
-<p><strong>4.基于注解</strong>：基于Java的注解功能，在私有变量前加“@Autowired”等注解，不需要显式的定义以上三种代码，便可以让外部容器传入对应的对象。该方案相当于定义了public 的set方法，但是因为没有真正的set方法，从而不会为了实现依赖注入导致暴露了不该暴露的接口（因为set方法只想让容器访问来注入而不希望其他依赖此类的对象访问）。</p>
-<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>面向切面编程，</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Spring设计模式</title>
-    <url>/2019/10/23/Spring%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h3 id="Spring设计模式"><a href="#Spring设计模式" class="headerlink" title="Spring设计模式"></a>Spring设计模式</h3><h4 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h4><p>spring ioc的核心设计模式的思想体现，本身就是一个大的工厂，把所有的bean实例都放在了spring 容器里（大工厂），如果要使用bean就直接找spring容器就好了，自己不用创建对象。</p>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyController</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 原先每次都要自己new一个</span></span><br><span class="line">	<span class="keyword">private</span> MyService mySerice = <span class="keyword">new</span> MyService();</span><br><span class="line">    <span class="comment">// 使用spring @Autowire注解自动注入一个，实际底层是依靠的工厂模式去创建的</span></span><br><span class="line">    <span class="keyword">private</span> MyService mySerice = MyServiceFactory.getMyService();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyServiceFactory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MyService <span class="title">getMyService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> MyServiceImpl();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><p>spring默认对每个bean都走的单例模式，确保一个类在系统运行期间只有一个实例对象，只有一个bean</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyService</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Myservice myService; <span class="comment">// 禁止指令重排序</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> stativ MyService <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (myService == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">synchronized</span>(MyService<span class="class">.<span class="keyword">class</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (myService == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    myService = <span class="keyword">new</span> MyService();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">return</span> myService;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h4><p>AOP的核心模式，如果要对一些类的方法切入一些增强的代码，会创建一些动态代理的对象，让你对那些目标对象的访问，先经过动态代理对象，动态代理对象先执行一些增强的代码，再调用你的目标对象。在设计模式里，就是代理模式的体现和运用，实现一些增强的访问。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring容器的启动过程及生命周期</title>
-    <url>/2019/10/08/Spring%E5%AE%B9%E5%99%A8%E7%9A%84%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B%E5%8F%8A%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
-    <content><![CDATA[<h3 id="Spring容器的启动过程及生命周期"><a href="#Spring容器的启动过程及生命周期" class="headerlink" title="Spring容器的启动过程及生命周期"></a>Spring容器的启动过程及生命周期</h3><h3 id="Spring-Container启动过程"><a href="#Spring-Container启动过程" class="headerlink" title="Spring Container启动过程"></a>Spring Container启动过程</h3><blockquote>
-<p>创建和配置实例</p>
-<p>刷新实例</p>
-</blockquote>
-<h1 id="Spring容器的启动全流程"><a href="#Spring容器的启动全流程" class="headerlink" title="Spring容器的启动全流程"></a>Spring容器的启动全流程</h1><p>Spring容器的启动流程如下，这是我在看源码过程中自己总结的流程图，如有错误，还望评论区指点：</p>
-<p><img src="https://img2020.cnblogs.com/blog/1771072/202009/1771072-20200909164014978-2077560080.png" alt="img"></p>
-<p>接下来附上源码：</p>
-<blockquote>
-<p>为什么是refresh方法命名，而不是init命名呢？</p>
-<p>其实，在ApplicaitonContext建立起来之后，可以通过refresh进行重建，将原来的ac销毁，重新执行一次初始化操作，用refresh更加贴切。</p>
-</blockquote>
-<p>Bean的创建和销毁</p>
-<ul>
-<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#dogetbean全流程" target="_blank" rel="noopener">doGetBean全流程</a></li>
-<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#createbean" target="_blank" rel="noopener">createBean</a></li>
-<li>doCreateBean<ul>
-<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#createbeaninstance-创建实例" target="_blank" rel="noopener">createBeanInstance 创建实例</a></li>
-<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#populatebean-填充属性" target="_blank" rel="noopener">populateBean 填充属性</a></li>
-<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#initializebean-回调方法" target="_blank" rel="noopener">initializeBean 回调方法</a></li>
-</ul>
-</li>
-</ul>
-<a id="more"></a>
-<h3 id="循环依赖"><a href="#循环依赖" class="headerlink" title="循环依赖"></a>循环依赖</h3><p>N个类循环(嵌套)引，即N个Bean互相引用对方，最终形成<code>闭环</code>，表示对象之间的相互依赖关系</p>
-<p>如果在日常开发中我们用new对象的方式，若构造函数之间发生这种<strong>循环依赖</strong>的话，程序会在运行时一直循环调用<strong>最终导致内存溢出</strong>，StackOverflowError</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        B b = <span class="keyword">new</span> B();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        A a = <span class="keyword">new</span> A();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>无法解决构造器/构造方法的循环依赖，因为一开始就实例化了，初始化</p>
-<p>参考文章 <a href="https://cloud.tencent.com/developer/article/1497692" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1497692</a></p>
-<p>对于Spring解决循环依赖的认识</p>
-<p>// 循环依赖：调用某实例对象的方法时，方法内部又涉及到另一个类的实例化，而B当中又依赖了A，所以这时先返回一个半成品的B，等A完成了实例化之后，再返回B的实例化，最终初始化</p>
-<h5 id="1、构造器注入循环依赖"><a href="#1、构造器注入循环依赖" class="headerlink" title="1、构造器注入循环依赖"></a>1、构造器注入循环依赖</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">(B b)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">(A a)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>结果：项目启动失败抛出异常<code>BeanCurrentlyInCreationException</code></p>
-<p>构造器注入构成的循环依赖，此种循环依赖方式<strong>是无法解决的</strong>，只能抛出<code>BeanCurrentlyInCreationException</code>异常表示循环依赖。这也是构造器注入的最大劣势</p>
-<p><code>根本原因</code>：Spring解决循环依赖依靠的是Bean的“中间态”这个概念，而这个中间态指的是<code>已经实例化</code>，但还没初始化的状态。而构造器是完成实例化的东东（不存在中间态），所以构造器的循环依赖无法解决</p>
-<h5 id="2、field属性注入（setter方法注入）循环依赖"><a href="#2、field属性注入（setter方法注入）循环依赖" class="headerlink" title="2、field属性注入（setter方法注入）循环依赖"></a>2、field属性注入（setter方法注入）循环依赖</h5><p>这种方式是我们<strong>最最最最</strong>为常用的依赖注入方式（所以猜都能猜到它肯定不会有问题啦）：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> B b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> A a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>结果：项目启动成功，能够正常work</strong></p>
-<h5 id="3、prototype-field属性注入循环依赖"><a href="#3、prototype-field属性注入循环依赖" class="headerlink" title="3、prototype field属性注入循环依赖"></a>3、<code>prototype</code> field属性注入循环依赖</h5><p><code>prototype</code>在平时使用情况较少，但是也并不是不会使用到，因此此种方式也需要引起重视。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span><br><span class="line">@Service</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private B b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span><br><span class="line">@Service</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private A a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>结果：<strong>需要注意的是</strong>本例中<strong>启动时是不会报错的</strong>（因为非单例Bean<code>默认</code>不会初始化，而是使用时才会初始化），所以很简单咱们只需要手动<code>getBean()</code>或者在一个单例Bean内<code>@Autowired</code>一下它即可</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在单例Bean内注入</span></span><br><span class="line">    @Autowired</span><br><span class="line">    private A a;</span><br></pre></td></tr></table></figure>
-<p>这样子启动就报错：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'mytest.TestSpringBean'</span>: Unsatisfied dependency expressed through field <span class="string">'a'</span>; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'a'</span>: Unsatisfied dependency expressed through field <span class="string">'b'</span>; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'b'</span>: Unsatisfied dependency expressed through field <span class="string">'a'</span>; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'a'</span>: Requested bean is currently <span class="keyword">in</span> creation: Is there an unresolvable circular reference?</span><br><span class="line"></span><br><span class="line">	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:<span class="number">596</span>)</span><br><span class="line">	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:<span class="number">90</span>)</span><br><span class="line">	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:<span class="number">374</span>)</span><br></pre></td></tr></table></figure>
-<p>如何解决？？？ 可能有的小伙伴看到网上有说使用<code>@Lazy</code>注解解决：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@Lazy</span><br><span class="line">@Autowired</span><br><span class="line">private A a;</span><br></pre></td></tr></table></figure>
-<p>此处负责任的告诉你这样是解决不了问题的(<strong>可能会掩盖问题</strong>)，<code>@Lazy</code>只是延迟初始化而已，当你真正使用到它（初始化）的时候，依旧会报如上异常。</p>
-<p>对于Spring循环依赖的情况总结如下：</p>
-<ol>
-<li>不能解决的情况： 1. 构造器注入循环依赖 2. <code>prototype</code> field属性注入循环依赖</li>
-<li>能解决的情况： 1. field属性注入（setter方法注入）循环依赖</li>
-</ol>
-<h2 id="Spring解决循环依赖的原理分析"><a href="#Spring解决循环依赖的原理分析" class="headerlink" title="Spring解决循环依赖的原理分析"></a>Spring解决循环依赖的原理分析</h2><p><strong><code>Spring的循环依赖的理论依据基于Java的引用传递</code></strong>，当获得对象的引用时，<strong>对象的属性是可以延后设置的</strong>。（但是构造器必须是在获取引用之前，毕竟你的引用是靠构造器给你生成的，儿子能先于爹出生？哈哈）</p>
-<h4 id="Spring创建Bean的流程"><a href="#Spring创建Bean的流程" class="headerlink" title="Spring创建Bean的流程"></a>Spring创建Bean的流程</h4><p>首先需要了解是Spring它创建Bean的流程，我把它的大致调用栈绘图如下： </p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-6158873/oepgq3cnb0.png?imageView2/2/w/1620" alt></p>
-<p> 对Bean的创建最为核心三个方法解释如下：</p>
-<ul>
-<li><code>createBeanInstance</code>：实例化，其实也就是调用对象的<strong>构造方法</strong>实例化对象</li>
-<li><code>populateBean</code>：填充属性，这一步主要是对bean的依赖属性进行注入(<code>@Autowired</code>)</li>
-<li><code>initializeBean</code>：回到一些形如<code>initMethod</code>、<code>InitializingBean</code>等方法</li>
-</ul>
-<p>从对<code>单例Bean</code>的初始化可以看出，循环依赖主要发生在<strong>第二步（populateBean）</strong>，也就是field属性注入的处理。</p>
-<h4 id="Spring容器的-39-三级缓存-39"><a href="#Spring容器的-39-三级缓存-39" class="headerlink" title="Spring容器的&#39;三级缓存&#39;"></a>Spring容器的<code>&#39;三级缓存&#39;</code></h4><p>在Spring容器的整个声明周期中，单例Bean有且仅有一个对象。这很容易让人想到可以用缓存来加速访问。 从源码中也可以看出Spring大量运用了Cache的手段，在循环依赖问题的解决过程中甚至不惜使用了“三级缓存”，这也便是它设计的精妙之处~</p>
-<p><code>三级缓存</code>其实它更像是Spring容器工厂的内的<code>术语</code>，采用三级缓存模式来解决循环依赖问题，这三级缓存分别指：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultSingletonBeanRegistry</span> <span class="keyword">extends</span> <span class="title">SimpleAliasRegistry</span> <span class="keyword">implements</span> <span class="title">SingletonBeanRegistry</span> </span>&#123;</span><br><span class="line">	...</span><br><span class="line">	<span class="comment">// 从上至下 分表代表这“三级缓存”</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; singletonObjects = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">256</span>); <span class="comment">//一级缓存</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; earlySingletonObjects = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>); <span class="comment">// 二级缓存</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, ObjectFactory&lt;?&gt;&gt; singletonFactories = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>); <span class="comment">// 三级缓存</span></span><br><span class="line">	...</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/** Names of beans that are currently in creation. */</span></span><br><span class="line">	<span class="comment">// 这个缓存也十分重要：它表示bean创建过程中都会在里面呆着~</span></span><br><span class="line">	<span class="comment">// 它在Bean开始创建时放值，创建完成时会将其移出~</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;String&gt; singletonsCurrentlyInCreation = Collections.newSetFromMap(<span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">16</span>));</span><br><span class="line"></span><br><span class="line">	<span class="comment">/** Names of beans that have already been created at least once. */</span></span><br><span class="line">	<span class="comment">// 当这个Bean被创建完成后，会标记为这个 注意：这里是set集合 不会重复</span></span><br><span class="line">	<span class="comment">// 至少被创建了一次的  都会放进这里~~~~</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;String&gt; alreadyCreated = Collections.newSetFromMap(<span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">256</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注：<code>AbstractBeanFactory</code>继承自<code>DefaultSingletonBeanRegistry</code>~</p>
-<ol>
-<li><code>singletonObjects</code>：用于存放完全初始化好的 bean，<strong>从该缓存中取出的 bean 可以直接使用</strong></li>
-<li><code>earlySingletonObjects</code>：提前曝光的单例对象的cache，存放原始的 bean 对象（尚未填充属性），用于解决循环依赖</li>
-<li><code>singletonFactories</code>：单例对象工厂的cache，存放 bean 工厂对象，用于解决循环依赖</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>String类相关知识点</title>
     <url>/2020/08/14/String%E7%B1%BB%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<h3 id="Java语言中String类是否可以被继承？"><a href="#Java语言中String类是否可以被继承？" class="headerlink" title="Java语言中String类是否可以被继承？"></a>Java语言中String类是否可以被继承？</h3><p>在Java中String类的定义是</p>
@@ -598,137 +351,6 @@ hexo s --port=4100
         <tag>Java</tag>
         <tag>基础知识</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Vue前端开发环境</title>
-    <url>/2019/07/20/Vue%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th style="text-align:left">技术</th>
-<th>版本</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">node</td>
-<td>v10.16.0</td>
-<td>node编译环境</td>
-</tr>
-<tr>
-<td style="text-align:left">npm</td>
-<td>6.9.0</td>
-<td>npm包管理工具</td>
-</tr>
-<tr>
-<td style="text-align:left">Vue</td>
-<td>2.9.6</td>
-<td>前端框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Vue-router</td>
-<td>3.0.2</td>
-<td>前端路由框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Vuex</td>
-<td>3.1.0</td>
-<td>vue状态管理组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Vue-cli</td>
-<td>————</td>
-<td>Vue脚手架</td>
-</tr>
-<tr>
-<td style="text-align:left">Element-ui</td>
-<td>2.7.0</td>
-<td>前端UI框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Echarts</td>
-<td>4.2.1</td>
-<td>数据可视化框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Uni-app</td>
-<td>————</td>
-<td>跨平台前端框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Mockjs</td>
-<td>1.0.1-beta3</td>
-<td>模拟后端数据</td>
-</tr>
-<tr>
-<td style="text-align:left">Axios</td>
-<td>0.18.0</td>
-<td>基于Promise的Http库</td>
-</tr>
-<tr>
-<td style="text-align:left">Js-cookie</td>
-<td>2.2.0</td>
-<td>Cookie组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Jsonlint</td>
-<td>1.6.3</td>
-<td>Json解析组件</td>
-</tr>
-<tr>
-<td style="text-align:left">screenfull</td>
-<td>4.2.0</td>
-<td>全屏组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Xlsx</td>
-<td>0.14.1</td>
-<td>Excel表导出组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Webpack</td>
-<td>————</td>
-<td>模板打包器</td>
-</tr>
-</tbody>
-</table>
-<a id="more"></a>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 安装vue</span><br><span class="line"><span class="meta">$</span> npm install vue@2.1.6</span><br><span class="line"><span class="meta">#</span> 全局安装 vue-cli</span><br><span class="line"><span class="meta">$</span> npm install --global vue-cli</span><br><span class="line"><span class="meta">#</span> 创建一个基于 webpack 模板的新项目my-project</span><br><span class="line"><span class="meta">$</span> vue init webpack my-project</span><br><span class="line"><span class="meta">#</span> 进入项目目录</span><br><span class="line"><span class="meta">$</span> cd my-project</span><br><span class="line"><span class="meta">#</span> 安装依赖</span><br><span class="line"><span class="meta">$</span> npm install</span><br><span class="line"><span class="meta">#</span> 运行项目</span><br><span class="line"><span class="meta">$</span> npm run dev</span><br><span class="line"><span class="meta">#</span> 卸载旧版本，在安装新版本。</span><br><span class="line">npm uninstall vue-cli -g </span><br><span class="line">npm install --global vue-cli</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2017/07/14/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><br><a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Linux服务端开发环境部署及管理（一）</title>
-    <url>/2018/04/28/Linux%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E5%8F%8A%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="Linux服务端开发环境部署及管理（一）"><a href="#Linux服务端开发环境部署及管理（一）" class="headerlink" title="Linux服务端开发环境部署及管理（一）"></a>Linux服务端开发环境部署及管理（一）</h3><h5 id="Centos7-2-x64环境下Java-JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）"><a href="#Centos7-2-x64环境下Java-JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）" class="headerlink" title="Centos7.2 x64环境下Java JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）"></a>Centos7.2 x64环境下Java JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）</h5><p>腾讯云是个好东西，对于Linux平台不是很熟悉的人而言，开始学习时候很方便，提供各种方便的在线管理方式，如重装系统等。由于版本升级和系统兼容问题，开发中遇到的问题都很琐碎，大概是码农的日常了吧。</p>
-<ul>
-<li>官网下载JDK以后，上传至Linux下，安装并设置环境变量。</li>
-<li>java -version</li>
-<li>javac</li>
-<li>MySQL安装，由于MariaDB的出现，经常会出现系统兼容问题，据说在Centos7.0以后的版本中MySQL都不太兼容，所以需要特别注意。</li>
-<li>首先，需要先卸载系统预装的MariaDB，然后下载安装MySQL</li>
-<li>在Linux环境下，基本都是命令行操作，所以为了方便起见，建议学习过程中多多动手，多多总结。</li>
-<li>Tomcat，类似，安装完后，需要设置环境变量。</li>
-<li>启动Tomcat后，可以通过访问外网IP:端口号的方式检验是否安装成功。</li>
-</ul>
-]]></content>
   </entry>
   <entry>
     <title>idea快捷键使用整理</title>
@@ -899,6 +521,286 @@ hexo s --port=4100
       </tags>
   </entry>
   <entry>
+    <title>Linux服务端开发环境部署及管理（一）</title>
+    <url>/2018/04/28/Linux%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E5%8F%8A%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="Linux服务端开发环境部署及管理（一）"><a href="#Linux服务端开发环境部署及管理（一）" class="headerlink" title="Linux服务端开发环境部署及管理（一）"></a>Linux服务端开发环境部署及管理（一）</h3><h5 id="Centos7-2-x64环境下Java-JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）"><a href="#Centos7-2-x64环境下Java-JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）" class="headerlink" title="Centos7.2 x64环境下Java JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）"></a>Centos7.2 x64环境下Java JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）</h5><p>腾讯云是个好东西，对于Linux平台不是很熟悉的人而言，开始学习时候很方便，提供各种方便的在线管理方式，如重装系统等。由于版本升级和系统兼容问题，开发中遇到的问题都很琐碎，大概是码农的日常了吧。</p>
+<ul>
+<li>官网下载JDK以后，上传至Linux下，安装并设置环境变量。</li>
+<li>java -version</li>
+<li>javac</li>
+<li>MySQL安装，由于MariaDB的出现，经常会出现系统兼容问题，据说在Centos7.0以后的版本中MySQL都不太兼容，所以需要特别注意。</li>
+<li>首先，需要先卸载系统预装的MariaDB，然后下载安装MySQL</li>
+<li>在Linux环境下，基本都是命令行操作，所以为了方便起见，建议学习过程中多多动手，多多总结。</li>
+<li>Tomcat，类似，安装完后，需要设置环境变量。</li>
+<li>启动Tomcat后，可以通过访问外网IP:端口号的方式检验是否安装成功。</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>Vuforia开发入门一准备工作</title>
+    <url>/2018/04/03/Vuforia%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%80%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="Vuforia开发入门"><a href="#Vuforia开发入门" class="headerlink" title="Vuforia开发入门"></a>Vuforia开发入门</h2><h3 id="1、开发环境配置"><a href="#1、开发环境配置" class="headerlink" title="1、开发环境配置"></a>1、开发环境配置</h3><ul>
+<li>a) Android 环境配置 </li>
+<li>b) Unity3D 下载和安装 <h3 id="2、资源下载"><a href="#2、资源下载" class="headerlink" title="2、资源下载"></a>2、资源下载</h3></li>
+<li>a) <a href="https://developer.vuforia.com/" target="_blank" rel="noopener">官网注册</a></li>
+<li>b) <a href="https://developer.vuforia.com/downloads/sdk" target="_blank" rel="noopener">Samples资源下载</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>AR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring设计模式</title>
+    <url>/2019/10/23/Spring%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h3 id="Spring设计模式"><a href="#Spring设计模式" class="headerlink" title="Spring设计模式"></a>Spring设计模式</h3><h4 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h4><p>spring ioc的核心设计模式的思想体现，本身就是一个大的工厂，把所有的bean实例都放在了spring 容器里（大工厂），如果要使用bean就直接找spring容器就好了，自己不用创建对象。</p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyController</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 原先每次都要自己new一个</span></span><br><span class="line">	<span class="keyword">private</span> MyService mySerice = <span class="keyword">new</span> MyService();</span><br><span class="line">    <span class="comment">// 使用spring @Autowire注解自动注入一个，实际底层是依靠的工厂模式去创建的</span></span><br><span class="line">    <span class="keyword">private</span> MyService mySerice = MyServiceFactory.getMyService();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyServiceFactory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MyService <span class="title">getMyService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> MyServiceImpl();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><p>spring默认对每个bean都走的单例模式，确保一个类在系统运行期间只有一个实例对象，只有一个bean</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyService</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Myservice myService; <span class="comment">// 禁止指令重排序</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> stativ MyService <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (myService == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">synchronized</span>(MyService<span class="class">.<span class="keyword">class</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (myService == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    myService = <span class="keyword">new</span> MyService();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">return</span> myService;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h4><p>AOP的核心模式，如果要对一些类的方法切入一些增强的代码，会创建一些动态代理的对象，让你对那些目标对象的访问，先经过动态代理对象，动态代理对象先执行一些增强的代码，再调用你的目标对象。在设计模式里，就是代理模式的体现和运用，实现一些增强的访问。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java核心技术001</title>
+    <url>/2018/08/02/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF001/</url>
+    <content><![CDATA[<h3 id="Java八大基本类型"><a href="#Java八大基本类型" class="headerlink" title="Java八大基本类型"></a>Java八大基本类型</h3><p>8种基本数据类型，其中4种整型，2种浮点类型，1种用于表示Unicode编码的字符单元的字符类型和1种用于表示真值的boolean类型。</p>
+<p>int / short / long / byte / float / double / char / boolean</p>
+<a id="more"></a>
+<p>1字节=8位，即1byte = 8bit，有符号整数，取值范围要先去掉符号位再计算数值大小</p>
+<ul>
+<li>整型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储需求</th>
+<th>bit数</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>4 byte</td>
+<td>32</td>
+<td>-2^31 ~ 2^31-1（有符号整数）</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2 byte</td>
+<td>16</td>
+<td>-2^15 ~ 2^15-1</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8 byte</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>byte</td>
+<td>1 byte</td>
+<td>8</td>
+<td>－128～127</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>浮点型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储</th>
+<th>bit</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>4 byte</td>
+<td>32</td>
+<td>float类型的数值有一个后缀F(例如：3.14F)</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8 byte</td>
+<td>64</td>
+<td>没有后缀F的浮点数值(如3.14)默认为double类型</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>char类型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储</th>
+<th>bit</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char</td>
+<td>2 byte</td>
+<td>16</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>boolean类型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储</th>
+<th>bit</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>1 byte</td>
+<td>8</td>
+<td>false、true</td>
+</tr>
+</tbody>
+</table>
+<p>Java有一个能够表示任意精度的数学包，通常称为“大数值”(big number)。虽然被称为大数值，但它并不是一种Java类型，而是一个Java对象。如果基本的整数和浮点数精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger，BigDecimal。这两个类可以处理包含<strong>任意长度数字序列</strong>的数值。BigInteger类实现了任意精度的整数运算，BigDecimal实现了任意精度的浮点数运算。具体的用法可以参见Java API。</p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><h4 id="long转int"><a href="#long转int" class="headerlink" title="long转int"></a>long转int</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">long</span> a = <span class="number">100L</span>;</span><br><span class="line"><span class="keyword">int</span> b = (<span class="keyword">int</span>)a;</span><br></pre></td></tr></table></figure>
+<h3 id="反射原理"><a href="#反射原理" class="headerlink" title="反射原理"></a>反射原理</h3><p>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法；这种动态获取的以及动态调用对象的方法的功能称为Java的反射机制。</p>
+<p>Java学习之反射机制及应用场景 - 对你说早安 - 博客园<a href="https://www.cnblogs.com/lzfsuifeng/p/9590705.html" target="_blank" rel="noopener">https://www.cnblogs.com/lzfsuifeng/p/9590705.html</a></p>
+<h3 id="反射机制提供了哪些功能？"><a href="#反射机制提供了哪些功能？" class="headerlink" title="反射机制提供了哪些功能？"></a>反射机制提供了哪些功能？</h3><ul>
+<li>在运行时判定任意一个对象所属的类</li>
+<li>在运行时判定任意一个类所具有的成员变量和方法；</li>
+<li>在运行时构造任意一个类的对象；</li>
+<li>在运行时调用任意一个对象的方法；</li>
+<li>生成动态代理；</li>
+</ul>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>Java运行时的原理？</p>
+<p>动态代理</p>
+<ul>
+<li>逆向代码 ，例如反编译</li>
+<li>与注解相结合的框架 例如Retrofit</li>
+<li>单纯的反射机制应用框架 例如EventBus 2.x</li>
+<li>动态生成类框架 例如Gson</li>
+</ul>
+<h3 id="反射机制的优缺点："><a href="#反射机制的优缺点：" class="headerlink" title="反射机制的优缺点："></a>反射机制的优缺点：</h3><p> <strong>优点：</strong></p>
+<p>  运行期类型的判断，动态类加载，动态代理使用反射。</p>
+<p> <strong>缺点：</strong></p>
+<p>  性能是一个问题，反射相当于一系列解释操作，通知jvm要做的事情，性能比直接的java代码要慢很多。</p>
+<p>Java中的静态变量和静态代码块是在类加载的时候就执行的，实例化对象时，先声明并实例化变量再执行构造函数。如果子类继承父类，则先执行父类的静态变量和静态代码块，再执行子类的静态变量和静态代码块。同样，接着在执行父类和子类非静态代码块和构造函数。</p>
+<p>注意：（静态）变量和（静态）代码块的也是有执行顺序的，与代码书写的顺序一致。在（静态）代码块中可以使用（静态）变量，但是被使用的（静态）变量必须在（静态）代码块前面声明。</p>
+<p> 最后给出执行步骤：</p>
+<p><strong>1、父类静态变量和静态代码块（先声明的先执行）；</strong></p>
+<p><strong>2、子类静态变量和静态代码块（先声明的先执行）；</strong></p>
+<p><strong>3、父类的变量和代码块（先声明的先执行）；</strong></p>
+<p><strong>4、父类的构造函数；</strong></p>
+<p><strong>5、子类的变量和代码块（先声明的先执行）；</strong></p>
+<p><strong>6、子类的构造函数。</strong></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring容器的启动过程及生命周期</title>
+    <url>/2019/10/08/Spring%E5%AE%B9%E5%99%A8%E7%9A%84%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B%E5%8F%8A%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
+    <content><![CDATA[<h3 id="Spring容器的启动过程及生命周期"><a href="#Spring容器的启动过程及生命周期" class="headerlink" title="Spring容器的启动过程及生命周期"></a>Spring容器的启动过程及生命周期</h3><h3 id="Spring-Container启动过程"><a href="#Spring-Container启动过程" class="headerlink" title="Spring Container启动过程"></a>Spring Container启动过程</h3><blockquote>
+<p>创建和配置实例</p>
+<p>刷新实例</p>
+</blockquote>
+<h1 id="Spring容器的启动全流程"><a href="#Spring容器的启动全流程" class="headerlink" title="Spring容器的启动全流程"></a>Spring容器的启动全流程</h1><p>Spring容器的启动流程如下，这是我在看源码过程中自己总结的流程图，如有错误，还望评论区指点：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1771072/202009/1771072-20200909164014978-2077560080.png" alt="img"></p>
+<p>接下来附上源码：</p>
+<blockquote>
+<p>为什么是refresh方法命名，而不是init命名呢？</p>
+<p>其实，在ApplicaitonContext建立起来之后，可以通过refresh进行重建，将原来的ac销毁，重新执行一次初始化操作，用refresh更加贴切。</p>
+</blockquote>
+<p>Bean的创建和销毁</p>
+<ul>
+<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#dogetbean全流程" target="_blank" rel="noopener">doGetBean全流程</a></li>
+<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#createbean" target="_blank" rel="noopener">createBean</a></li>
+<li>doCreateBean<ul>
+<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#createbeaninstance-创建实例" target="_blank" rel="noopener">createBeanInstance 创建实例</a></li>
+<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#populatebean-填充属性" target="_blank" rel="noopener">populateBean 填充属性</a></li>
+<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#initializebean-回调方法" target="_blank" rel="noopener">initializeBean 回调方法</a></li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="循环依赖"><a href="#循环依赖" class="headerlink" title="循环依赖"></a>循环依赖</h3><p>N个类循环(嵌套)引，即N个Bean互相引用对方，最终形成<code>闭环</code>，表示对象之间的相互依赖关系</p>
+<p>如果在日常开发中我们用new对象的方式，若构造函数之间发生这种<strong>循环依赖</strong>的话，程序会在运行时一直循环调用<strong>最终导致内存溢出</strong>，StackOverflowError</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        B b = <span class="keyword">new</span> B();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        A a = <span class="keyword">new</span> A();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>无法解决构造器/构造方法的循环依赖，因为一开始就实例化了，初始化</p>
+<p>参考文章 <a href="https://cloud.tencent.com/developer/article/1497692" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1497692</a></p>
+<p>对于Spring解决循环依赖的认识</p>
+<p>// 循环依赖：调用某实例对象的方法时，方法内部又涉及到另一个类的实例化，而B当中又依赖了A，所以这时先返回一个半成品的B，等A完成了实例化之后，再返回B的实例化，最终初始化</p>
+<h5 id="1、构造器注入循环依赖"><a href="#1、构造器注入循环依赖" class="headerlink" title="1、构造器注入循环依赖"></a>1、构造器注入循环依赖</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">(B b)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">(A a)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果：项目启动失败抛出异常<code>BeanCurrentlyInCreationException</code></p>
+<p>构造器注入构成的循环依赖，此种循环依赖方式<strong>是无法解决的</strong>，只能抛出<code>BeanCurrentlyInCreationException</code>异常表示循环依赖。这也是构造器注入的最大劣势</p>
+<p><code>根本原因</code>：Spring解决循环依赖依靠的是Bean的“中间态”这个概念，而这个中间态指的是<code>已经实例化</code>，但还没初始化的状态。而构造器是完成实例化的东东（不存在中间态），所以构造器的循环依赖无法解决</p>
+<h5 id="2、field属性注入（setter方法注入）循环依赖"><a href="#2、field属性注入（setter方法注入）循环依赖" class="headerlink" title="2、field属性注入（setter方法注入）循环依赖"></a>2、field属性注入（setter方法注入）循环依赖</h5><p>这种方式是我们<strong>最最最最</strong>为常用的依赖注入方式（所以猜都能猜到它肯定不会有问题啦）：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> B b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> A a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>结果：项目启动成功，能够正常work</strong></p>
+<h5 id="3、prototype-field属性注入循环依赖"><a href="#3、prototype-field属性注入循环依赖" class="headerlink" title="3、prototype field属性注入循环依赖"></a>3、<code>prototype</code> field属性注入循环依赖</h5><p><code>prototype</code>在平时使用情况较少，但是也并不是不会使用到，因此此种方式也需要引起重视。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span><br><span class="line">@Service</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private B b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span><br><span class="line">@Service</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private A a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果：<strong>需要注意的是</strong>本例中<strong>启动时是不会报错的</strong>（因为非单例Bean<code>默认</code>不会初始化，而是使用时才会初始化），所以很简单咱们只需要手动<code>getBean()</code>或者在一个单例Bean内<code>@Autowired</code>一下它即可</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在单例Bean内注入</span></span><br><span class="line">    @Autowired</span><br><span class="line">    private A a;</span><br></pre></td></tr></table></figure>
+<p>这样子启动就报错：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'mytest.TestSpringBean'</span>: Unsatisfied dependency expressed through field <span class="string">'a'</span>; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'a'</span>: Unsatisfied dependency expressed through field <span class="string">'b'</span>; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'b'</span>: Unsatisfied dependency expressed through field <span class="string">'a'</span>; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'a'</span>: Requested bean is currently <span class="keyword">in</span> creation: Is there an unresolvable circular reference?</span><br><span class="line"></span><br><span class="line">	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:<span class="number">596</span>)</span><br><span class="line">	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:<span class="number">90</span>)</span><br><span class="line">	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:<span class="number">374</span>)</span><br></pre></td></tr></table></figure>
+<p>如何解决？？？ 可能有的小伙伴看到网上有说使用<code>@Lazy</code>注解解决：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@Lazy</span><br><span class="line">@Autowired</span><br><span class="line">private A a;</span><br></pre></td></tr></table></figure>
+<p>此处负责任的告诉你这样是解决不了问题的(<strong>可能会掩盖问题</strong>)，<code>@Lazy</code>只是延迟初始化而已，当你真正使用到它（初始化）的时候，依旧会报如上异常。</p>
+<p>对于Spring循环依赖的情况总结如下：</p>
+<ol>
+<li>不能解决的情况： 1. 构造器注入循环依赖 2. <code>prototype</code> field属性注入循环依赖</li>
+<li>能解决的情况： 1. field属性注入（setter方法注入）循环依赖</li>
+</ol>
+<h2 id="Spring解决循环依赖的原理分析"><a href="#Spring解决循环依赖的原理分析" class="headerlink" title="Spring解决循环依赖的原理分析"></a>Spring解决循环依赖的原理分析</h2><p><strong><code>Spring的循环依赖的理论依据基于Java的引用传递</code></strong>，当获得对象的引用时，<strong>对象的属性是可以延后设置的</strong>。（但是构造器必须是在获取引用之前，毕竟你的引用是靠构造器给你生成的，儿子能先于爹出生？哈哈）</p>
+<h4 id="Spring创建Bean的流程"><a href="#Spring创建Bean的流程" class="headerlink" title="Spring创建Bean的流程"></a>Spring创建Bean的流程</h4><p>首先需要了解是Spring它创建Bean的流程，我把它的大致调用栈绘图如下： </p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-6158873/oepgq3cnb0.png?imageView2/2/w/1620" alt></p>
+<p> 对Bean的创建最为核心三个方法解释如下：</p>
+<ul>
+<li><code>createBeanInstance</code>：实例化，其实也就是调用对象的<strong>构造方法</strong>实例化对象</li>
+<li><code>populateBean</code>：填充属性，这一步主要是对bean的依赖属性进行注入(<code>@Autowired</code>)</li>
+<li><code>initializeBean</code>：回到一些形如<code>initMethod</code>、<code>InitializingBean</code>等方法</li>
+</ul>
+<p>从对<code>单例Bean</code>的初始化可以看出，循环依赖主要发生在<strong>第二步（populateBean）</strong>，也就是field属性注入的处理。</p>
+<h4 id="Spring容器的-39-三级缓存-39"><a href="#Spring容器的-39-三级缓存-39" class="headerlink" title="Spring容器的&#39;三级缓存&#39;"></a>Spring容器的<code>&#39;三级缓存&#39;</code></h4><p>在Spring容器的整个声明周期中，单例Bean有且仅有一个对象。这很容易让人想到可以用缓存来加速访问。 从源码中也可以看出Spring大量运用了Cache的手段，在循环依赖问题的解决过程中甚至不惜使用了“三级缓存”，这也便是它设计的精妙之处~</p>
+<p><code>三级缓存</code>其实它更像是Spring容器工厂的内的<code>术语</code>，采用三级缓存模式来解决循环依赖问题，这三级缓存分别指：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultSingletonBeanRegistry</span> <span class="keyword">extends</span> <span class="title">SimpleAliasRegistry</span> <span class="keyword">implements</span> <span class="title">SingletonBeanRegistry</span> </span>&#123;</span><br><span class="line">	...</span><br><span class="line">	<span class="comment">// 从上至下 分表代表这“三级缓存”</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; singletonObjects = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">256</span>); <span class="comment">//一级缓存</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; earlySingletonObjects = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>); <span class="comment">// 二级缓存</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, ObjectFactory&lt;?&gt;&gt; singletonFactories = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>); <span class="comment">// 三级缓存</span></span><br><span class="line">	...</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/** Names of beans that are currently in creation. */</span></span><br><span class="line">	<span class="comment">// 这个缓存也十分重要：它表示bean创建过程中都会在里面呆着~</span></span><br><span class="line">	<span class="comment">// 它在Bean开始创建时放值，创建完成时会将其移出~</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;String&gt; singletonsCurrentlyInCreation = Collections.newSetFromMap(<span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">16</span>));</span><br><span class="line"></span><br><span class="line">	<span class="comment">/** Names of beans that have already been created at least once. */</span></span><br><span class="line">	<span class="comment">// 当这个Bean被创建完成后，会标记为这个 注意：这里是set集合 不会重复</span></span><br><span class="line">	<span class="comment">// 至少被创建了一次的  都会放进这里~~~~</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;String&gt; alreadyCreated = Collections.newSetFromMap(<span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">256</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注：<code>AbstractBeanFactory</code>继承自<code>DefaultSingletonBeanRegistry</code>~</p>
+<ol>
+<li><code>singletonObjects</code>：用于存放完全初始化好的 bean，<strong>从该缓存中取出的 bean 可以直接使用</strong></li>
+<li><code>earlySingletonObjects</code>：提前曝光的单例对象的cache，存放原始的 bean 对象（尚未填充属性），用于解决循环依赖</li>
+<li><code>singletonFactories</code>：单例对象工厂的cache，存放 bean 工厂对象，用于解决循环依赖</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《深入理解Java虚拟机》之Java内存模型</title>
     <url>/2019/12/03/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E3%80%8B%E4%B9%8BJava%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</url>
     <content><![CDATA[<h3 id="一、内存模型"><a href="#一、内存模型" class="headerlink" title="一、内存模型"></a>一、内存模型</h3><p>1.分为主内存和工作内存，分别对应虚拟机内存的堆内存、栈内存、方法区</p>
@@ -931,20 +833,51 @@ hexo s --port=4100
       </tags>
   </entry>
   <entry>
-    <title>Vuforia开发入门一准备工作</title>
-    <url>/2018/04/03/Vuforia%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%80%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</url>
-    <content><![CDATA[<h2 id="Vuforia开发入门"><a href="#Vuforia开发入门" class="headerlink" title="Vuforia开发入门"></a>Vuforia开发入门</h2><h3 id="1、开发环境配置"><a href="#1、开发环境配置" class="headerlink" title="1、开发环境配置"></a>1、开发环境配置</h3><ul>
-<li>a) Android 环境配置 </li>
-<li>b) Unity3D 下载和安装 <h3 id="2、资源下载"><a href="#2、资源下载" class="headerlink" title="2、资源下载"></a>2、资源下载</h3></li>
-<li>a) <a href="https://developer.vuforia.com/" target="_blank" rel="noopener">官网注册</a></li>
-<li>b) <a href="https://developer.vuforia.com/downloads/sdk" target="_blank" rel="noopener">Samples资源下载</a></li>
+    <title>《深入理解Java虚拟机》之虚拟机类加载机制</title>
+    <url>/2020/10/01/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E3%80%8B%E4%B9%8B%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/</url>
+    <content><![CDATA[<h3 id="类加载过程"><a href="#类加载过程" class="headerlink" title="类加载过程"></a>类加载过程</h3><p>当程序主动使用某个类时，如果该类还未被加载到内存中，则JVM会通过加载、连接、初始化3个步骤来对该类进行初始化。如果没有意外，JVM将会连续完成3个步骤，所以有时也把这个3个步骤统称为类加载或类初始化。</p>
+<p>JVM虚拟机执行class字节码的过程可以分为7个阶段：加载、验证、准备、解析、初始化、使用、卸载</p>
+<p>（没事多看书，多总结，多动手。）</p>
+<p><img src="https://img-blog.csdn.net/20180813115150336?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM4MDc1NDI1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt></p>
+<a id="more"></a>
+<h3 id="1-加载："><a href="#1-加载：" class="headerlink" title="1.加载："></a>1.加载：</h3><p>将类的class文件读入到内存，并为之创建一个java.lang.Class对象，也就是说，当程序中使用任何类时，系统都会为之建立一个java.lang.Class对象。</p>
+<p>类的加载由类加载器完成，类加载器通常由JVM提供，这些类加载器也是前面所有程序运行的基础，JVM提供的这些类加载器通常被称为系统类加载器。除此之外，开发者可以通过继承ClassLoader基类来创建自己的类加载器。</p>
+<p>  通过使用不同的类加载器，可以从不同来源加载类的二进制数据，通常有如下几种来源。</p>
+<ul>
+<li>从本地文件系统加载class文件，这是前面绝大部分示例程序的类加载方式。</li>
+<li>从JAR包加载class文件，这种方式也是很常见的，前面介绍JDBC编程时用到的数据库驱动类就放在JAR文件中，JVM可以从JAR文件中直接加载该class文件。</li>
+<li>通过网络加载class文件。</li>
+<li><p>把一个Java源文件动态编译，并执行加载。</p>
+<p>类加载器通常无须等到“首次使用”该类时才加载该类，Java虚拟机规范允许系统预先加载某些类。</p>
+</li>
 </ul>
+<h3 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h3><p>  当类被加载之后，系统为之生成一个对应的Class对象，接着将会进入连接阶段，连接阶段负责把类的二进制数据合并到JRE中。类连接又可分为如下3个阶段。</p>
+<p>  <strong>1)验证：</strong>验证阶段用于检验被加载的类是否有正确的内部结构，并和其他类协调一致。Java是相对C++语言是安全的语言，例如它有C++不具有的数组越界的检查。这本身就是对自身安全的一种保护。验证阶段是Java非常重要的一个阶段，它会直接的保证应用是否会被恶意入侵的一道重要的防线，越是严谨的验证机制越安全。验证的目的在于确保Class文件的字节流中包含信息符合当前虚拟机要求，不会危害虚拟机自身安全。其主要包括四种验证，文件格式验证，元数据验证，字节码验证，符号引用验证。</p>
+<p>  四种验证做进一步说明：</p>
+<p>  <strong>文件格式验证：</strong>主要验证字节流是否符合Class文件格式规范，并且能被当前的虚拟机加载处理。例如：主，次版本号是否在当前虚拟机处理的范围之内。常量池中是否有不被支持的常量类型。指向常量的中的索引值是否存在不存在的常量或不符合类型的常量。</p>
+<p>  <strong>元数据验证：</strong>对字节码描述的信息进行语义的分析，分析是否符合java的语言语法的规范。</p>
+<p>  <strong>字节码验证：</strong>最重要的验证环节，分析数据流和控制，确定语义是合法的，符合逻辑的。主要的针对元数据验证后对方法体的验证。保证类方法在运行时不会有危害出现。</p>
+<p>  <strong>符号引用验证：</strong>主要是针对符号引用转换为直接引用的时候，是会延伸到第三解析阶段，主要去确定访问类型等涉及到引用的情况，主要是要保证引用一定会被访问到，不会出现类等无法访问的问题。</p>
+<p>  2)<strong>准备：</strong>类准备阶段负责为类的静态变量分配内存，并设置默认初始值。</p>
+<p>  3)<strong>解析：</strong>将类的二进制数据中的符号引用替换成直接引用。说明一下：符号引用：符号引用是以一组符号来描述所引用的目标，符号可以是任何的字面形式的字面量，只要不会出现冲突能够定位到就行。布局和内存无关。直接引用：是指向目标的指针，偏移量或者能够直接定位的句柄。该引用是和内存中的布局有关的，并且一定加载进来的。</p>
+<h3 id="3-初始化"><a href="#3-初始化" class="headerlink" title="3.初始化"></a>3.初始化</h3><p>  初始化是为类的静态变量赋予正确的初始值，准备阶段和初始化阶段看似有点矛盾，其实是不矛盾的，如果类中有语句：private static int a = 10，它的执行过程是这样的，首先字节码文件被加载到内存后，先进行链接的验证这一步骤，验证通过后准备阶段，给a分配内存，因为变量a是static的，所以此时a等于int类型的默认初始值0，即a=0,然后到解析（后面在说），到初始化这一步骤时，才把a的真正的值10赋给a,此时a=10。</p>
+<h2 id="类加载机制："><a href="#类加载机制：" class="headerlink" title="类加载机制："></a>类加载机制：</h2><p><strong>1.JVM的类加载机制</strong>主要有如下3种。</p>
+<ul>
+<li>全盘负责：所谓全盘负责，就是当一个类加载器负责加载某个Class时，该Class所依赖和引用其他Class也将由该类加载器负责载入，除非显示使用另外一个类加载器来载入。</li>
+<li>双亲委派：所谓的双亲委派，则是先让父类加载器试图加载该Class，只有在父类加载器无法加载该类时才尝试从自己的类路径中加载该类。通俗的讲，就是某个特定的类加载器在接到加载类的请求时，首先将加载任务委托给父加载器，依次递归，如果父加载器可以完成类加载任务，就成功返回；只有父加载器无法完成此加载任务时，才自己去加载。</li>
+<li>缓存机制。缓存机制将会保证所有加载过的Class都会被缓存，当程序中需要使用某个Class时，类加载器先从缓存区中搜寻该Class，只有当缓存区中不存在该Class对象时，系统才会读取该类对应的二进制数据，并将其转换成Class对象，存入缓冲区中。这就是为很么修改了Class后，必须重新启动JVM，程序所做的修改才会生效的原因。</li>
+</ul>
+<p><strong>2.这里说明一下双亲委派机制：</strong></p>
+<p><img src="https://img-blog.csdn.net/20180813145521896?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM4MDc1NDI1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>​    双亲委派机制，其工作原理的是，如果一个类加载器收到了类加载请求，它并不会自己先去加载，而是把这个请求委托给父类的加载器去执行，如果父类加载器还存在其父类加载器，则进一步向上委托，依次递归，请求最终将到达顶层的启动类加载器，如果父类加载器可以完成类加载任务，就成功返回，倘若父类加载器无法完成此加载任务，子加载器才会尝试自己去加载，这就是双亲委派模式，即每个儿子都很懒，每次有活就丢给父亲去干，直到父亲说这件事我也干不了时，儿子自己才想办法去完成。</p>
+<p>   双亲委派机制的优势：采用双亲委派模式的是好处是Java类随着它的类加载器一起具备了一种带有优先级的层次关系，通过这种层级关可以避免类的重复加载，当父亲已经加载了该类时，就没有必要子ClassLoader再加载一次。其次是考虑到安全因素，java核心api中定义类型不会被随意替换，假设通过网络传递一个名为java.lang.Integer的类，通过双亲委托模式传递到启动类加载器，而启动类加载器在核心Java API发现这个名字的类，发现该类已被加载，并不会重新加载网络传递的过来的java.lang.Integer，而直接返回已加载过的Integer.class，这样便可以防止核心API库被随意篡改。</p>
 ]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
-        <tag>AR</tag>
+        <tag>Java</tag>
+        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
@@ -1012,6 +945,134 @@ hexo s --port=4100
       </tags>
   </entry>
   <entry>
+    <title>写文章咯！</title>
+    <url>/2018/03/06/%E5%86%99%E6%96%87%E7%AB%A0%E5%92%AF%EF%BC%81/</url>
+    <content><![CDATA[<h1 id="写文章咯！"><a href="#写文章咯！" class="headerlink" title="写文章咯！"></a>写文章咯！</h1><h2 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h2><h3 id="这个是三级标题哦"><a href="#这个是三级标题哦" class="headerlink" title="这个是三级标题哦"></a>这个是三级标题哦</h3><ul>
+<li>列表1</li>
+<li>列表2<br>  a 子列表<br>  b 子列表</li>
+<li>列表3<a id="more"></a>
+</li>
+</ul>
+<hr>
+<hr>
+<p><a href="https://kanson.wang" target="_blank" rel="noopener">Kanson乐园</a><br><img src="/uploads/avator.jpg" alt="kanson乐园"><br><em>字体是斜线的哟</em><br><strong>字体是不是加粗了呢</strong></p>
+<p><code>&lt;html&gt; 哈哈 &lt;/html&gt;</code></p>
+<p>···</p>
+<p><html><br>    <head><meta name="generator" content="Hexo 3.9.0"><br>        <title>我是标题哦</title><br>        </head><body></body><br>    <br></html><br>···</p>
+<blockquote>
+<p>我的内容是引用的哦</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue前端开发环境</title>
+    <url>/2019/07/20/Vue%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th style="text-align:left">技术</th>
+<th>版本</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">node</td>
+<td>v10.16.0</td>
+<td>node编译环境</td>
+</tr>
+<tr>
+<td style="text-align:left">npm</td>
+<td>6.9.0</td>
+<td>npm包管理工具</td>
+</tr>
+<tr>
+<td style="text-align:left">Vue</td>
+<td>2.9.6</td>
+<td>前端框架</td>
+</tr>
+<tr>
+<td style="text-align:left">Vue-router</td>
+<td>3.0.2</td>
+<td>前端路由框架</td>
+</tr>
+<tr>
+<td style="text-align:left">Vuex</td>
+<td>3.1.0</td>
+<td>vue状态管理组件</td>
+</tr>
+<tr>
+<td style="text-align:left">Vue-cli</td>
+<td>————</td>
+<td>Vue脚手架</td>
+</tr>
+<tr>
+<td style="text-align:left">Element-ui</td>
+<td>2.7.0</td>
+<td>前端UI框架</td>
+</tr>
+<tr>
+<td style="text-align:left">Echarts</td>
+<td>4.2.1</td>
+<td>数据可视化框架</td>
+</tr>
+<tr>
+<td style="text-align:left">Uni-app</td>
+<td>————</td>
+<td>跨平台前端框架</td>
+</tr>
+<tr>
+<td style="text-align:left">Mockjs</td>
+<td>1.0.1-beta3</td>
+<td>模拟后端数据</td>
+</tr>
+<tr>
+<td style="text-align:left">Axios</td>
+<td>0.18.0</td>
+<td>基于Promise的Http库</td>
+</tr>
+<tr>
+<td style="text-align:left">Js-cookie</td>
+<td>2.2.0</td>
+<td>Cookie组件</td>
+</tr>
+<tr>
+<td style="text-align:left">Jsonlint</td>
+<td>1.6.3</td>
+<td>Json解析组件</td>
+</tr>
+<tr>
+<td style="text-align:left">screenfull</td>
+<td>4.2.0</td>
+<td>全屏组件</td>
+</tr>
+<tr>
+<td style="text-align:left">Xlsx</td>
+<td>0.14.1</td>
+<td>Excel表导出组件</td>
+</tr>
+<tr>
+<td style="text-align:left">Webpack</td>
+<td>————</td>
+<td>模板打包器</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 安装vue</span><br><span class="line"><span class="meta">$</span> npm install vue@2.1.6</span><br><span class="line"><span class="meta">#</span> 全局安装 vue-cli</span><br><span class="line"><span class="meta">$</span> npm install --global vue-cli</span><br><span class="line"><span class="meta">#</span> 创建一个基于 webpack 模板的新项目my-project</span><br><span class="line"><span class="meta">$</span> vue init webpack my-project</span><br><span class="line"><span class="meta">#</span> 进入项目目录</span><br><span class="line"><span class="meta">$</span> cd my-project</span><br><span class="line"><span class="meta">#</span> 安装依赖</span><br><span class="line"><span class="meta">$</span> npm install</span><br><span class="line"><span class="meta">#</span> 运行项目</span><br><span class="line"><span class="meta">$</span> npm run dev</span><br><span class="line"><span class="meta">#</span> 卸载旧版本，在安装新版本。</span><br><span class="line">npm uninstall vue-cli -g </span><br><span class="line">npm install --global vue-cli</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>完美世界2018春招编程题</title>
     <url>/2018/04/27/%E5%AE%8C%E7%BE%8E%E4%B8%96%E7%95%8C2018%E6%98%A5%E6%8B%9B%E7%BC%96%E7%A8%8B%E9%A2%98/</url>
     <content><![CDATA[<ul>
@@ -1030,6 +1091,180 @@ hexo s --port=4100
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int a[20];</span><br><span class="line">    int i = 0;</span><br><span class="line">    string ss, st;</span><br><span class="line">    stack&lt;string&gt; s1;</span><br><span class="line">    char c;</span><br><span class="line">    do&#123;</span><br><span class="line">        c = getchar();</span><br><span class="line">        if(c &gt;= &apos;0&apos; &amp;&amp; c &lt;= &apos;9&apos;)&#123;</span><br><span class="line">            ss += c;</span><br><span class="line">        &#125;else if(c == &apos; &apos; || c == &apos;\n&apos;)&#123;</span><br><span class="line">         </span><br><span class="line">   s1.push(ss);</span><br><span class="line">            ss = &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;while(c != &apos;\n&apos;);</span><br><span class="line"></span><br><span class="line">    while(!s1.empty())&#123;</span><br><span class="line">        st = s1.top();</span><br><span class="line">        s1.pop();</span><br><span class="line">        cout &lt;&lt; st;</span><br><span class="line">        if(!s1.empty())&#123;</span><br><span class="line">            cout &lt;&lt; &quot; &quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>方法一、使用数组变换存储</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;	</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int a[20];</span><br><span class="line">    int i = 0;</span><br><span class="line">    char c;</span><br><span class="line">    string str = &quot;&quot;;</span><br><span class="line">    do&#123;</span><br><span class="line">        c=getchar();</span><br><span class="line">        if(c&gt;=&apos;0&apos;&amp;&amp;c&lt;=&apos;9&apos;)&#123;</span><br><span class="line">            str += c;</span><br><span class="line">        &#125;else if(c ==&apos; &apos; || c == &apos;\n&apos;)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i++] = atoi(str.c_str()); //atoi：将字符串转化为char*对象，再转换成一个整数值</span><br><span class="line">            str = &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;while(c!=&apos;\n&apos;);</span><br><span class="line"></span><br><span class="line">    for(int j = 0; j &lt; i; j++)&#123;</span><br><span class="line">        cout &lt;&lt; a[i-j-1];</span><br><span class="line">        if(i-j-1 != 0)&#123;</span><br><span class="line">            cout &lt;&lt; &quot; &quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>视觉领域的部分国内公司</title>
+    <url>/2018/03/09/%E8%A7%86%E8%A7%89%E9%A2%86%E5%9F%9F%E7%9A%84%E9%83%A8%E5%88%86%E5%9B%BD%E5%86%85%E5%85%AC%E5%8F%B8/</url>
+    <content><![CDATA[<p>##初创公司</p>
+<p><a href="http://www.tuputech.com/" target="_blank" rel="noopener">图普科技</a><br><a href="http://www.faceplusplus.com.cn/" target="_blank" rel="noopener">Face++</a><br><a href="http://www.linkface.cn/index.html" target="_blank" rel="noopener">Linkface</a><br><a href="http://www.minieye.cc/cn/" target="_blank" rel="noopener">Minieye</a><br><a href="http://www.cogtu.com/?lang=zh" target="_blank" rel="noopener">知图Cogtu</a><br><a href="http://www.sensetime.com/cn" target="_blank" rel="noopener">商汤科技Sensetime</a><br><a href="http://www.hiscene.com/" target="_blank" rel="noopener">亮风台Hiscene</a><br><a href="http://www.zhangying.mobi/index.html" target="_blank" rel="noopener">掌赢科技</a><br><a href="http://www.deepglint.com/" target="_blank" rel="noopener">格灵深瞳DeepPG</a></p>
+<a id="more"></a>
+<p><a href="http://www.lagou.com/gongsi/j114187.html" target="_blank" rel="noopener">凌感科技usens</a><br><a href="http://www.tusimple.com/" target="_blank" rel="noopener">图森TuSimple</a><br><a href="http://www.seetatech.com/" target="_blank" rel="noopener">中科视拓Seetatech(山世光)</a><br><a href>第四范式</a></p>
+<p>##上市公司：</p>
+<p><a href="http://idl.baidu.com/" target="_blank" rel="noopener">百度DL实验室</a><br><a href="http://youtu.qq.com/" target="_blank" rel="noopener">腾讯优图</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_Upgrade/429476" target="_blank" rel="noopener">阿里高德</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/225254" target="_blank" rel="noopener">暴风魔镜</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/224449" target="_blank" rel="noopener">搜狗</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222651" target="_blank" rel="noopener">乐视tv</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222379" target="_blank" rel="noopener">奇虎360</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/223133/a" target="_blank" rel="noopener">京东实验室</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222007" target="_blank" rel="noopener">阿里巴巴</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/220225" target="_blank" rel="noopener">联想研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/225976" target="_blank" rel="noopener">华为研究院</a></p>
+<p>##知名外企：</p>
+<p><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222548" target="_blank" rel="noopener">佳能信息</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/223437" target="_blank" rel="noopener">索尼研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/220654" target="_blank" rel="noopener">富士通研发中心</a><br><a href="https://careers.microsoft.com/?rg=cn" target="_blank" rel="noopener">微软研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/221175" target="_blank" rel="noopener">英特尔研究院</a><br><a href="http://www.yingjiesheng.com/job-001-742-124.html" target="_blank" rel="noopener">三星研究院</a></p>
+]]></content>
+      <tags>
+        <tag>收藏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《深入理解Java虚拟机》之GC</title>
+    <url>/2019/12/05/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E3%80%8B%E4%B9%8BGC/</url>
+    <content><![CDATA[<h1 id="内存动态分配和垃圾收集技术"><a href="#内存动态分配和垃圾收集技术" class="headerlink" title="内存动态分配和垃圾收集技术"></a>内存动态分配和垃圾收集技术</h1><p>GC：哪些内存需要回收？什么时候回收？如何回收？</p>
+<p>当需要排查各种内存溢出、内存泄露问题时，当垃圾收集成为系统达到更高并发量的瓶颈时，就需要对内存动态分配和垃圾收集技术实施必要的监控和调节。</p>
+<p>垃圾收集器关注的是Java堆和方法区中的动态分配和回收的内存。</p>
+<p>判断对象存活与否？</p>
+<p>1、引用计数算法：主流的Java虚拟机未采用，很难解决对象之间相互循环引用的问题</p>
+<p>2、可达性分析算法：判定对象是否可回收</p>
+<p>对象真正死亡：至少经历两次标记过程：finalize()最多执行一次</p>
+<hr>
+<h3 id="一、垃圾收集算法："><a href="#一、垃圾收集算法：" class="headerlink" title="一、垃圾收集算法："></a>一、垃圾收集算法：</h3><h5 id="1-标记-清除算法-Mark-and-Sweep"><a href="#1-标记-清除算法-Mark-and-Sweep" class="headerlink" title="1.标记-清除算法 Mark and Sweep"></a>1.标记-清除算法 Mark and Sweep</h5><p>分为标记和清除两个阶段，是最基础的收集算法，主要不足：1、效率问题；2、空间问题：标记清除之后会产生大量不连续的内存碎片，导致之后在程序运行过程中需要分配较大对象时，无法找到足够的连续内存而不得不提前触发另一次GC。</p>
+<a id="more"></a>
+<h5 id="2-复制算法-Copying"><a href="#2-复制算法-Copying" class="headerlink" title="2.复制算法 Copying"></a>2.复制算法 Copying</h5><p>一块内存平均划分为2块，一块空闲，一块存储，当回收的时候，把另一半中仍然存活的复制过来，并将其内存全部收回——解决了效率问题（每次都是对半个区域进行内存回收，内存分配时也不用考虑内存碎片等复杂情况，只要移动堆顶指针，按顺序分配内存即可，实现简单运行高效）。比较适合“朝生夕死”的新生代对象。</p>
+<p>Eden:Survivor0:Survivor = 8:1:1</p>
+<h5 id="3-标记-整理算法-Mark-Compact"><a href="#3-标记-整理算法-Mark-Compact" class="headerlink" title="3.标记-整理算法 Mark-Compact"></a>3.标记-整理算法 Mark-Compact</h5><p>标记以后，让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。适用于老年代，绝大多数对象都存活的情况。</p>
+<h5 id="4-分代收集算法"><a href="#4-分代收集算法" class="headerlink" title="4.分代收集算法"></a>4.分代收集算法</h5><p>一般将Java堆分为新生代和老年代，对于新生代，每次收集时都发现有大批对象死去，只有少量存活，就选用复制算法，只需付出少量复制成本即可完成回收。而老年代中对象存活率高，没有额外空间对其进行担保，就必须使用“标记清除”或者“标记整理”算法回收。</p>
+<p>一般新生代触发内存回收称之为Yong GC，而老年代大对象触发内存回收称之为Full GC</p>
+<p>Young区（新生代），Elden区（老年代），Survivor区（永久代）：S0，S1，Meta Space，S0:S1=9:1</p>
+<hr>
+<p>Java内存：堆内存、栈内存、方法区</p>
+<p>堆内存：基本数据类型，引用类型，Java8之后常量池移动堆中</p>
+<p>栈内存：递归无终止条件会导致StackOverFlowError，栈空间的耗尽</p>
+<p>方法区：函数，方法名</p>
+<hr>
+<h3 id="二、垃圾回收器"><a href="#二、垃圾回收器" class="headerlink" title="二、垃圾回收器"></a>二、垃圾回收器</h3><p>收集算法是内存回收的方法论，垃圾收集器是内存回收的具体实现。</p>
+<p>7种作用于不同分代的收集器：</p>
+<p>特性、基本原理和使用场景：</p>
+<p>重点分析CMS和G1相对复杂的收集器，了解运作细节。</p>
+<ul>
+<li><p>新生代：Serial、ParNew、Praralell Scavenge</p>
+</li>
+<li><p>老年代：CMS、Serial Old、Parallel Old、G1</p>
+</li>
+</ul>
+<h5 id="1、Serial收集器"><a href="#1、Serial收集器" class="headerlink" title="1、Serial收集器"></a>1、Serial收集器</h5><p>单线程，stop the world，是虚拟机运行在Client模式下的默认新生代收集器，与其他收集器的单线程相比，简单而高效。对于限定单个CPU的环境而言，Serial由于没有线程交互的开销，可以获得最高的单线程收集效率。</p>
+<p>新生代采取复制算法，而老年代采取标记-整理算法。</p>
+<h5 id="2、ParNew收集器"><a href="#2、ParNew收集器" class="headerlink" title="2、ParNew收集器"></a>2、ParNew收集器</h5><p>是Serial的多线程版本，行为包括：Serial可用的所有控制参数、收集算法、stop the world、对象分配规则、回收策略。这两种收集器共用了不少代码。</p>
+<p>-XX:ParallelGCThreads用来限制垃圾收集的线程数，ParNew收集器是使用-XX:+UseConcMarkSweepGC后的默认新生代收集器。可以使用-XX:+UseParNewGC强制使用。</p>
+<h5 id="3、Praralell-Scavenge（清除）收集器"><a href="#3、Praralell-Scavenge（清除）收集器" class="headerlink" title="3、Praralell Scavenge（清除）收集器"></a>3、Praralell Scavenge（清除）收集器</h5><p>复制算法，并行的多线程收集器，目标是达到可控制的吞吐量（吞吐量优先收集器），吞吐量=运行用户代码时间/(运行用户代码时间+GC时间)，低停顿时间有利于提高响应速度，因而适合交互较多的程序，高吞吐量可以高效利用CPU时间，尽快完成程序的运算任务，主要适合后台计算。</p>
+<p>精确控制吞吐量的参数：-XX:MaxGCPauseMillis（控制最大GC停顿时间），-XX:GCTimeRatio（直接设置吞吐量大小）</p>
+<p>GC停顿时间缩短是以牺牲吞吐量和新生代空间为代价的。</p>
+<p>自适应调节策略：-XX:+UseAdaptiveSizePolicy 开启GC自适应调节策略后，无需手工指定新生代的大小（-Xmn）、Eden与Survivor区的比例（-XX:SurvivorRatio）、晋升老年代对象大小（-XX:PretenureSizeThreshold）等参数，虚拟机会根据当前系统运行情况收集性能监控信息，动态调整这些参数以提供最合适的停顿时间或者最大的吞吐量。</p>
+<h5 id="4、Serial-Old收集器"><a href="#4、Serial-Old收集器" class="headerlink" title="4、Serial Old收集器"></a>4、Serial Old收集器</h5><p>单线程、标记-整理算法、老年代，给Client模式的VM使用，Server模式下，作为CMS的后备预案（在并发收集发生Concurrent Mode failure时使用）</p>
+<h5 id="5、Parallel-Old收集器"><a href="#5、Parallel-Old收集器" class="headerlink" title="5、Parallel Old收集器"></a>5、Parallel Old收集器</h5><p>是Praralell Scavenge的老年代版本，多线程，标记-整理算法，在注重吞吐量以及CPU资源敏感的场合，可以优先考虑使用Praralell Scavenge+Praralell Old组合。</p>
+<hr>
+<h3 id="相关问题："><a href="#相关问题：" class="headerlink" title="相关问题："></a>相关问题：</h3><h4 id="1-哪些对象可以作为引用链的-Root-对象？"><a href="#1-哪些对象可以作为引用链的-Root-对象？" class="headerlink" title="1.哪些对象可以作为引用链的 Root 对象？"></a>1.哪些对象可以作为引用链的 Root 对象？</h4><p>答：引用链的 Root 对象可以为以下内容：</p>
+<ul>
+<li>Java 虚拟机栈中的引用对象；</li>
+<li>本地方法栈中 JNI（既一般说的 Native 方法）引用的对象；</li>
+<li>方法区中类静态常量的引用对象；</li>
+<li>方法区中常量的引用对象。</li>
+</ul>
+<h4 id="2-对象引用关系都有哪些？"><a href="#2-对象引用关系都有哪些？" class="headerlink" title="2.对象引用关系都有哪些？"></a>2.对象引用关系都有哪些？</h4><p>答：不管是引用计数法还是可达性分析算法都与对象的“引用”有关，这说明对象的引用决定了对象的生死，对象的引用关系如下。</p>
+<ul>
+<li>强引用：在代码中普遍存在的，类似 <code>Object obj = new Object()</code> 这类引用，只要强引用还在，垃圾收集器永远不会回收掉被引用的对象。</li>
+<li>软引用：是一种相对强引用弱化一些的引用，可以让对象豁免一些垃圾收集，只有当JVM 认为内存不足时，才会去试图回收软引用指向的对象，JVM 会确保在抛出 OutOfMemoryError 之前，清理软引用指向的对象。</li>
+<li>弱引用：非必需对象，但它的强度比软引用更弱，被弱引用关联的对象只能生存到下一次垃圾收集发生之前。</li>
+<li>虚引用：也称为幽灵引用或幻影引用，是最弱的一种引用关系，无法通过虚引用来获取一个对象实例，为对象设置虚引用的目的只有一个，就是当这个对象被收集器回收时收到一条系统通知。</li>
+</ul>
+<h4 id="3-垃圾回收算法有哪些？"><a href="#3-垃圾回收算法有哪些？" class="headerlink" title="3.垃圾回收算法有哪些？"></a>3.垃圾回收算法有哪些？</h4><p>答：垃圾回收算法如下。</p>
+<ul>
+<li>引用计数器算法：引用计算器判断对象是否存活的算法是这样的，给每一个对象设置一个引用计数器，每当有一个地方引用这个对象的时候，计数器就加 1，与之相反，每当引用失效的时候就减 1。</li>
+<li>可达性分析算法：在主流的语言的主流实现中，比如 Java、C#，甚至是古老的 Lisp 都是使用的可达性分析算法来判断对象是否存活的。这个算法的核心思路就是通过一些列的“GC Roots”对象作为起始点，从这些对象开始往下搜索，搜索所经过的路径称之为“引用链”。当一个对象到 GC Roots 没有任何引用链相连的时候，证明此对象是可以被回收的。</li>
+<li>复制算法：复制算法是将内存分为大小相同的两块，当这一块使用完了，就把当前存活的对象复制到另一块，然后一次性清空当前区块。此算法的缺点是只能利用一半的内存空间。</li>
+<li>标记-清除算法：此算法执行分两阶段，第一阶段从引用根节点开始标记所有被引用的对象，第二阶段遍历整个堆，把未标记的对象清除。此算法需要暂停整个应用，同时，会产生内存碎片。</li>
+<li>标记-整理：此算法结合了“标记-清除”和“复制”两个算法的优点。分为两个阶段，第一阶段从根节点开始标记所有被引用对象，第二阶段遍历整个堆，把清除未标记对象并且把存活对象“压缩”到堆的其中一块，按顺序排放。此算法避免了“标记-清除”的碎片问题，同时也避免了“复制”算法的空间问题。</li>
+</ul>
+<h4 id="4-垃圾回收的分类都有哪些？"><a href="#4-垃圾回收的分类都有哪些？" class="headerlink" title="4.垃圾回收的分类都有哪些？"></a>4.垃圾回收的分类都有哪些？</h4><p>答：垃圾回收的分类如下：</p>
+<ul>
+<li>新生代回收器：Serial、ParNew、Parallel Scavenge</li>
+<li>老年代回收器：Serial Old、Parallel Old、CMS</li>
+<li>整堆回收器：G1</li>
+</ul>
+<h4 id="5-分代垃圾回收器的组成部分有哪些？"><a href="#5-分代垃圾回收器的组成部分有哪些？" class="headerlink" title="5.分代垃圾回收器的组成部分有哪些？"></a>5.分代垃圾回收器的组成部分有哪些？</h4><p>答：分代垃圾回收器是由：新生代（Young Generation）和老生代（Tenured Generation）组成的，默认情况下新生代和老生代的内存比例是 1:2。</p>
+<h4 id="6-新生代的组成部分有哪些？"><a href="#6-新生代的组成部分有哪些？" class="headerlink" title="6.新生代的组成部分有哪些？"></a>6.新生代的组成部分有哪些？</h4><p>答：新生代是由：Eden、Form Survivor、To Survivor 三个区域组成的，它们内存默认占比是 8:1:1。</p>
+<h4 id="7-新生代垃圾回收是怎么执行的？"><a href="#7-新生代垃圾回收是怎么执行的？" class="headerlink" title="7.新生代垃圾回收是怎么执行的？"></a>7.新生代垃圾回收是怎么执行的？</h4><p>答：新生代垃圾回收的执行过程如下：</p>
+<p>① Eden 区 + From Survivor 区存活着的对象复制到 To Survivor 区；<br>② 清空 Eden 和 From Survivor 分区；<br>③ From Survivor 和 To Survivor 分区交换（From 变 To，To 变 From）。</p>
+<h4 id="8-为什么新生代有两个-Survivor-分区？"><a href="#8-为什么新生代有两个-Survivor-分区？" class="headerlink" title="8.为什么新生代有两个 Survivor 分区？"></a>8.为什么新生代有两个 Survivor 分区？</h4><p>答：当新生代的 Survivor 分区为 2 个的时候，不论是空间利用率还是程序运行的效率都是最优的。</p>
+<ul>
+<li>如果 Survivor 是 0 的话，也就是说新生代只有一个 Eden 分区，每次垃圾回收之后，存活的对象都会进入老生代，这样老生代的内存空间很快就被占满了，从而触发最耗时的 Full GC ，显然这样的收集器的效率是我们完全不能接受的。</li>
+<li>如果 Survivor 分区是 1 个的话，假设把两个区域分为 1:1，那么任何时候都有一半的内存空间是闲置的，显然空间利用率太低不是最佳的方案。但如果设置内存空间的比例是 8:2 ，只是看起来似乎“很好”，假设新生代的内存为 100 MB（ Survivor 大小为 20 MB ），现在有 70 MB 对象进行垃圾回收之后，剩余活跃的对象为 15 MB 进入 Survivor 区，这个时候新生代可用的内存空间只剩了 5 MB，这样很快又要进行垃圾回收操作，显然这种垃圾回收器最大的问题就在于，需要频繁进行垃圾回收。</li>
+<li>如果 Survivor 分区有 2 个分区，我们就可以把 Eden、From Survivor、To Survivor 分区内存比例设置为 8:1:1 ，那么任何时候新生代内存的利用率都 90% ，这样空间利用率基本是符合预期的。再者就是虚拟机的大部分对象都符合“朝生夕死”的特性，因此每次新对象的产生都在空间占比比较大的 Eden 区，垃圾回收之后再把存活的对象方法存入 Survivor 区，如果是 Survivor 区存活的对象，那么“年龄”就 +1 ，当年龄增长到 15 （可通过 -XX:+MaxTenuringThreshold 设定）对象就升级到老生代。</li>
+</ul>
+<p>经过以上对比，可以得出结论，当新生代的 Survivor 分区为 2 个的时候，不论是空间利用率还是程序运行的效率都是最优的。</p>
+<h4 id="9-什么是-CMS-垃圾回收器？"><a href="#9-什么是-CMS-垃圾回收器？" class="headerlink" title="9.什么是 CMS 垃圾回收器？"></a>9.什么是 CMS 垃圾回收器？</h4><p>答：CMS（Concurrent Mark Sweep）一种以获得最短停顿时间为目标的收集器，非常适用 B/S 系统。</p>
+<h4 id="10-CMS-垃圾回收器有哪些优缺点？"><a href="#10-CMS-垃圾回收器有哪些优缺点？" class="headerlink" title="10.CMS 垃圾回收器有哪些优缺点？"></a>10.CMS 垃圾回收器有哪些优缺点？</h4><p>答：CMS 垃圾回收器的优点是使用多线程，标记清除垃圾的，它缺点如下。</p>
+<ul>
+<li>对 CPU 资源要求敏感：CMS 回收器过分依赖于多线程环境，默认情况下，开启的线程数为（CPU 的数量 + 3）/ 4，当 CPU 数量少于 4 个时，CMS 对用户本身的操作的影响将会很大，因为要分出一半的运算能力去执行回收器线程；</li>
+<li>CMS 无法清除浮动垃圾：浮动垃圾指的是 CMS 清除垃圾的时候，还有用户线程产生新的垃圾，这部分未被标记的垃圾叫做“浮动垃圾”，只能在下次 GC 的时候进行清除；</li>
+<li>CMS 垃圾回收会产生大量空间碎片：CMS 使用的是标记-清除算法，所有在垃圾回收的时候回产生大量的空间碎片。</li>
+</ul>
+<h4 id="11-什么是-G1-垃圾回收器？"><a href="#11-什么是-G1-垃圾回收器？" class="headerlink" title="11.什么是 G1 垃圾回收器？"></a>11.什么是 G1 垃圾回收器？</h4><p>答：G1 垃圾回收器是一种兼顾吞吐量和停顿时间的 GC 实现，是 JDK 9 以后的默认 GC 选项。G1 可以直观的设定停顿时间的目标，相比于 CMS CG，G1 未必能做到 CMS 在最好情况下的延时停顿，但是最差情况要好很多。</p>
+<p>G1 GC 仍然存在着年代的概念，但是其内存结构并不是简单的条带式划分，而是类似棋盘的一个个 Region。Region 之间是复制算法，但整体上实际可看作是标记 - 整理（Mark-Compact）算法，可以有效地避免内存碎片，尤其是当 Java 堆非常大的时候，G1 的优势更加明显。</p>
+<h4 id="12-垃圾回收的调优参数有哪些？"><a href="#12-垃圾回收的调优参数有哪些？" class="headerlink" title="12.垃圾回收的调优参数有哪些？"></a>12.垃圾回收的调优参数有哪些？</h4><p>答：垃圾回收的常用调优如下：</p>
+<ul>
+<li>-Xmx:512 设置最大堆内存为 512 M；</li>
+<li>-Xms:215 初始堆内存为 215 M；</li>
+<li>-XX:MaxNewSize 设置最大年轻区内存；</li>
+<li>-XX:MaxTenuringThreshold=5 设置新生代对象经过 5 次 GC 晋升到老年代；</li>
+<li>-XX:PretrnureSizeThreshold 设置大对象的值，超过这个值的大对象直接进入老生代；</li>
+<li>-XX:NewRatio 设置分代垃圾回收器新生代和老生代内存占比；</li>
+<li>-XX:SurvivorRatio 设置新生代 Eden、Form Survivor、To Survivor 占比。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Java, JVM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>进程、线程、协程的区别和通信方式</title>
+    <url>/2020/10/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E3%80%81%E5%8D%8F%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>进程，是操作系统资源分配（CPU时间片、内存空间）的最小单位。</p>
+<p><strong>进程通信：</strong><br>每个进程各自有不同的用户地址空间,任何一个进程的全局变量在另一个进程中都看不到，所以进程之间要交换数据必须通过<code>内核</code>,在内核中开辟一块缓冲区,进程A把数据从用户空间拷到内核缓冲区,进程B再从内核缓冲区把数据读走,内核提供的这种机制称为进程间通信。</p>
+<a id="more"></a>
+<p>进程间通信有4种方式，以下从简单到复杂的方式出场:</p>
+<h4 id="1-管道-pipe"><a href="#1-管道-pipe" class="headerlink" title="1.管道(pipe)"></a>1.管道(pipe)</h4><p>  管道是一种具有两个端点的通信通道，一个管道实际上就是只存在在内存中的文件，对这个文件操作需要两个已经打开文件进行，他们代表管道的两端，也叫两个句槟，管道是一种特殊的文件，不属于一种文件系统，而是一种独立的文件系统，有自己的数据结构，根据管道的使用范围划分为无名管道和命名管道。<br>无名管道用于父进程和子进程之间，通常父进程创建管道，然后由通信的子进程继承父进程的读端点句柄和写端点句柄，或者父进程有读写句柄的子进程，这些子进程可以使用管道直接通信，不需要通过父进程。<br>命名管道，命名管道是为了解决无名管道只能在父子进程间通信而设计的，命名管道是建立在实际的磁盘介质或文件系统(而不是只存在内存中)，任何进程可以通过文件名或路径建立与该文件的联系，命名换到需要一种FIFO文件(有先进先出的原则)，虽然FIFO文件的inode节点在磁盘上，但仅是一个节点而已，文件的数据还是存在于内存缓冲页面中，和普通管道相同。</p>
+<h4 id="2-信号"><a href="#2-信号" class="headerlink" title="2.信号"></a>2.信号</h4><p>  信号，用于接受某种事件发生，除了用于进程间通信之外，进程还可以发送信号给进程本身。除了系统内核和root之外，只有具备相同id的进程才可以信号进行通信。</p>
+<h4 id="3-消息队列"><a href="#3-消息队列" class="headerlink" title="3.消息队列"></a>3.消息队列</h4><p>  消息队列是消息的链表，包括Posix消息队列和system v消息队列(Posix常用于线程，system常用于进程)，有权限的进程可以向消息队列中添加消息，有读权限的进程可以读走消息队列的消息。<br>消息队列克服了信号承载信息量少，管道只能承载无格式字节流及缓冲区大小受限等缺陷。</p>
+<h4 id="4-共享内存"><a href="#4-共享内存" class="headerlink" title="4.共享内存"></a>4.共享内存</h4><p>  共享内存使多个进程可以访问同一块内存空间，是最快的IPC形式，是针对其他通信方式运行效率低而设计的，往往与其他进程结合使用，如与信号量结合，来达到进程间的同步与互斥。传递文件最好用共享内存的方式。 </p>
+<p>linux常用的进程间的通讯方式<br>（1）、管道(pipe)：管道可用于具有亲缘关系的进程间的通信，是一种半双工的方式，数据只能单向流动，允许一个进程和另一个与它有共同祖先的进程之间进行通信。<br>（2）、命名管道(named pipe)：命名管道克服了管道没有名字的限制，同时除了具有管道的功能外（也是半双工），它还允许无亲缘关系进程间的通信。命名管道在文件系统中有对应的文件名。命名管道通过命令mkfifo或系统调用mkfifo来创建。<br>（3）、信号（signal）：信号是比较复杂的通信方式，用于通知接收进程有某种事件发生了，除了进程间通信外，进程还可以发送信号给进程本身；linux除了支持Unix早期信号语义函数sigal外，还支持语义符合Posix.1标准的信号函数sigaction（实际上，该函数是基于BSD的，BSD为了实现可靠信号机制，又能够统一对外接口，用sigaction函数重新实现了signal函数）。<br>（4）、消息队列：消息队列是消息的链接表，包括Posix消息队列system V消息队列。有足够权限的进程可以向队列中添加消息，被赋予读权限的进程则可以读走队列中的消息。消息队列克服了信号承载信息量少，管道只能承载无格式字节流以及缓冲区大小受限等缺<br>（5）、共享内存：使得多个进程可以访问同一块内存空间，是最快的可用IPC形式。是针对其他通信机制运行效率较低而设计的。往往与其它通信机制，如信号量结合使用，来达到进程间的同步及互斥。<br>（6）、内存映射：内存映射允许任何多个进程间通信，每一个使用该机制的进程通过把一个共享的文件映射到自己的进程地址空间来实现它。<br>（7）、信号量（semaphore）：主要作为进程间以及同一进程不同线程之间的同步手段。</p>
+<p>（8）、套接字（Socket）：更为一般的进程间通信机制，可用于不同机器之间的进程间通信。起初是由Unix系统的BSD分支开发出来的，但现在一般可以移植到其它类Unix系统上：Linux和System V的变种都支持套接字。</p>
+<h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><p>线程是CPU调度、程序执行的最小单位。线程间通信主要通过等待/通知机制…</p>
+<h3 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h3><p>协程由程序自身控制子程序执行，有极高的执行效率，是比线程更轻量级的存在。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2017/07/14/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><br><a id="more"></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>构建你的深度学习环境（一）</title>
+    <url>/2018/04/27/%E6%9E%84%E5%BB%BA%E4%BD%A0%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="环境：Centos-7-2，python-2-7-5"><a href="#环境：Centos-7-2，python-2-7-5" class="headerlink" title="环境：Centos 7.2，python 2.7.5"></a>环境：Centos 7.2，python 2.7.5</h3><ul>
+<li>1.首先安装好Linux</li>
+<li>2.呼出命令行CTRL+ALT+T</li>
+<li>3.检测是否安装python，一般Linux默认安装python</li>
+<li>直接在命令行输入:python，会显示python的版本号，python2.7.9以上版本默认安装pip。可以看到我的版本号是2.7.5，否则进行步骤</li>
+<li>4.eixt()退出python环境。</li>
+</ul>
+]]></content>
   </entry>
   <entry>
     <title>微服务组件清单</title>
@@ -1198,241 +1433,6 @@ hexo s --port=4100
 ]]></content>
       <tags>
         <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>写文章咯！</title>
-    <url>/2018/03/06/%E5%86%99%E6%96%87%E7%AB%A0%E5%92%AF%EF%BC%81/</url>
-    <content><![CDATA[<h1 id="写文章咯！"><a href="#写文章咯！" class="headerlink" title="写文章咯！"></a>写文章咯！</h1><h2 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h2><h3 id="这个是三级标题哦"><a href="#这个是三级标题哦" class="headerlink" title="这个是三级标题哦"></a>这个是三级标题哦</h3><ul>
-<li>列表1</li>
-<li>列表2<br>  a 子列表<br>  b 子列表</li>
-<li>列表3<a id="more"></a>
-</li>
-</ul>
-<hr>
-<hr>
-<p><a href="https://kanson.wang" target="_blank" rel="noopener">Kanson乐园</a><br><img src="/uploads/avator.jpg" alt="kanson乐园"><br><em>字体是斜线的哟</em><br><strong>字体是不是加粗了呢</strong></p>
-<p><code>&lt;html&gt; 哈哈 &lt;/html&gt;</code></p>
-<p>···</p>
-<p><html><br>    <head><meta name="generator" content="Hexo 3.9.0"><br>        <title>我是标题哦</title><br>        </head><body></body><br>    <br></html><br>···</p>
-<blockquote>
-<p>我的内容是引用的哦</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《深入理解Java虚拟机》之GC</title>
-    <url>/2019/12/05/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E3%80%8B%E4%B9%8BGC/</url>
-    <content><![CDATA[<h1 id="内存动态分配和垃圾收集技术"><a href="#内存动态分配和垃圾收集技术" class="headerlink" title="内存动态分配和垃圾收集技术"></a>内存动态分配和垃圾收集技术</h1><p>GC：哪些内存需要回收？什么时候回收？如何回收？</p>
-<p>当需要排查各种内存溢出、内存泄露问题时，当垃圾收集成为系统达到更高并发量的瓶颈时，就需要对内存动态分配和垃圾收集技术实施必要的监控和调节。</p>
-<p>垃圾收集器关注的是Java堆和方法区中的动态分配和回收的内存。</p>
-<p>判断对象存活与否？</p>
-<p>1、引用计数算法：主流的Java虚拟机未采用，很难解决对象之间相互循环引用的问题</p>
-<p>2、可达性分析算法：判定对象是否可回收</p>
-<p>对象真正死亡：至少经历两次标记过程：finalize()最多执行一次</p>
-<hr>
-<h3 id="一、垃圾收集算法："><a href="#一、垃圾收集算法：" class="headerlink" title="一、垃圾收集算法："></a>一、垃圾收集算法：</h3><h5 id="1-标记-清除算法-Mark-and-Sweep"><a href="#1-标记-清除算法-Mark-and-Sweep" class="headerlink" title="1.标记-清除算法 Mark and Sweep"></a>1.标记-清除算法 Mark and Sweep</h5><p>分为标记和清除两个阶段，是最基础的收集算法，主要不足：1、效率问题；2、空间问题：标记清除之后会产生大量不连续的内存碎片，导致之后在程序运行过程中需要分配较大对象时，无法找到足够的连续内存而不得不提前触发另一次GC。</p>
-<a id="more"></a>
-<h5 id="2-复制算法-Copying"><a href="#2-复制算法-Copying" class="headerlink" title="2.复制算法 Copying"></a>2.复制算法 Copying</h5><p>一块内存平均划分为2块，一块空闲，一块存储，当回收的时候，把另一半中仍然存活的复制过来，并将其内存全部收回——解决了效率问题（每次都是对半个区域进行内存回收，内存分配时也不用考虑内存碎片等复杂情况，只要移动堆顶指针，按顺序分配内存即可，实现简单运行高效）。比较适合“朝生夕死”的新生代对象。</p>
-<p>Eden:Survivor0:Survivor = 8:1:1</p>
-<h5 id="3-标记-整理算法-Mark-Compact"><a href="#3-标记-整理算法-Mark-Compact" class="headerlink" title="3.标记-整理算法 Mark-Compact"></a>3.标记-整理算法 Mark-Compact</h5><p>标记以后，让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。适用于老年代，绝大多数对象都存活的情况。</p>
-<h5 id="4-分代收集算法"><a href="#4-分代收集算法" class="headerlink" title="4.分代收集算法"></a>4.分代收集算法</h5><p>一般将Java堆分为新生代和老年代，对于新生代，每次收集时都发现有大批对象死去，只有少量存活，就选用复制算法，只需付出少量复制成本即可完成回收。而老年代中对象存活率高，没有额外空间对其进行担保，就必须使用“标记清除”或者“标记整理”算法回收。</p>
-<p>一般新生代触发内存回收称之为Yong GC，而老年代大对象触发内存回收称之为Full GC</p>
-<p>Young区（新生代），Elden区（老年代），Survivor区（永久代）：S0，S1，Meta Space，S0:S1=9:1</p>
-<hr>
-<p>Java内存：堆内存、栈内存、方法区</p>
-<p>堆内存：基本数据类型，引用类型，Java8之后常量池移动堆中</p>
-<p>栈内存：递归无终止条件会导致StackOverFlowError，栈空间的耗尽</p>
-<p>方法区：函数，方法名</p>
-<hr>
-<h3 id="二、垃圾回收器"><a href="#二、垃圾回收器" class="headerlink" title="二、垃圾回收器"></a>二、垃圾回收器</h3><p>收集算法是内存回收的方法论，垃圾收集器是内存回收的具体实现。</p>
-<p>7种作用于不同分代的收集器：</p>
-<p>特性、基本原理和使用场景：</p>
-<p>重点分析CMS和G1相对复杂的收集器，了解运作细节。</p>
-<ul>
-<li><p>新生代：Serial、ParNew、Praralell Scavenge</p>
-</li>
-<li><p>老年代：CMS、Serial Old、Parallel Old、G1</p>
-</li>
-</ul>
-<h5 id="1、Serial收集器"><a href="#1、Serial收集器" class="headerlink" title="1、Serial收集器"></a>1、Serial收集器</h5><p>单线程，stop the world，是虚拟机运行在Client模式下的默认新生代收集器，与其他收集器的单线程相比，简单而高效。对于限定单个CPU的环境而言，Serial由于没有线程交互的开销，可以获得最高的单线程收集效率。</p>
-<p>新生代采取复制算法，而老年代采取标记-整理算法。</p>
-<h5 id="2、ParNew收集器"><a href="#2、ParNew收集器" class="headerlink" title="2、ParNew收集器"></a>2、ParNew收集器</h5><p>是Serial的多线程版本，行为包括：Serial可用的所有控制参数、收集算法、stop the world、对象分配规则、回收策略。这两种收集器共用了不少代码。</p>
-<p>-XX:ParallelGCThreads用来限制垃圾收集的线程数，ParNew收集器是使用-XX:+UseConcMarkSweepGC后的默认新生代收集器。可以使用-XX:+UseParNewGC强制使用。</p>
-<h5 id="3、Praralell-Scavenge（清除）收集器"><a href="#3、Praralell-Scavenge（清除）收集器" class="headerlink" title="3、Praralell Scavenge（清除）收集器"></a>3、Praralell Scavenge（清除）收集器</h5><p>复制算法，并行的多线程收集器，目标是达到可控制的吞吐量（吞吐量优先收集器），吞吐量=运行用户代码时间/(运行用户代码时间+GC时间)，低停顿时间有利于提高响应速度，因而适合交互较多的程序，高吞吐量可以高效利用CPU时间，尽快完成程序的运算任务，主要适合后台计算。</p>
-<p>精确控制吞吐量的参数：-XX:MaxGCPauseMillis（控制最大GC停顿时间），-XX:GCTimeRatio（直接设置吞吐量大小）</p>
-<p>GC停顿时间缩短是以牺牲吞吐量和新生代空间为代价的。</p>
-<p>自适应调节策略：-XX:+UseAdaptiveSizePolicy 开启GC自适应调节策略后，无需手工指定新生代的大小（-Xmn）、Eden与Survivor区的比例（-XX:SurvivorRatio）、晋升老年代对象大小（-XX:PretenureSizeThreshold）等参数，虚拟机会根据当前系统运行情况收集性能监控信息，动态调整这些参数以提供最合适的停顿时间或者最大的吞吐量。</p>
-<h5 id="4、Serial-Old收集器"><a href="#4、Serial-Old收集器" class="headerlink" title="4、Serial Old收集器"></a>4、Serial Old收集器</h5><p>单线程、标记-整理算法、老年代，给Client模式的VM使用，Server模式下，作为CMS的后备预案（在并发收集发生Concurrent Mode failure时使用）</p>
-<h5 id="5、Parallel-Old收集器"><a href="#5、Parallel-Old收集器" class="headerlink" title="5、Parallel Old收集器"></a>5、Parallel Old收集器</h5><p>是Praralell Scavenge的老年代版本，多线程，标记-整理算法，在注重吞吐量以及CPU资源敏感的场合，可以优先考虑使用Praralell Scavenge+Praralell Old组合。</p>
-<hr>
-<h3 id="相关问题："><a href="#相关问题：" class="headerlink" title="相关问题："></a>相关问题：</h3><h4 id="1-哪些对象可以作为引用链的-Root-对象？"><a href="#1-哪些对象可以作为引用链的-Root-对象？" class="headerlink" title="1.哪些对象可以作为引用链的 Root 对象？"></a>1.哪些对象可以作为引用链的 Root 对象？</h4><p>答：引用链的 Root 对象可以为以下内容：</p>
-<ul>
-<li>Java 虚拟机栈中的引用对象；</li>
-<li>本地方法栈中 JNI（既一般说的 Native 方法）引用的对象；</li>
-<li>方法区中类静态常量的引用对象；</li>
-<li>方法区中常量的引用对象。</li>
-</ul>
-<h4 id="2-对象引用关系都有哪些？"><a href="#2-对象引用关系都有哪些？" class="headerlink" title="2.对象引用关系都有哪些？"></a>2.对象引用关系都有哪些？</h4><p>答：不管是引用计数法还是可达性分析算法都与对象的“引用”有关，这说明对象的引用决定了对象的生死，对象的引用关系如下。</p>
-<ul>
-<li>强引用：在代码中普遍存在的，类似 <code>Object obj = new Object()</code> 这类引用，只要强引用还在，垃圾收集器永远不会回收掉被引用的对象。</li>
-<li>软引用：是一种相对强引用弱化一些的引用，可以让对象豁免一些垃圾收集，只有当JVM 认为内存不足时，才会去试图回收软引用指向的对象，JVM 会确保在抛出 OutOfMemoryError 之前，清理软引用指向的对象。</li>
-<li>弱引用：非必需对象，但它的强度比软引用更弱，被弱引用关联的对象只能生存到下一次垃圾收集发生之前。</li>
-<li>虚引用：也称为幽灵引用或幻影引用，是最弱的一种引用关系，无法通过虚引用来获取一个对象实例，为对象设置虚引用的目的只有一个，就是当这个对象被收集器回收时收到一条系统通知。</li>
-</ul>
-<h4 id="3-垃圾回收算法有哪些？"><a href="#3-垃圾回收算法有哪些？" class="headerlink" title="3.垃圾回收算法有哪些？"></a>3.垃圾回收算法有哪些？</h4><p>答：垃圾回收算法如下。</p>
-<ul>
-<li>引用计数器算法：引用计算器判断对象是否存活的算法是这样的，给每一个对象设置一个引用计数器，每当有一个地方引用这个对象的时候，计数器就加 1，与之相反，每当引用失效的时候就减 1。</li>
-<li>可达性分析算法：在主流的语言的主流实现中，比如 Java、C#，甚至是古老的 Lisp 都是使用的可达性分析算法来判断对象是否存活的。这个算法的核心思路就是通过一些列的“GC Roots”对象作为起始点，从这些对象开始往下搜索，搜索所经过的路径称之为“引用链”。当一个对象到 GC Roots 没有任何引用链相连的时候，证明此对象是可以被回收的。</li>
-<li>复制算法：复制算法是将内存分为大小相同的两块，当这一块使用完了，就把当前存活的对象复制到另一块，然后一次性清空当前区块。此算法的缺点是只能利用一半的内存空间。</li>
-<li>标记-清除算法：此算法执行分两阶段，第一阶段从引用根节点开始标记所有被引用的对象，第二阶段遍历整个堆，把未标记的对象清除。此算法需要暂停整个应用，同时，会产生内存碎片。</li>
-<li>标记-整理：此算法结合了“标记-清除”和“复制”两个算法的优点。分为两个阶段，第一阶段从根节点开始标记所有被引用对象，第二阶段遍历整个堆，把清除未标记对象并且把存活对象“压缩”到堆的其中一块，按顺序排放。此算法避免了“标记-清除”的碎片问题，同时也避免了“复制”算法的空间问题。</li>
-</ul>
-<h4 id="4-垃圾回收的分类都有哪些？"><a href="#4-垃圾回收的分类都有哪些？" class="headerlink" title="4.垃圾回收的分类都有哪些？"></a>4.垃圾回收的分类都有哪些？</h4><p>答：垃圾回收的分类如下：</p>
-<ul>
-<li>新生代回收器：Serial、ParNew、Parallel Scavenge</li>
-<li>老年代回收器：Serial Old、Parallel Old、CMS</li>
-<li>整堆回收器：G1</li>
-</ul>
-<h4 id="5-分代垃圾回收器的组成部分有哪些？"><a href="#5-分代垃圾回收器的组成部分有哪些？" class="headerlink" title="5.分代垃圾回收器的组成部分有哪些？"></a>5.分代垃圾回收器的组成部分有哪些？</h4><p>答：分代垃圾回收器是由：新生代（Young Generation）和老生代（Tenured Generation）组成的，默认情况下新生代和老生代的内存比例是 1:2。</p>
-<h4 id="6-新生代的组成部分有哪些？"><a href="#6-新生代的组成部分有哪些？" class="headerlink" title="6.新生代的组成部分有哪些？"></a>6.新生代的组成部分有哪些？</h4><p>答：新生代是由：Eden、Form Survivor、To Survivor 三个区域组成的，它们内存默认占比是 8:1:1。</p>
-<h4 id="7-新生代垃圾回收是怎么执行的？"><a href="#7-新生代垃圾回收是怎么执行的？" class="headerlink" title="7.新生代垃圾回收是怎么执行的？"></a>7.新生代垃圾回收是怎么执行的？</h4><p>答：新生代垃圾回收的执行过程如下：</p>
-<p>① Eden 区 + From Survivor 区存活着的对象复制到 To Survivor 区；<br>② 清空 Eden 和 From Survivor 分区；<br>③ From Survivor 和 To Survivor 分区交换（From 变 To，To 变 From）。</p>
-<h4 id="8-为什么新生代有两个-Survivor-分区？"><a href="#8-为什么新生代有两个-Survivor-分区？" class="headerlink" title="8.为什么新生代有两个 Survivor 分区？"></a>8.为什么新生代有两个 Survivor 分区？</h4><p>答：当新生代的 Survivor 分区为 2 个的时候，不论是空间利用率还是程序运行的效率都是最优的。</p>
-<ul>
-<li>如果 Survivor 是 0 的话，也就是说新生代只有一个 Eden 分区，每次垃圾回收之后，存活的对象都会进入老生代，这样老生代的内存空间很快就被占满了，从而触发最耗时的 Full GC ，显然这样的收集器的效率是我们完全不能接受的。</li>
-<li>如果 Survivor 分区是 1 个的话，假设把两个区域分为 1:1，那么任何时候都有一半的内存空间是闲置的，显然空间利用率太低不是最佳的方案。但如果设置内存空间的比例是 8:2 ，只是看起来似乎“很好”，假设新生代的内存为 100 MB（ Survivor 大小为 20 MB ），现在有 70 MB 对象进行垃圾回收之后，剩余活跃的对象为 15 MB 进入 Survivor 区，这个时候新生代可用的内存空间只剩了 5 MB，这样很快又要进行垃圾回收操作，显然这种垃圾回收器最大的问题就在于，需要频繁进行垃圾回收。</li>
-<li>如果 Survivor 分区有 2 个分区，我们就可以把 Eden、From Survivor、To Survivor 分区内存比例设置为 8:1:1 ，那么任何时候新生代内存的利用率都 90% ，这样空间利用率基本是符合预期的。再者就是虚拟机的大部分对象都符合“朝生夕死”的特性，因此每次新对象的产生都在空间占比比较大的 Eden 区，垃圾回收之后再把存活的对象方法存入 Survivor 区，如果是 Survivor 区存活的对象，那么“年龄”就 +1 ，当年龄增长到 15 （可通过 -XX:+MaxTenuringThreshold 设定）对象就升级到老生代。</li>
-</ul>
-<p>经过以上对比，可以得出结论，当新生代的 Survivor 分区为 2 个的时候，不论是空间利用率还是程序运行的效率都是最优的。</p>
-<h4 id="9-什么是-CMS-垃圾回收器？"><a href="#9-什么是-CMS-垃圾回收器？" class="headerlink" title="9.什么是 CMS 垃圾回收器？"></a>9.什么是 CMS 垃圾回收器？</h4><p>答：CMS（Concurrent Mark Sweep）一种以获得最短停顿时间为目标的收集器，非常适用 B/S 系统。</p>
-<h4 id="10-CMS-垃圾回收器有哪些优缺点？"><a href="#10-CMS-垃圾回收器有哪些优缺点？" class="headerlink" title="10.CMS 垃圾回收器有哪些优缺点？"></a>10.CMS 垃圾回收器有哪些优缺点？</h4><p>答：CMS 垃圾回收器的优点是使用多线程，标记清除垃圾的，它缺点如下。</p>
-<ul>
-<li>对 CPU 资源要求敏感：CMS 回收器过分依赖于多线程环境，默认情况下，开启的线程数为（CPU 的数量 + 3）/ 4，当 CPU 数量少于 4 个时，CMS 对用户本身的操作的影响将会很大，因为要分出一半的运算能力去执行回收器线程；</li>
-<li>CMS 无法清除浮动垃圾：浮动垃圾指的是 CMS 清除垃圾的时候，还有用户线程产生新的垃圾，这部分未被标记的垃圾叫做“浮动垃圾”，只能在下次 GC 的时候进行清除；</li>
-<li>CMS 垃圾回收会产生大量空间碎片：CMS 使用的是标记-清除算法，所有在垃圾回收的时候回产生大量的空间碎片。</li>
-</ul>
-<h4 id="11-什么是-G1-垃圾回收器？"><a href="#11-什么是-G1-垃圾回收器？" class="headerlink" title="11.什么是 G1 垃圾回收器？"></a>11.什么是 G1 垃圾回收器？</h4><p>答：G1 垃圾回收器是一种兼顾吞吐量和停顿时间的 GC 实现，是 JDK 9 以后的默认 GC 选项。G1 可以直观的设定停顿时间的目标，相比于 CMS CG，G1 未必能做到 CMS 在最好情况下的延时停顿，但是最差情况要好很多。</p>
-<p>G1 GC 仍然存在着年代的概念，但是其内存结构并不是简单的条带式划分，而是类似棋盘的一个个 Region。Region 之间是复制算法，但整体上实际可看作是标记 - 整理（Mark-Compact）算法，可以有效地避免内存碎片，尤其是当 Java 堆非常大的时候，G1 的优势更加明显。</p>
-<h4 id="12-垃圾回收的调优参数有哪些？"><a href="#12-垃圾回收的调优参数有哪些？" class="headerlink" title="12.垃圾回收的调优参数有哪些？"></a>12.垃圾回收的调优参数有哪些？</h4><p>答：垃圾回收的常用调优如下：</p>
-<ul>
-<li>-Xmx:512 设置最大堆内存为 512 M；</li>
-<li>-Xms:215 初始堆内存为 215 M；</li>
-<li>-XX:MaxNewSize 设置最大年轻区内存；</li>
-<li>-XX:MaxTenuringThreshold=5 设置新生代对象经过 5 次 GC 晋升到老年代；</li>
-<li>-XX:PretrnureSizeThreshold 设置大对象的值，超过这个值的大对象直接进入老生代；</li>
-<li>-XX:NewRatio 设置分代垃圾回收器新生代和老生代内存占比；</li>
-<li>-XX:SurvivorRatio 设置新生代 Eden、Form Survivor、To Survivor 占比。</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Java, JVM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>视觉领域的部分国内公司</title>
-    <url>/2018/03/09/%E8%A7%86%E8%A7%89%E9%A2%86%E5%9F%9F%E7%9A%84%E9%83%A8%E5%88%86%E5%9B%BD%E5%86%85%E5%85%AC%E5%8F%B8/</url>
-    <content><![CDATA[<p>##初创公司</p>
-<p><a href="http://www.tuputech.com/" target="_blank" rel="noopener">图普科技</a><br><a href="http://www.faceplusplus.com.cn/" target="_blank" rel="noopener">Face++</a><br><a href="http://www.linkface.cn/index.html" target="_blank" rel="noopener">Linkface</a><br><a href="http://www.minieye.cc/cn/" target="_blank" rel="noopener">Minieye</a><br><a href="http://www.cogtu.com/?lang=zh" target="_blank" rel="noopener">知图Cogtu</a><br><a href="http://www.sensetime.com/cn" target="_blank" rel="noopener">商汤科技Sensetime</a><br><a href="http://www.hiscene.com/" target="_blank" rel="noopener">亮风台Hiscene</a><br><a href="http://www.zhangying.mobi/index.html" target="_blank" rel="noopener">掌赢科技</a><br><a href="http://www.deepglint.com/" target="_blank" rel="noopener">格灵深瞳DeepPG</a></p>
-<a id="more"></a>
-<p><a href="http://www.lagou.com/gongsi/j114187.html" target="_blank" rel="noopener">凌感科技usens</a><br><a href="http://www.tusimple.com/" target="_blank" rel="noopener">图森TuSimple</a><br><a href="http://www.seetatech.com/" target="_blank" rel="noopener">中科视拓Seetatech(山世光)</a><br><a href>第四范式</a></p>
-<p>##上市公司：</p>
-<p><a href="http://idl.baidu.com/" target="_blank" rel="noopener">百度DL实验室</a><br><a href="http://youtu.qq.com/" target="_blank" rel="noopener">腾讯优图</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_Upgrade/429476" target="_blank" rel="noopener">阿里高德</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/225254" target="_blank" rel="noopener">暴风魔镜</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/224449" target="_blank" rel="noopener">搜狗</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222651" target="_blank" rel="noopener">乐视tv</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222379" target="_blank" rel="noopener">奇虎360</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/223133/a" target="_blank" rel="noopener">京东实验室</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222007" target="_blank" rel="noopener">阿里巴巴</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/220225" target="_blank" rel="noopener">联想研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/225976" target="_blank" rel="noopener">华为研究院</a></p>
-<p>##知名外企：</p>
-<p><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222548" target="_blank" rel="noopener">佳能信息</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/223437" target="_blank" rel="noopener">索尼研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/220654" target="_blank" rel="noopener">富士通研发中心</a><br><a href="https://careers.microsoft.com/?rg=cn" target="_blank" rel="noopener">微软研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/221175" target="_blank" rel="noopener">英特尔研究院</a><br><a href="http://www.yingjiesheng.com/job-001-742-124.html" target="_blank" rel="noopener">三星研究院</a></p>
-]]></content>
-      <tags>
-        <tag>收藏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>构建你的深度学习环境（一）</title>
-    <url>/2018/04/27/%E6%9E%84%E5%BB%BA%E4%BD%A0%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="环境：Centos-7-2，python-2-7-5"><a href="#环境：Centos-7-2，python-2-7-5" class="headerlink" title="环境：Centos 7.2，python 2.7.5"></a>环境：Centos 7.2，python 2.7.5</h3><ul>
-<li>1.首先安装好Linux</li>
-<li>2.呼出命令行CTRL+ALT+T</li>
-<li>3.检测是否安装python，一般Linux默认安装python</li>
-<li>直接在命令行输入:python，会显示python的版本号，python2.7.9以上版本默认安装pip。可以看到我的版本号是2.7.5，否则进行步骤</li>
-<li>4.eixt()退出python环境。</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>进程、线程、协程的区别和通信方式</title>
-    <url>/2020/10/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E3%80%81%E5%8D%8F%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>进程，是操作系统资源分配（CPU时间片、内存空间）的最小单位。</p>
-<p><strong>进程通信：</strong><br>每个进程各自有不同的用户地址空间,任何一个进程的全局变量在另一个进程中都看不到，所以进程之间要交换数据必须通过<code>内核</code>,在内核中开辟一块缓冲区,进程A把数据从用户空间拷到内核缓冲区,进程B再从内核缓冲区把数据读走,内核提供的这种机制称为进程间通信。</p>
-<a id="more"></a>
-<p>进程间通信有4种方式，以下从简单到复杂的方式出场:</p>
-<h4 id="1-管道-pipe"><a href="#1-管道-pipe" class="headerlink" title="1.管道(pipe)"></a>1.管道(pipe)</h4><p>  管道是一种具有两个端点的通信通道，一个管道实际上就是只存在在内存中的文件，对这个文件操作需要两个已经打开文件进行，他们代表管道的两端，也叫两个句槟，管道是一种特殊的文件，不属于一种文件系统，而是一种独立的文件系统，有自己的数据结构，根据管道的使用范围划分为无名管道和命名管道。<br>无名管道用于父进程和子进程之间，通常父进程创建管道，然后由通信的子进程继承父进程的读端点句柄和写端点句柄，或者父进程有读写句柄的子进程，这些子进程可以使用管道直接通信，不需要通过父进程。<br>命名管道，命名管道是为了解决无名管道只能在父子进程间通信而设计的，命名管道是建立在实际的磁盘介质或文件系统(而不是只存在内存中)，任何进程可以通过文件名或路径建立与该文件的联系，命名换到需要一种FIFO文件(有先进先出的原则)，虽然FIFO文件的inode节点在磁盘上，但仅是一个节点而已，文件的数据还是存在于内存缓冲页面中，和普通管道相同。</p>
-<h4 id="2-信号"><a href="#2-信号" class="headerlink" title="2.信号"></a>2.信号</h4><p>  信号，用于接受某种事件发生，除了用于进程间通信之外，进程还可以发送信号给进程本身。除了系统内核和root之外，只有具备相同id的进程才可以信号进行通信。</p>
-<h4 id="3-消息队列"><a href="#3-消息队列" class="headerlink" title="3.消息队列"></a>3.消息队列</h4><p>  消息队列是消息的链表，包括Posix消息队列和system v消息队列(Posix常用于线程，system常用于进程)，有权限的进程可以向消息队列中添加消息，有读权限的进程可以读走消息队列的消息。<br>消息队列克服了信号承载信息量少，管道只能承载无格式字节流及缓冲区大小受限等缺陷。</p>
-<h4 id="4-共享内存"><a href="#4-共享内存" class="headerlink" title="4.共享内存"></a>4.共享内存</h4><p>  共享内存使多个进程可以访问同一块内存空间，是最快的IPC形式，是针对其他通信方式运行效率低而设计的，往往与其他进程结合使用，如与信号量结合，来达到进程间的同步与互斥。传递文件最好用共享内存的方式。 </p>
-<p>linux常用的进程间的通讯方式<br>（1）、管道(pipe)：管道可用于具有亲缘关系的进程间的通信，是一种半双工的方式，数据只能单向流动，允许一个进程和另一个与它有共同祖先的进程之间进行通信。<br>（2）、命名管道(named pipe)：命名管道克服了管道没有名字的限制，同时除了具有管道的功能外（也是半双工），它还允许无亲缘关系进程间的通信。命名管道在文件系统中有对应的文件名。命名管道通过命令mkfifo或系统调用mkfifo来创建。<br>（3）、信号（signal）：信号是比较复杂的通信方式，用于通知接收进程有某种事件发生了，除了进程间通信外，进程还可以发送信号给进程本身；linux除了支持Unix早期信号语义函数sigal外，还支持语义符合Posix.1标准的信号函数sigaction（实际上，该函数是基于BSD的，BSD为了实现可靠信号机制，又能够统一对外接口，用sigaction函数重新实现了signal函数）。<br>（4）、消息队列：消息队列是消息的链接表，包括Posix消息队列system V消息队列。有足够权限的进程可以向队列中添加消息，被赋予读权限的进程则可以读走队列中的消息。消息队列克服了信号承载信息量少，管道只能承载无格式字节流以及缓冲区大小受限等缺<br>（5）、共享内存：使得多个进程可以访问同一块内存空间，是最快的可用IPC形式。是针对其他通信机制运行效率较低而设计的。往往与其它通信机制，如信号量结合使用，来达到进程间的同步及互斥。<br>（6）、内存映射：内存映射允许任何多个进程间通信，每一个使用该机制的进程通过把一个共享的文件映射到自己的进程地址空间来实现它。<br>（7）、信号量（semaphore）：主要作为进程间以及同一进程不同线程之间的同步手段。</p>
-<p>（8）、套接字（Socket）：更为一般的进程间通信机制，可用于不同机器之间的进程间通信。起初是由Unix系统的BSD分支开发出来的，但现在一般可以移植到其它类Unix系统上：Linux和System V的变种都支持套接字。</p>
-<h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><p>线程是CPU调度、程序执行的最小单位。线程间通信主要通过等待/通知机制…</p>
-<h3 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h3><p>协程由程序自身控制子程序执行，有极高的执行效率，是比线程更轻量级的存在。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《深入理解Java虚拟机》之虚拟机类加载机制</title>
-    <url>/2020/10/01/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E3%80%8B%E4%B9%8B%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/</url>
-    <content><![CDATA[<h3 id="类加载过程"><a href="#类加载过程" class="headerlink" title="类加载过程"></a>类加载过程</h3><p>当程序主动使用某个类时，如果该类还未被加载到内存中，则JVM会通过加载、连接、初始化3个步骤来对该类进行初始化。如果没有意外，JVM将会连续完成3个步骤，所以有时也把这个3个步骤统称为类加载或类初始化。</p>
-<p>JVM虚拟机执行class字节码的过程可以分为7个阶段：加载、验证、准备、解析、初始化、使用、卸载</p>
-<p>（没事多看书，多总结，多动手。）</p>
-<p><img src="https://img-blog.csdn.net/20180813115150336?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM4MDc1NDI1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt></p>
-<a id="more"></a>
-<h3 id="1-加载："><a href="#1-加载：" class="headerlink" title="1.加载："></a>1.加载：</h3><p>将类的class文件读入到内存，并为之创建一个java.lang.Class对象，也就是说，当程序中使用任何类时，系统都会为之建立一个java.lang.Class对象。</p>
-<p>类的加载由类加载器完成，类加载器通常由JVM提供，这些类加载器也是前面所有程序运行的基础，JVM提供的这些类加载器通常被称为系统类加载器。除此之外，开发者可以通过继承ClassLoader基类来创建自己的类加载器。</p>
-<p>  通过使用不同的类加载器，可以从不同来源加载类的二进制数据，通常有如下几种来源。</p>
-<ul>
-<li>从本地文件系统加载class文件，这是前面绝大部分示例程序的类加载方式。</li>
-<li>从JAR包加载class文件，这种方式也是很常见的，前面介绍JDBC编程时用到的数据库驱动类就放在JAR文件中，JVM可以从JAR文件中直接加载该class文件。</li>
-<li>通过网络加载class文件。</li>
-<li><p>把一个Java源文件动态编译，并执行加载。</p>
-<p>类加载器通常无须等到“首次使用”该类时才加载该类，Java虚拟机规范允许系统预先加载某些类。</p>
-</li>
-</ul>
-<h3 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h3><p>  当类被加载之后，系统为之生成一个对应的Class对象，接着将会进入连接阶段，连接阶段负责把类的二进制数据合并到JRE中。类连接又可分为如下3个阶段。</p>
-<p>  <strong>1)验证：</strong>验证阶段用于检验被加载的类是否有正确的内部结构，并和其他类协调一致。Java是相对C++语言是安全的语言，例如它有C++不具有的数组越界的检查。这本身就是对自身安全的一种保护。验证阶段是Java非常重要的一个阶段，它会直接的保证应用是否会被恶意入侵的一道重要的防线，越是严谨的验证机制越安全。验证的目的在于确保Class文件的字节流中包含信息符合当前虚拟机要求，不会危害虚拟机自身安全。其主要包括四种验证，文件格式验证，元数据验证，字节码验证，符号引用验证。</p>
-<p>  四种验证做进一步说明：</p>
-<p>  <strong>文件格式验证：</strong>主要验证字节流是否符合Class文件格式规范，并且能被当前的虚拟机加载处理。例如：主，次版本号是否在当前虚拟机处理的范围之内。常量池中是否有不被支持的常量类型。指向常量的中的索引值是否存在不存在的常量或不符合类型的常量。</p>
-<p>  <strong>元数据验证：</strong>对字节码描述的信息进行语义的分析，分析是否符合java的语言语法的规范。</p>
-<p>  <strong>字节码验证：</strong>最重要的验证环节，分析数据流和控制，确定语义是合法的，符合逻辑的。主要的针对元数据验证后对方法体的验证。保证类方法在运行时不会有危害出现。</p>
-<p>  <strong>符号引用验证：</strong>主要是针对符号引用转换为直接引用的时候，是会延伸到第三解析阶段，主要去确定访问类型等涉及到引用的情况，主要是要保证引用一定会被访问到，不会出现类等无法访问的问题。</p>
-<p>  2)<strong>准备：</strong>类准备阶段负责为类的静态变量分配内存，并设置默认初始值。</p>
-<p>  3)<strong>解析：</strong>将类的二进制数据中的符号引用替换成直接引用。说明一下：符号引用：符号引用是以一组符号来描述所引用的目标，符号可以是任何的字面形式的字面量，只要不会出现冲突能够定位到就行。布局和内存无关。直接引用：是指向目标的指针，偏移量或者能够直接定位的句柄。该引用是和内存中的布局有关的，并且一定加载进来的。</p>
-<h3 id="3-初始化"><a href="#3-初始化" class="headerlink" title="3.初始化"></a>3.初始化</h3><p>  初始化是为类的静态变量赋予正确的初始值，准备阶段和初始化阶段看似有点矛盾，其实是不矛盾的，如果类中有语句：private static int a = 10，它的执行过程是这样的，首先字节码文件被加载到内存后，先进行链接的验证这一步骤，验证通过后准备阶段，给a分配内存，因为变量a是static的，所以此时a等于int类型的默认初始值0，即a=0,然后到解析（后面在说），到初始化这一步骤时，才把a的真正的值10赋给a,此时a=10。</p>
-<h2 id="类加载机制："><a href="#类加载机制：" class="headerlink" title="类加载机制："></a>类加载机制：</h2><p><strong>1.JVM的类加载机制</strong>主要有如下3种。</p>
-<ul>
-<li>全盘负责：所谓全盘负责，就是当一个类加载器负责加载某个Class时，该Class所依赖和引用其他Class也将由该类加载器负责载入，除非显示使用另外一个类加载器来载入。</li>
-<li>双亲委派：所谓的双亲委派，则是先让父类加载器试图加载该Class，只有在父类加载器无法加载该类时才尝试从自己的类路径中加载该类。通俗的讲，就是某个特定的类加载器在接到加载类的请求时，首先将加载任务委托给父加载器，依次递归，如果父加载器可以完成类加载任务，就成功返回；只有父加载器无法完成此加载任务时，才自己去加载。</li>
-<li>缓存机制。缓存机制将会保证所有加载过的Class都会被缓存，当程序中需要使用某个Class时，类加载器先从缓存区中搜寻该Class，只有当缓存区中不存在该Class对象时，系统才会读取该类对应的二进制数据，并将其转换成Class对象，存入缓冲区中。这就是为很么修改了Class后，必须重新启动JVM，程序所做的修改才会生效的原因。</li>
-</ul>
-<p><strong>2.这里说明一下双亲委派机制：</strong></p>
-<p><img src="https://img-blog.csdn.net/20180813145521896?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM4MDc1NDI1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>​    双亲委派机制，其工作原理的是，如果一个类加载器收到了类加载请求，它并不会自己先去加载，而是把这个请求委托给父类的加载器去执行，如果父类加载器还存在其父类加载器，则进一步向上委托，依次递归，请求最终将到达顶层的启动类加载器，如果父类加载器可以完成类加载任务，就成功返回，倘若父类加载器无法完成此加载任务，子加载器才会尝试自己去加载，这就是双亲委派模式，即每个儿子都很懒，每次有活就丢给父亲去干，直到父亲说这件事我也干不了时，儿子自己才想办法去完成。</p>
-<p>   双亲委派机制的优势：采用双亲委派模式的是好处是Java类随着它的类加载器一起具备了一种带有优先级的层次关系，通过这种层级关可以避免类的重复加载，当父亲已经加载了该类时，就没有必要子ClassLoader再加载一次。其次是考虑到安全因素，java核心api中定义类型不会被随意替换，假设通过网络传递一个名为java.lang.Integer的类，通过双亲委托模式传递到启动类加载器，而启动类加载器在核心Java API发现这个名字的类，发现该类已被加载，并不会重新加载网络传递的过来的java.lang.Integer，而直接返回已加载过的Integer.class，这样便可以防止核心API库被随意篡改。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>JVM</tag>
       </tags>
   </entry>
 </search>
