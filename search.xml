@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>现在是北京时间2020年5月16日早上7:37，我在杭州的家里早早起床</title>
+    <url>/2020/05/16/2020-05-16/</url>
+    <content><![CDATA[<p>现在是北京时间2020年5月16日早上7:37，我在杭州的家里早早起床（大概不到6点就醒了），洗漱后出去买了早餐，这个时间要比平时出门上班早1个小时，难得的自由与清闲啊~~有木有？！昨天傍晚下了小雨，和同事们一起吃过饭后惊喜地发现雨停了，开心！所以出去走走都觉得好凉爽，好放松！</p>
+<a id="more"></a>
+<p>我的工作是单休，所以今天也是工作日，不过初创小公司，注重结果大于形式，我们都在家办公还是比较人性化的。作为一名软件工程师，我深知自己还很菜，但是大家一起组成一个团队就很强了（所以更得投入精力成为团队的扛把子吖，小克同学听到木有？！），多人协作，直接沟通，交流碰撞的同时每个人的头脑都能活跃起来，思考并输出想法，最终达成共识从而形成有效的解决方案，朴素而务实的工程师文化大概不过如此吧~~</p>
+<p>最近负责的系统刚上线不久，一堆bug，一堆需求，痛并快乐着~~测试不到位，用例不足，完整的测试意识不强，后面要重视起来。不要什么事都那么独立地做，有些事一个人也不可能做到极致，要有意识地去找别人合作！</p>
+<hr>
+<blockquote>
+<p>本周碎碎念：要变得强大起来，要追求极致，要快乐而投入地工作，要有品质有感情的生活……要活得漂亮！</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+        <tag>思考</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo+GitHub博客管理命令汇总</title>
     <url>/2018/03/06/Hexo-GitHub%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/</url>
     <content><![CDATA[<h2 id="Hexo-部署博客及更新博文"><a href="#Hexo-部署博客及更新博文" class="headerlink" title="[Hexo]部署博客及更新博文"></a>[Hexo]部署博客及更新博文</h2><h3 id="新建博文"><a href="#新建博文" class="headerlink" title="新建博文"></a>新建博文</h3><p>使用 Git Shell 进入本地 Blog 文件夹，输入以下命令：</p>
@@ -39,26 +59,6 @@ hexo s --port=4100
       </categories>
       <tags>
         <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>现在是北京时间2020年5月16日早上7:37，我在杭州的家里早早起床</title>
-    <url>/2020/05/16/2020-05-16/</url>
-    <content><![CDATA[<p>现在是北京时间2020年5月16日早上7:37，我在杭州的家里早早起床（大概不到6点就醒了），洗漱后出去买了早餐，这个时间要比平时出门上班早1个小时，难得的自由与清闲啊~~有木有？！昨天傍晚下了小雨，和同事们一起吃过饭后惊喜地发现雨停了，开心！所以出去走走都觉得好凉爽，好放松！</p>
-<a id="more"></a>
-<p>我的工作是单休，所以今天也是工作日，不过初创小公司，注重结果大于形式，我们都在家办公还是比较人性化的。作为一名软件工程师，我深知自己还很菜，但是大家一起组成一个团队就很强了（所以更得投入精力成为团队的扛把子吖，小克同学听到木有？！），多人协作，直接沟通，交流碰撞的同时每个人的头脑都能活跃起来，思考并输出想法，最终达成共识从而形成有效的解决方案，朴素而务实的工程师文化大概不过如此吧~~</p>
-<p>最近负责的系统刚上线不久，一堆bug，一堆需求，痛并快乐着~~测试不到位，用例不足，完整的测试意识不强，后面要重视起来。不要什么事都那么独立地做，有些事一个人也不可能做到极致，要有意识地去找别人合作！</p>
-<hr>
-<blockquote>
-<p>本周碎碎念：要变得强大起来，要追求极致，要快乐而投入地工作，要有品质有感情的生活……要活得漂亮！</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-        <tag>思考</tag>
       </tags>
   </entry>
   <entry>
@@ -113,129 +113,6 @@ hexo s --port=4100
       <tags>
         <tag>Java</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Java中接口和抽象类的分析</title>
-    <url>/2020/10/01/Java%E4%B8%AD%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>接口是抽象方法的集合，如果一个类实现了某个接口，那么它就继承了这个接口的抽象方法</p>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MyInterface</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 接口当中只能声明一些方法（隐式的抽象方法），但是不能有方法体</span></span><br><span class="line">    <span class="comment">// 接口需要对应的实现类来实现具体方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printName</span><span class="params">(String name)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getNmae</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyInterfaceImpl</span> <span class="keyword">implements</span> <span class="title">MyInterface</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 抽象类实现接口的时候，需要实现接口当中声明的所有方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        System.out.println(name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getNmae</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"name"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>抽象，顾名思义，就是具体的另一面。抽象类，主要是用来提炼子类的通用特性，是被用来创建具有继承关系的子类的模板。它本身不能被实例化，只能被用作子类的超类。需要实例化时必须重写抽象方法，变成一个具体类。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAbstractClass</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 抽象类当中可以实现默认方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printNum</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">        System.out.println(a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 抽象方法只需要在抽象类当中声明，交由子类进行实现</span></span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">service</span><span class="params">(String req, String res)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 继承抽象类的子类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySubAbstractClass</span> <span class="keyword">extends</span> <span class="title">MyAbstractClass</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"aaa"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">service</span><span class="params">(String req, String res)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// implementation</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    MyAbstractClass m = <span class="keyword">new</span> MyAbstractClass() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">service</span><span class="params">(String req, String res)</span> </span>&#123;</span><br><span class="line">            <span class="comment">// implementation</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="抽象类和接口的对比"><a href="#抽象类和接口的对比" class="headerlink" title="抽象类和接口的对比"></a>抽象类和接口的对比</h3><p><img src="https://images2015.cnblogs.com/blog/1064302/201612/1064302-20161230090438195-1243745647.png" alt></p>
-<h2 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h2><h3 id="1、接口和抽象类有什么区别"><a href="#1、接口和抽象类有什么区别" class="headerlink" title="1、接口和抽象类有什么区别"></a>1、接口和抽象类有什么区别</h3><p>在Java语言中，抽象类abstract class和接口interface<code>是抽象定义的两种机制</code>。</p>
-<p>正是由于这两种机制的存在，才赋予了Java强大的面向对象能力。抽象类abstract class和接口interface在对于抽象定义方面具有很大的相似性，甚至可以相互替换。因此很多开发者在进行抽象定义时对二者的选择显得比较随意。其实，<code>两者之间还是有很大的区别</code>，对于它们的选择能反映出对问题本质的理解、对设计意图的理解。</p>
-<p>具体如下：<br><img src="https://img-blog.csdnimg.cn/20190311215243146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG5saWppbmdyYW4=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="2、interface应用在什么场合"><a href="#2、interface应用在什么场合" class="headerlink" title="2、interface应用在什么场合"></a>2、interface应用在什么场合</h3><ul>
-<li>类与类之间<code>需要特定的接口进行协调</code>，<code>而不在乎其如何实现</code>。</li>
-<li>作为能够实现特定功能的<code>标识</code>存在，也可以是什么接口方法都没有的纯粹标识。如序列化接口：<code>Serializable</code></li>
-<li>需要将一组类视为单一的类，而<code>调用者只通过接口来与这组类发生联系</code>。</li>
-<li>需要实现特定的<code>多项功能</code>，<code>而这些功能之间可能完全没有任何联系</code>。</li>
-<li>想实现多重继承，由于<strong>Java不支持多继承</strong>，子类不能够继承多个类，但可以实现多个接口</li>
-</ul>
-<h3 id="3、abstract-class应用在什么场合"><a href="#3、abstract-class应用在什么场合" class="headerlink" title="3、abstract class应用在什么场合"></a>3、abstract class应用在什么场合</h3><ul>
-<li>子类与子类之间有<code>共同的方法</code>（<code>甚至可以是空方法体</code>，然后由子类选择自己所感兴趣的方法来<code>覆盖 重写</code>），该方法写在抽象类中，避免每个子类再去写一遍；子类与子类之间<code>不同的方法</code>作为抽象方法，在抽象类中定义。</li>
-<li>某些场合下，只靠纯粹的接口不能满足类与类之间的协调，还必需类中<code>表示状态的属性</code>来<code>区别不同的关系</code>。</li>
-<li>一些方法是<code>共同的，与状态无关的，可以共享的</code>，<code>无需子类分别实现</code>，想提供默认实现；而另一些方法却需要各个子类根据自己特定的状态来实现特定的功能。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>今日春分，现在是2022年3月20日星期天，凌晨5:30</title>
-    <url>/2022/03/20/2022-03-20/</url>
-    <content><![CDATA[<p>刚刷到了一个关于什么语言适合做GUI的知乎问题，想到了原生开发在底层性能优化上能做的比混合开发（运行时需预先编译为目标语言）高出很多倍。其实，是一个关于技术选型的话题。由此，我联想到了当前工作中遇到的一些问题和两年前在一家创业公司的工作经历。</p>
-<a id="more"></a>
-<p>当初是面临node server和java server的跨语言服务交互，涉及一些数据处理、实时交互，用户体验优化相关。今天是面临python server整体向java server过渡，其中一个用户界面需要用到两个接口进行完整的交互，一个主接口已经完全迁移到了java，另一个提供参数列表的接口还是python，界面进行了很大幅度的改变，而原先的接口交互逻辑已不适用于新的界面，同时这段时间99%精力都用在了迁移上面，迁移的目标是：100%复制原先的代码逻辑，使得每一个子流程和整体流程的输入输出保持一致。很需要细心，也需要花大量时间来完成工程量，按这个惯性思维，就会尽最大可能去适配原先的逻辑。而当新的需求接入时，很容易会有一种路径依赖，保留了原先的调用方式，反而对于新功能造成一定的冗余，画蛇添足，对于用户体验是一个很大的负面效果。</p>
-<p>另外，python端的分支版本管理做的也很不规范，无法一键回滚到上一个线上版本，测试和线上使用了两个分支，并且最终rebase之后reset到了线上，管理比较混乱，导致不得不进行增量更新以实现回滚的逻辑。小改动还可以这么干，大的代码量没法这么来，风险不可控了。后面得尽快把分支规范化，线上master，开发dev，新功能feature，问题修复bugfix，不要有测试和线上不同分支的巨大分歧，起码从版本、分支上面做到合理化、规范化。</p>
-<p>感悟：<br>现在是一个很难兼顾的状态，不能两全其美。感觉生活在重复上演同类境遇，这一次，愿自己全力以赴，做到最好！</p>
-<p>时常去梳理当前现状，改变现状要有方案先出来。最近一两年接触的都是大量工程上的琐碎问题，技术上倒是没啥太大长进，除了21年新学习了Golang并且实际开发过一个后端项目，对于Python的开发有了更深入的理解与心得体会。对于自己的主开发语言Java，很久没有进行过更深入的学习了。今年的目标是把后端技术体系完整的梳理一遍，总结和分享相关技术，持续输出，争取产生一定的影响力。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-        <tag>思考</tag>
-        <tag>自我审视</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring事务传播机制</title>
-    <url>/2019/10/24/Spring%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD%E6%9C%BA%E5%88%B6/</url>
-    <content><![CDATA[<h4 id="Spring事务传播机制"><a href="#Spring事务传播机制" class="headerlink" title="Spring事务传播机制"></a>Spring事务传播机制</h4><p>1、事务抽象，特性：</p>
-<p>①REQUIRED：如果当前没有事务就<strong>需要</strong>创建一个新事务，否则就加入该事务，最常用也是Spring默认设置</p>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">   <span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">       methodB();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="comment">// do something</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<p>使用默认的事务传播机制，执行过程如下：调用A方法开启一个事务执行方法A的代码，紧接着执行方法B的代码，提交或者回滚事务（如果方法B出现了异常，则方法A最终回滚整体单个事务）</p>
-<p>②SUPPORTS：<strong>支持</strong>当前事务，如果当前存在事务，就加入该事务，否则以非事务执行</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>直接调用方法B不会执行事务</p>
-<p>③MANDATORY：支持当前事务，如果当前存在事务，就加入该事务，否则就<strong>强制</strong>抛出异常</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>直接调用方法B会报错</p>
-<p>④REQUIRES_NEW：创建新事务，无论是否存在事务，都创建新事务</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRES_NEW)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>调用方法A会开启事务1，执行完A里面的代码后，开启事务2执行方法B里面的代码，提交或回滚事务2，最后提交或回滚事务1。事务1和事务2互不影响</p>
-<p>⑤NOT_SUPPORTED：以非事务方式执行操作，如果当前存在事务，则把当前事务<strong>挂起</strong>（一般很少用到）</p>
-<p>⑥NEVER：以非事务方式执行操作，如果当前存在事务，则抛出异常</p>
-<p>⑦NESTED：嵌套事务：外层的事务如果回滚，会导致内层的事务也回滚，但内层的事务如果回滚仅仅回滚自己的代码</p>
-<h4 id="相关思考："><a href="#相关思考：" class="headerlink" title="相关思考："></a>相关思考：</h4><p>1.有一段业务逻辑，A调用B，如果A出错了仅仅回滚A，不能回滚B，这时必须得用REQUIRES_NEW传播机制，让A和B的事务是不同的两个事务</p>
-<p>2.A调用B，如果出错，B只能回滚自己，而A可以带着B一起回滚，这时得用NESTED来嵌套事务</p>
-<p>Tips: Spring事务隔离级别</p>
-<blockquote>
-<p> Spring默认的是数据库存储引擎的事务隔离级别，mysql默认隔离级别为可重复读</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>事务</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring IOC和AOP</title>
-    <url>/2019/07/13/Spring%20IOC%E5%92%8CAOP/</url>
-    <content><![CDATA[<h3 id="一、Spring"><a href="#一、Spring" class="headerlink" title="一、Spring"></a>一、Spring</h3><p>Spring的核心是IoC/DI的容器，它可以帮程序员完成组件之间的依赖关系注入，使得组件之间的依赖达到最小，进而提高组件的重用性，Spring是个低侵入性（invasive）的框架，Spring中的组件并不会意识到它正置身于Spring中，这使得组件可以轻易的从框架中脱离，而几乎不用任何修改，反过来说，组件也可以简单的方式加入至框架中，使得组件甚至框架的整合变得容易。</p>
-<p>Spring最为人重视的另一方面是支持AOP（Aspect-Oriented Programming），然而AOP框架只是Spring支持的一个子框架，说Spring框架是AOP框架并不是一件适当的描述，人们对于新奇的 AOP关注映射至Spring上，使得人们对于Spring的关注集中在它的AOP框架上，虽然有所误解，但也突显了Spring的另一个令人关注的特色。</p>
-<a id="more"></a>
-<p>Spring是一个开源框架，是一个轻量级的控制反转（IOC）和面向切面（AOP）的容器框架。</p>
-<p>（1）通过控制反转（IOC）达到松耦合，IOC也就是把控制权交出去，在使用中直接得到对象</p>
-<p>（2）提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑与系统级服务进行内聚性的开发（例如，商品的入库和出库是业务逻辑，而商品的入库和出库需要统一的日志记录和事务的管理是系统服务，与具体的业务无关，也就是无论业务如何，都要用到系统服务）</p>
-<p>（3）包含并管理应用对象的配置和生命周期，也就是容器的作用</p>
-<p>（4）将简单的组件配置、组合成为复杂的应用，也就是框架的作用</p>
-<p>框架与类库的区别：</p>
-<ul>
-<li><p>框架一般是封装了逻辑、高内聚的，类库则是松散的工具组合</p>
-</li>
-<li><p>框架专注于某一领域，类库则是更通用的</p>
-</li>
-</ul>
-<p><strong>Spring是一系列轻量级Java EE框架的集合：核心容器，Spring上下文，Spring AOP, Spring DAO, Spring ORM, Spring Web, Spring MVC。</strong></p>
-<p>IOC：控制反转，控制权的转移，应用程序本身不负责依赖对象的创建和维护，而是由外部容器负责创建和维护，也就是不显示的进行new创建对象</p>
-<p>DI（依赖注入）：<strong>是控制反转的一种实现方式</strong>，由IOC容器在运行期间，动态地将某种依赖关系注入到对象之中。也就是获得依赖对象的过程由自身管理变为由IOC容器主动注入。通过<a href="https://blog.csdn.net/sinat_38259539/article/details/71799078" target="_blank" rel="noopener">反射机制</a>实现。</p>
-<h4 id="控制反转："><a href="#控制反转：" class="headerlink" title="控制反转："></a>控制反转：</h4><p>控制反转的目的：创建对象并组装对象之间的关系。</p>
-<p>IOC容器初始化时创建一系列对象，并把对象之间的依赖关系通过注入的方式组织起来，当一个类A中有另外一个B，实例化时，先实例化A这个对象，再实例化B这个对象，然后把B这个对象赋值给A，这就是IOC的组装对象，具体如下图</p>
-<p><img src="https://images2017.cnblogs.com/blog/1170065/201708/1170065-20170822171719871-436013565.png" alt="img"></p>
-<p>图解：业务对象进入Spring容器，然后通过配置的元数据，生产出符合我们需要的对象，当我们需要用的时候，直接从Spring容器中取出来用即可，这也就是IOC，应用程序只关心对象的使用，而不关心对象的创建</p>
-<p>在IOC容器中，把所有对象称为Bean，Spring利用Bean来管理这些对象，Spring对于Bean和其他的使用有两种方式，一种是基于xml的配置，一种是注解方式。</p>
-<h4 id="依赖注入："><a href="#依赖注入：" class="headerlink" title="依赖注入："></a>依赖注入：</h4><p>借鉴<a href="http://blog.csdn.net/zhoudaxia/article/details/31763677" target="_blank" rel="noopener">http://blog.csdn.net/zhoudaxia/article/details/31763677</a></p>
-<p>控制反转：把传统上由程序代码直接操控的对象的调用权交给外部容器，通过容器来实现对象组件的装配和管理。所谓的“控制反转”就是组件对象的控制权转移了，从程序代码本身转移到了外部容器。</p>
-<p>实现控制反转的两种方式：依赖注入和依赖查找。</p>
-<p>依赖注入有四种实现方式：</p>
-<p><strong>1.基于接口</strong>：实现特定接口以供外部容器注入所依赖类型的对象，接口中定义要注入依赖对象的方法。</p>
-<p><strong>2.基于setter方法</strong>：实现特定属性的public set方法，来让外部容器调用，以传入所依赖类型的对象。</p>
-<p><strong>3.基于构造函数</strong>：实现特定参数的构造函数，在新建对象时传入所依赖类型的对象。</p>
-<p><strong>4.基于注解</strong>：基于Java的注解功能，在私有变量前加“@Autowired”等注解，不需要显式的定义以上三种代码，便可以让外部容器传入对应的对象。该方案相当于定义了public 的set方法，但是因为没有真正的set方法，从而不会为了实现依赖注入导致暴露了不该暴露的接口（因为set方法只想让容器访问来注入而不希望其他依赖此类的对象访问）。</p>
-<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>面向切面编程，</p>
-]]></content>
   </entry>
   <entry>
     <title>JDK源码分析之Map</title>
@@ -319,6 +196,374 @@ hexo s --port=4100
       </tags>
   </entry>
   <entry>
+    <title>今日春分，现在是2022年3月20日星期天，凌晨5:30</title>
+    <url>/2022/03/20/2022-03-20/</url>
+    <content><![CDATA[<p>刚刷到了一个关于什么语言适合做GUI的知乎问题，想到了原生开发在底层性能优化上能做的比混合开发（运行时需预先编译为目标语言）高出很多倍。其实，是一个关于技术选型的话题。由此，我联想到了当前工作中遇到的一些问题和两年前在一家创业公司的工作经历。</p>
+<a id="more"></a>
+<p>当初是面临node server和java server的跨语言服务交互，涉及一些数据处理、实时交互，用户体验优化相关。今天是面临python server整体向java server过渡，其中一个用户界面需要用到两个接口进行完整的交互，一个主接口已经完全迁移到了java，另一个提供参数列表的接口还是python，界面进行了很大幅度的改变，而原先的接口交互逻辑已不适用于新的界面，同时这段时间99%精力都用在了迁移上面，迁移的目标是：100%复制原先的代码逻辑，使得每一个子流程和整体流程的输入输出保持一致。很需要细心，也需要花大量时间来完成工程量，按这个惯性思维，就会尽最大可能去适配原先的逻辑。而当新的需求接入时，很容易会有一种路径依赖，保留了原先的调用方式，反而对于新功能造成一定的冗余，画蛇添足，对于用户体验是一个很大的负面效果。</p>
+<p>另外，python端的分支版本管理做的也很不规范，无法一键回滚到上一个线上版本，测试和线上使用了两个分支，并且最终rebase之后reset到了线上，管理比较混乱，导致不得不进行增量更新以实现回滚的逻辑。小改动还可以这么干，大的代码量没法这么来，风险不可控了。后面得尽快把分支规范化，线上master，开发dev，新功能feature，问题修复bugfix，不要有测试和线上不同分支的巨大分歧，起码从版本、分支上面做到合理化、规范化。</p>
+<p>感悟：<br>现在是一个很难兼顾的状态，不能两全其美。感觉生活在重复上演同类境遇，这一次，愿自己全力以赴，做到最好！</p>
+<p>时常去梳理当前现状，改变现状要有方案先出来。最近一两年接触的都是大量工程上的琐碎问题，技术上倒是没啥太大长进，除了21年新学习了Golang并且实际开发过一个后端项目，对于Python的开发有了更深入的理解与心得体会。对于自己的主开发语言Java，很久没有进行过更深入的学习了。今年的目标是把后端技术体系完整的梳理一遍，总结和分享相关技术，持续输出，争取产生一定的影响力。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+        <tag>思考</tag>
+        <tag>自我审视</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java核心技术001</title>
+    <url>/2018/08/02/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF001/</url>
+    <content><![CDATA[<h3 id="Java八大基本类型"><a href="#Java八大基本类型" class="headerlink" title="Java八大基本类型"></a>Java八大基本类型</h3><p>8种基本数据类型，其中4种整型，2种浮点类型，1种用于表示Unicode编码的字符单元的字符类型和1种用于表示真值的boolean类型。</p>
+<p>int / short / long / byte / float / double / char / boolean</p>
+<a id="more"></a>
+<p>1字节=8位，即1byte = 8bit，有符号整数，取值范围要先去掉符号位再计算数值大小</p>
+<ul>
+<li>整型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储需求</th>
+<th>bit数</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>4 byte</td>
+<td>32</td>
+<td>-2^31 ~ 2^31-1（有符号整数）</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2 byte</td>
+<td>16</td>
+<td>-2^15 ~ 2^15-1</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8 byte</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>byte</td>
+<td>1 byte</td>
+<td>8</td>
+<td>－128～127</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>浮点型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储</th>
+<th>bit</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>4 byte</td>
+<td>32</td>
+<td>float类型的数值有一个后缀F(例如：3.14F)</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8 byte</td>
+<td>64</td>
+<td>没有后缀F的浮点数值(如3.14)默认为double类型</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>char类型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储</th>
+<th>bit</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char</td>
+<td>2 byte</td>
+<td>16</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>boolean类型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储</th>
+<th>bit</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>1 byte</td>
+<td>8</td>
+<td>false、true</td>
+</tr>
+</tbody>
+</table>
+<p>Java有一个能够表示任意精度的数学包，通常称为“大数值”(big number)。虽然被称为大数值，但它并不是一种Java类型，而是一个Java对象。如果基本的整数和浮点数精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger，BigDecimal。这两个类可以处理包含<strong>任意长度数字序列</strong>的数值。BigInteger类实现了任意精度的整数运算，BigDecimal实现了任意精度的浮点数运算。具体的用法可以参见Java API。</p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><h4 id="long转int"><a href="#long转int" class="headerlink" title="long转int"></a>long转int</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">long</span> a = <span class="number">100L</span>;</span><br><span class="line"><span class="keyword">int</span> b = (<span class="keyword">int</span>)a;</span><br></pre></td></tr></table></figure>
+<h3 id="反射原理"><a href="#反射原理" class="headerlink" title="反射原理"></a>反射原理</h3><p>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法；这种动态获取的以及动态调用对象的方法的功能称为Java的反射机制。</p>
+<p>Java学习之反射机制及应用场景 - 对你说早安 - 博客园<a href="https://www.cnblogs.com/lzfsuifeng/p/9590705.html" target="_blank" rel="noopener">https://www.cnblogs.com/lzfsuifeng/p/9590705.html</a></p>
+<h3 id="反射机制提供了哪些功能？"><a href="#反射机制提供了哪些功能？" class="headerlink" title="反射机制提供了哪些功能？"></a>反射机制提供了哪些功能？</h3><ul>
+<li>在运行时判定任意一个对象所属的类</li>
+<li>在运行时判定任意一个类所具有的成员变量和方法；</li>
+<li>在运行时构造任意一个类的对象；</li>
+<li>在运行时调用任意一个对象的方法；</li>
+<li>生成动态代理；</li>
+</ul>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>Java运行时的原理？</p>
+<p>动态代理</p>
+<ul>
+<li>逆向代码 ，例如反编译</li>
+<li>与注解相结合的框架 例如Retrofit</li>
+<li>单纯的反射机制应用框架 例如EventBus 2.x</li>
+<li>动态生成类框架 例如Gson</li>
+</ul>
+<h3 id="反射机制的优缺点："><a href="#反射机制的优缺点：" class="headerlink" title="反射机制的优缺点："></a>反射机制的优缺点：</h3><p> <strong>优点：</strong></p>
+<p>  运行期类型的判断，动态类加载，动态代理使用反射。</p>
+<p> <strong>缺点：</strong></p>
+<p>  性能是一个问题，反射相当于一系列解释操作，通知jvm要做的事情，性能比直接的java代码要慢很多。</p>
+<p>Java中的静态变量和静态代码块是在类加载的时候就执行的，实例化对象时，先声明并实例化变量再执行构造函数。如果子类继承父类，则先执行父类的静态变量和静态代码块，再执行子类的静态变量和静态代码块。同样，接着在执行父类和子类非静态代码块和构造函数。</p>
+<p>注意：（静态）变量和（静态）代码块的也是有执行顺序的，与代码书写的顺序一致。在（静态）代码块中可以使用（静态）变量，但是被使用的（静态）变量必须在（静态）代码块前面声明。</p>
+<p> 最后给出执行步骤：</p>
+<p><strong>1、父类静态变量和静态代码块（先声明的先执行）；</strong></p>
+<p><strong>2、子类静态变量和静态代码块（先声明的先执行）；</strong></p>
+<p><strong>3、父类的变量和代码块（先声明的先执行）；</strong></p>
+<p><strong>4、父类的构造函数；</strong></p>
+<p><strong>5、子类的变量和代码块（先声明的先执行）；</strong></p>
+<p><strong>6、子类的构造函数。</strong></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Java中接口和抽象类的分析</title>
+    <url>/2020/10/01/Java%E4%B8%AD%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>接口是抽象方法的集合，如果一个类实现了某个接口，那么它就继承了这个接口的抽象方法</p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MyInterface</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 接口当中只能声明一些方法（隐式的抽象方法），但是不能有方法体</span></span><br><span class="line">    <span class="comment">// 接口需要对应的实现类来实现具体方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printName</span><span class="params">(String name)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getNmae</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyInterfaceImpl</span> <span class="keyword">implements</span> <span class="title">MyInterface</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 抽象类实现接口的时候，需要实现接口当中声明的所有方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        System.out.println(name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getNmae</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"name"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>抽象，顾名思义，就是具体的另一面。抽象类，主要是用来提炼子类的通用特性，是被用来创建具有继承关系的子类的模板。它本身不能被实例化，只能被用作子类的超类。需要实例化时必须重写抽象方法，变成一个具体类。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAbstractClass</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 抽象类当中可以实现默认方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printNum</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">        System.out.println(a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 抽象方法只需要在抽象类当中声明，交由子类进行实现</span></span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">service</span><span class="params">(String req, String res)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 继承抽象类的子类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySubAbstractClass</span> <span class="keyword">extends</span> <span class="title">MyAbstractClass</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"aaa"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">service</span><span class="params">(String req, String res)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// implementation</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    MyAbstractClass m = <span class="keyword">new</span> MyAbstractClass() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">service</span><span class="params">(String req, String res)</span> </span>&#123;</span><br><span class="line">            <span class="comment">// implementation</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="抽象类和接口的对比"><a href="#抽象类和接口的对比" class="headerlink" title="抽象类和接口的对比"></a>抽象类和接口的对比</h3><p><img src="https://images2015.cnblogs.com/blog/1064302/201612/1064302-20161230090438195-1243745647.png" alt></p>
+<h2 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h2><h3 id="1、接口和抽象类有什么区别"><a href="#1、接口和抽象类有什么区别" class="headerlink" title="1、接口和抽象类有什么区别"></a>1、接口和抽象类有什么区别</h3><p>在Java语言中，抽象类abstract class和接口interface<code>是抽象定义的两种机制</code>。</p>
+<p>正是由于这两种机制的存在，才赋予了Java强大的面向对象能力。抽象类abstract class和接口interface在对于抽象定义方面具有很大的相似性，甚至可以相互替换。因此很多开发者在进行抽象定义时对二者的选择显得比较随意。其实，<code>两者之间还是有很大的区别</code>，对于它们的选择能反映出对问题本质的理解、对设计意图的理解。</p>
+<p>具体如下：<br><img src="https://img-blog.csdnimg.cn/20190311215243146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NzZG5saWppbmdyYW4=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="2、interface应用在什么场合"><a href="#2、interface应用在什么场合" class="headerlink" title="2、interface应用在什么场合"></a>2、interface应用在什么场合</h3><ul>
+<li>类与类之间<code>需要特定的接口进行协调</code>，<code>而不在乎其如何实现</code>。</li>
+<li>作为能够实现特定功能的<code>标识</code>存在，也可以是什么接口方法都没有的纯粹标识。如序列化接口：<code>Serializable</code></li>
+<li>需要将一组类视为单一的类，而<code>调用者只通过接口来与这组类发生联系</code>。</li>
+<li>需要实现特定的<code>多项功能</code>，<code>而这些功能之间可能完全没有任何联系</code>。</li>
+<li>想实现多重继承，由于<strong>Java不支持多继承</strong>，子类不能够继承多个类，但可以实现多个接口</li>
+</ul>
+<h3 id="3、abstract-class应用在什么场合"><a href="#3、abstract-class应用在什么场合" class="headerlink" title="3、abstract class应用在什么场合"></a>3、abstract class应用在什么场合</h3><ul>
+<li>子类与子类之间有<code>共同的方法</code>（<code>甚至可以是空方法体</code>，然后由子类选择自己所感兴趣的方法来<code>覆盖 重写</code>），该方法写在抽象类中，避免每个子类再去写一遍；子类与子类之间<code>不同的方法</code>作为抽象方法，在抽象类中定义。</li>
+<li>某些场合下，只靠纯粹的接口不能满足类与类之间的协调，还必需类中<code>表示状态的属性</code>来<code>区别不同的关系</code>。</li>
+<li>一些方法是<code>共同的，与状态无关的，可以共享的</code>，<code>无需子类分别实现</code>，想提供默认实现；而另一些方法却需要各个子类根据自己特定的状态来实现特定的功能。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring容器的启动过程及生命周期</title>
+    <url>/2019/10/08/Spring%E5%AE%B9%E5%99%A8%E7%9A%84%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B%E5%8F%8A%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
+    <content><![CDATA[<h3 id="Spring容器的启动过程及生命周期"><a href="#Spring容器的启动过程及生命周期" class="headerlink" title="Spring容器的启动过程及生命周期"></a>Spring容器的启动过程及生命周期</h3><h3 id="Spring-Container启动过程"><a href="#Spring-Container启动过程" class="headerlink" title="Spring Container启动过程"></a>Spring Container启动过程</h3><blockquote>
+<p>创建和配置实例</p>
+<p>刷新实例</p>
+</blockquote>
+<h1 id="Spring容器的启动全流程"><a href="#Spring容器的启动全流程" class="headerlink" title="Spring容器的启动全流程"></a>Spring容器的启动全流程</h1><p>Spring容器的启动流程如下，这是我在看源码过程中自己总结的流程图，如有错误，还望评论区指点：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1771072/202009/1771072-20200909164014978-2077560080.png" alt="img"></p>
+<p>接下来附上源码：</p>
+<blockquote>
+<p>为什么是refresh方法命名，而不是init命名呢？</p>
+<p>其实，在ApplicaitonContext建立起来之后，可以通过refresh进行重建，将原来的ac销毁，重新执行一次初始化操作，用refresh更加贴切。</p>
+</blockquote>
+<p>Bean的创建和销毁</p>
+<ul>
+<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#dogetbean全流程" target="_blank" rel="noopener">doGetBean全流程</a></li>
+<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#createbean" target="_blank" rel="noopener">createBean</a></li>
+<li>doCreateBean<ul>
+<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#createbeaninstance-创建实例" target="_blank" rel="noopener">createBeanInstance 创建实例</a></li>
+<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#populatebean-填充属性" target="_blank" rel="noopener">populateBean 填充属性</a></li>
+<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#initializebean-回调方法" target="_blank" rel="noopener">initializeBean 回调方法</a></li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="循环依赖"><a href="#循环依赖" class="headerlink" title="循环依赖"></a>循环依赖</h3><p>N个类循环(嵌套)引，即N个Bean互相引用对方，最终形成<code>闭环</code>，表示对象之间的相互依赖关系</p>
+<p>如果在日常开发中我们用new对象的方式，若构造函数之间发生这种<strong>循环依赖</strong>的话，程序会在运行时一直循环调用<strong>最终导致内存溢出</strong>，StackOverflowError</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        B b = <span class="keyword">new</span> B();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        A a = <span class="keyword">new</span> A();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>无法解决构造器/构造方法的循环依赖，因为一开始就实例化了，初始化</p>
+<p>参考文章 <a href="https://cloud.tencent.com/developer/article/1497692" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1497692</a></p>
+<p>对于Spring解决循环依赖的认识</p>
+<p>// 循环依赖：调用某实例对象的方法时，方法内部又涉及到另一个类的实例化，而B当中又依赖了A，所以这时先返回一个半成品的B，等A完成了实例化之后，再返回B的实例化，最终初始化</p>
+<h5 id="1、构造器注入循环依赖"><a href="#1、构造器注入循环依赖" class="headerlink" title="1、构造器注入循环依赖"></a>1、构造器注入循环依赖</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">(B b)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">(A a)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果：项目启动失败抛出异常<code>BeanCurrentlyInCreationException</code></p>
+<p>构造器注入构成的循环依赖，此种循环依赖方式<strong>是无法解决的</strong>，只能抛出<code>BeanCurrentlyInCreationException</code>异常表示循环依赖。这也是构造器注入的最大劣势</p>
+<p><code>根本原因</code>：Spring解决循环依赖依靠的是Bean的“中间态”这个概念，而这个中间态指的是<code>已经实例化</code>，但还没初始化的状态。而构造器是完成实例化的东东（不存在中间态），所以构造器的循环依赖无法解决</p>
+<h5 id="2、field属性注入（setter方法注入）循环依赖"><a href="#2、field属性注入（setter方法注入）循环依赖" class="headerlink" title="2、field属性注入（setter方法注入）循环依赖"></a>2、field属性注入（setter方法注入）循环依赖</h5><p>这种方式是我们<strong>最最最最</strong>为常用的依赖注入方式（所以猜都能猜到它肯定不会有问题啦）：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> B b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> A a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>结果：项目启动成功，能够正常work</strong></p>
+<h5 id="3、prototype-field属性注入循环依赖"><a href="#3、prototype-field属性注入循环依赖" class="headerlink" title="3、prototype field属性注入循环依赖"></a>3、<code>prototype</code> field属性注入循环依赖</h5><p><code>prototype</code>在平时使用情况较少，但是也并不是不会使用到，因此此种方式也需要引起重视。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span><br><span class="line">@Service</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private B b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span><br><span class="line">@Service</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private A a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果：<strong>需要注意的是</strong>本例中<strong>启动时是不会报错的</strong>（因为非单例Bean<code>默认</code>不会初始化，而是使用时才会初始化），所以很简单咱们只需要手动<code>getBean()</code>或者在一个单例Bean内<code>@Autowired</code>一下它即可</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在单例Bean内注入</span></span><br><span class="line">    @Autowired</span><br><span class="line">    private A a;</span><br></pre></td></tr></table></figure>
+<p>这样子启动就报错：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'mytest.TestSpringBean'</span>: Unsatisfied dependency expressed through field <span class="string">'a'</span>; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'a'</span>: Unsatisfied dependency expressed through field <span class="string">'b'</span>; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'b'</span>: Unsatisfied dependency expressed through field <span class="string">'a'</span>; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'a'</span>: Requested bean is currently <span class="keyword">in</span> creation: Is there an unresolvable circular reference?</span><br><span class="line"></span><br><span class="line">	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:<span class="number">596</span>)</span><br><span class="line">	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:<span class="number">90</span>)</span><br><span class="line">	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:<span class="number">374</span>)</span><br></pre></td></tr></table></figure>
+<p>如何解决？？？ 可能有的小伙伴看到网上有说使用<code>@Lazy</code>注解解决：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@Lazy</span><br><span class="line">@Autowired</span><br><span class="line">private A a;</span><br></pre></td></tr></table></figure>
+<p>此处负责任的告诉你这样是解决不了问题的(<strong>可能会掩盖问题</strong>)，<code>@Lazy</code>只是延迟初始化而已，当你真正使用到它（初始化）的时候，依旧会报如上异常。</p>
+<p>对于Spring循环依赖的情况总结如下：</p>
+<ol>
+<li>不能解决的情况： 1. 构造器注入循环依赖 2. <code>prototype</code> field属性注入循环依赖</li>
+<li>能解决的情况： 1. field属性注入（setter方法注入）循环依赖</li>
+</ol>
+<h2 id="Spring解决循环依赖的原理分析"><a href="#Spring解决循环依赖的原理分析" class="headerlink" title="Spring解决循环依赖的原理分析"></a>Spring解决循环依赖的原理分析</h2><p><strong><code>Spring的循环依赖的理论依据基于Java的引用传递</code></strong>，当获得对象的引用时，<strong>对象的属性是可以延后设置的</strong>。（但是构造器必须是在获取引用之前，毕竟你的引用是靠构造器给你生成的，儿子能先于爹出生？哈哈）</p>
+<h4 id="Spring创建Bean的流程"><a href="#Spring创建Bean的流程" class="headerlink" title="Spring创建Bean的流程"></a>Spring创建Bean的流程</h4><p>首先需要了解是Spring它创建Bean的流程，我把它的大致调用栈绘图如下： </p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-6158873/oepgq3cnb0.png?imageView2/2/w/1620" alt></p>
+<p> 对Bean的创建最为核心三个方法解释如下：</p>
+<ul>
+<li><code>createBeanInstance</code>：实例化，其实也就是调用对象的<strong>构造方法</strong>实例化对象</li>
+<li><code>populateBean</code>：填充属性，这一步主要是对bean的依赖属性进行注入(<code>@Autowired</code>)</li>
+<li><code>initializeBean</code>：回到一些形如<code>initMethod</code>、<code>InitializingBean</code>等方法</li>
+</ul>
+<p>从对<code>单例Bean</code>的初始化可以看出，循环依赖主要发生在<strong>第二步（populateBean）</strong>，也就是field属性注入的处理。</p>
+<h4 id="Spring容器的-39-三级缓存-39"><a href="#Spring容器的-39-三级缓存-39" class="headerlink" title="Spring容器的&#39;三级缓存&#39;"></a>Spring容器的<code>&#39;三级缓存&#39;</code></h4><p>在Spring容器的整个声明周期中，单例Bean有且仅有一个对象。这很容易让人想到可以用缓存来加速访问。 从源码中也可以看出Spring大量运用了Cache的手段，在循环依赖问题的解决过程中甚至不惜使用了“三级缓存”，这也便是它设计的精妙之处~</p>
+<p><code>三级缓存</code>其实它更像是Spring容器工厂的内的<code>术语</code>，采用三级缓存模式来解决循环依赖问题，这三级缓存分别指：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultSingletonBeanRegistry</span> <span class="keyword">extends</span> <span class="title">SimpleAliasRegistry</span> <span class="keyword">implements</span> <span class="title">SingletonBeanRegistry</span> </span>&#123;</span><br><span class="line">	...</span><br><span class="line">	<span class="comment">// 从上至下 分表代表这“三级缓存”</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; singletonObjects = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">256</span>); <span class="comment">//一级缓存</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; earlySingletonObjects = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>); <span class="comment">// 二级缓存</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, ObjectFactory&lt;?&gt;&gt; singletonFactories = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>); <span class="comment">// 三级缓存</span></span><br><span class="line">	...</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/** Names of beans that are currently in creation. */</span></span><br><span class="line">	<span class="comment">// 这个缓存也十分重要：它表示bean创建过程中都会在里面呆着~</span></span><br><span class="line">	<span class="comment">// 它在Bean开始创建时放值，创建完成时会将其移出~</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;String&gt; singletonsCurrentlyInCreation = Collections.newSetFromMap(<span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">16</span>));</span><br><span class="line"></span><br><span class="line">	<span class="comment">/** Names of beans that have already been created at least once. */</span></span><br><span class="line">	<span class="comment">// 当这个Bean被创建完成后，会标记为这个 注意：这里是set集合 不会重复</span></span><br><span class="line">	<span class="comment">// 至少被创建了一次的  都会放进这里~~~~</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;String&gt; alreadyCreated = Collections.newSetFromMap(<span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">256</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注：<code>AbstractBeanFactory</code>继承自<code>DefaultSingletonBeanRegistry</code>~</p>
+<ol>
+<li><code>singletonObjects</code>：用于存放完全初始化好的 bean，<strong>从该缓存中取出的 bean 可以直接使用</strong></li>
+<li><code>earlySingletonObjects</code>：提前曝光的单例对象的cache，存放原始的 bean 对象（尚未填充属性），用于解决循环依赖</li>
+<li><code>singletonFactories</code>：单例对象工厂的cache，存放 bean 工厂对象，用于解决循环依赖</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring事务传播机制</title>
+    <url>/2019/10/24/Spring%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD%E6%9C%BA%E5%88%B6/</url>
+    <content><![CDATA[<h4 id="Spring事务传播机制"><a href="#Spring事务传播机制" class="headerlink" title="Spring事务传播机制"></a>Spring事务传播机制</h4><p>1、事务抽象，特性：</p>
+<p>①REQUIRED：如果当前没有事务就<strong>需要</strong>创建一个新事务，否则就加入该事务，最常用也是Spring默认设置</p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">   <span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">       methodB();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="comment">// do something</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>使用默认的事务传播机制，执行过程如下：调用A方法开启一个事务执行方法A的代码，紧接着执行方法B的代码，提交或者回滚事务（如果方法B出现了异常，则方法A最终回滚整体单个事务）</p>
+<p>②SUPPORTS：<strong>支持</strong>当前事务，如果当前存在事务，就加入该事务，否则以非事务执行</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>直接调用方法B不会执行事务</p>
+<p>③MANDATORY：支持当前事务，如果当前存在事务，就加入该事务，否则就<strong>强制</strong>抛出异常</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>直接调用方法B会报错</p>
+<p>④REQUIRES_NEW：创建新事务，无论是否存在事务，都创建新事务</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 7种事务传播机制：默认都是REQUIRED </span></span><br><span class="line">    methodB();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.REQUIRES_NEW)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用方法A会开启事务1，执行完A里面的代码后，开启事务2执行方法B里面的代码，提交或回滚事务2，最后提交或回滚事务1。事务1和事务2互不影响</p>
+<p>⑤NOT_SUPPORTED：以非事务方式执行操作，如果当前存在事务，则把当前事务<strong>挂起</strong>（一般很少用到）</p>
+<p>⑥NEVER：以非事务方式执行操作，如果当前存在事务，则抛出异常</p>
+<p>⑦NESTED：嵌套事务：外层的事务如果回滚，会导致内层的事务也回滚，但内层的事务如果回滚仅仅回滚自己的代码</p>
+<h4 id="相关思考："><a href="#相关思考：" class="headerlink" title="相关思考："></a>相关思考：</h4><p>1.有一段业务逻辑，A调用B，如果A出错了仅仅回滚A，不能回滚B，这时必须得用REQUIRES_NEW传播机制，让A和B的事务是不同的两个事务</p>
+<p>2.A调用B，如果出错，B只能回滚自己，而A可以带着B一起回滚，这时得用NESTED来嵌套事务</p>
+<p>Tips: Spring事务隔离级别</p>
+<blockquote>
+<p> Spring默认的是数据库存储引擎的事务隔离级别，mysql默认隔离级别为可重复读</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>事务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring IOC和AOP</title>
+    <url>/2019/07/13/Spring%20IOC%E5%92%8CAOP/</url>
+    <content><![CDATA[<h3 id="一、Spring"><a href="#一、Spring" class="headerlink" title="一、Spring"></a>一、Spring</h3><p>Spring的核心是IoC/DI的容器，它可以帮程序员完成组件之间的依赖关系注入，使得组件之间的依赖达到最小，进而提高组件的重用性，Spring是个低侵入性（invasive）的框架，Spring中的组件并不会意识到它正置身于Spring中，这使得组件可以轻易的从框架中脱离，而几乎不用任何修改，反过来说，组件也可以简单的方式加入至框架中，使得组件甚至框架的整合变得容易。</p>
+<p>Spring最为人重视的另一方面是支持AOP（Aspect-Oriented Programming），然而AOP框架只是Spring支持的一个子框架，说Spring框架是AOP框架并不是一件适当的描述，人们对于新奇的 AOP关注映射至Spring上，使得人们对于Spring的关注集中在它的AOP框架上，虽然有所误解，但也突显了Spring的另一个令人关注的特色。</p>
+<a id="more"></a>
+<p>Spring是一个开源框架，是一个轻量级的控制反转（IOC）和面向切面（AOP）的容器框架。</p>
+<p>（1）通过控制反转（IOC）达到松耦合，IOC也就是把控制权交出去，在使用中直接得到对象</p>
+<p>（2）提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑与系统级服务进行内聚性的开发（例如，商品的入库和出库是业务逻辑，而商品的入库和出库需要统一的日志记录和事务的管理是系统服务，与具体的业务无关，也就是无论业务如何，都要用到系统服务）</p>
+<p>（3）包含并管理应用对象的配置和生命周期，也就是容器的作用</p>
+<p>（4）将简单的组件配置、组合成为复杂的应用，也就是框架的作用</p>
+<p>框架与类库的区别：</p>
+<ul>
+<li><p>框架一般是封装了逻辑、高内聚的，类库则是松散的工具组合</p>
+</li>
+<li><p>框架专注于某一领域，类库则是更通用的</p>
+</li>
+</ul>
+<p><strong>Spring是一系列轻量级Java EE框架的集合：核心容器，Spring上下文，Spring AOP, Spring DAO, Spring ORM, Spring Web, Spring MVC。</strong></p>
+<p>IOC：控制反转，控制权的转移，应用程序本身不负责依赖对象的创建和维护，而是由外部容器负责创建和维护，也就是不显示的进行new创建对象</p>
+<p>DI（依赖注入）：<strong>是控制反转的一种实现方式</strong>，由IOC容器在运行期间，动态地将某种依赖关系注入到对象之中。也就是获得依赖对象的过程由自身管理变为由IOC容器主动注入。通过<a href="https://blog.csdn.net/sinat_38259539/article/details/71799078" target="_blank" rel="noopener">反射机制</a>实现。</p>
+<h4 id="控制反转："><a href="#控制反转：" class="headerlink" title="控制反转："></a>控制反转：</h4><p>控制反转的目的：创建对象并组装对象之间的关系。</p>
+<p>IOC容器初始化时创建一系列对象，并把对象之间的依赖关系通过注入的方式组织起来，当一个类A中有另外一个B，实例化时，先实例化A这个对象，再实例化B这个对象，然后把B这个对象赋值给A，这就是IOC的组装对象，具体如下图</p>
+<p><img src="https://images2017.cnblogs.com/blog/1170065/201708/1170065-20170822171719871-436013565.png" alt="img"></p>
+<p>图解：业务对象进入Spring容器，然后通过配置的元数据，生产出符合我们需要的对象，当我们需要用的时候，直接从Spring容器中取出来用即可，这也就是IOC，应用程序只关心对象的使用，而不关心对象的创建</p>
+<p>在IOC容器中，把所有对象称为Bean，Spring利用Bean来管理这些对象，Spring对于Bean和其他的使用有两种方式，一种是基于xml的配置，一种是注解方式。</p>
+<h4 id="依赖注入："><a href="#依赖注入：" class="headerlink" title="依赖注入："></a>依赖注入：</h4><p>借鉴<a href="http://blog.csdn.net/zhoudaxia/article/details/31763677" target="_blank" rel="noopener">http://blog.csdn.net/zhoudaxia/article/details/31763677</a></p>
+<p>控制反转：把传统上由程序代码直接操控的对象的调用权交给外部容器，通过容器来实现对象组件的装配和管理。所谓的“控制反转”就是组件对象的控制权转移了，从程序代码本身转移到了外部容器。</p>
+<p>实现控制反转的两种方式：依赖注入和依赖查找。</p>
+<p>依赖注入有四种实现方式：</p>
+<p><strong>1.基于接口</strong>：实现特定接口以供外部容器注入所依赖类型的对象，接口中定义要注入依赖对象的方法。</p>
+<p><strong>2.基于setter方法</strong>：实现特定属性的public set方法，来让外部容器调用，以传入所依赖类型的对象。</p>
+<p><strong>3.基于构造函数</strong>：实现特定参数的构造函数，在新建对象时传入所依赖类型的对象。</p>
+<p><strong>4.基于注解</strong>：基于Java的注解功能，在私有变量前加“@Autowired”等注解，不需要显式的定义以上三种代码，便可以让外部容器传入对应的对象。该方案相当于定义了public 的set方法，但是因为没有真正的set方法，从而不会为了实现依赖注入导致暴露了不该暴露的接口（因为set方法只想让容器访问来注入而不希望其他依赖此类的对象访问）。</p>
+<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>面向切面编程，</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Linux服务端开发环境部署及管理（一）</title>
+    <url>/2018/04/28/Linux%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E5%8F%8A%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="Linux服务端开发环境部署及管理（一）"><a href="#Linux服务端开发环境部署及管理（一）" class="headerlink" title="Linux服务端开发环境部署及管理（一）"></a>Linux服务端开发环境部署及管理（一）</h3><h5 id="Centos7-2-x64环境下Java-JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）"><a href="#Centos7-2-x64环境下Java-JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）" class="headerlink" title="Centos7.2 x64环境下Java JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）"></a>Centos7.2 x64环境下Java JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）</h5><p>腾讯云是个好东西，对于Linux平台不是很熟悉的人而言，开始学习时候很方便，提供各种方便的在线管理方式，如重装系统等。由于版本升级和系统兼容问题，开发中遇到的问题都很琐碎，大概是码农的日常了吧。</p>
+<ul>
+<li>官网下载JDK以后，上传至Linux下，安装并设置环境变量。</li>
+<li>java -version</li>
+<li>javac</li>
+<li>MySQL安装，由于MariaDB的出现，经常会出现系统兼容问题，据说在Centos7.0以后的版本中MySQL都不太兼容，所以需要特别注意。</li>
+<li>首先，需要先卸载系统预装的MariaDB，然后下载安装MySQL</li>
+<li>在Linux环境下，基本都是命令行操作，所以为了方便起见，建议学习过程中多多动手，多多总结。</li>
+<li>Tomcat，类似，安装完后，需要设置环境变量。</li>
+<li>启动Tomcat后，可以通过访问外网IP:端口号的方式检验是否安装成功。</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>String类相关知识点</title>
     <url>/2020/08/14/String%E7%B1%BB%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<h3 id="Java语言中String类是否可以被继承？"><a href="#Java语言中String类是否可以被继承？" class="headerlink" title="Java语言中String类是否可以被继承？"></a>Java语言中String类是否可以被继承？</h3><p>在Java中String类的定义是</p>
@@ -351,6 +596,156 @@ hexo s --port=4100
         <tag>Java</tag>
         <tag>基础知识</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Spring设计模式</title>
+    <url>/2019/10/23/Spring%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h3 id="Spring设计模式"><a href="#Spring设计模式" class="headerlink" title="Spring设计模式"></a>Spring设计模式</h3><h4 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h4><p>spring ioc的核心设计模式的思想体现，本身就是一个大的工厂，把所有的bean实例都放在了spring 容器里（大工厂），如果要使用bean就直接找spring容器就好了，自己不用创建对象。</p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyController</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 原先每次都要自己new一个</span></span><br><span class="line">	<span class="keyword">private</span> MyService mySerice = <span class="keyword">new</span> MyService();</span><br><span class="line">    <span class="comment">// 使用spring @Autowire注解自动注入一个，实际底层是依靠的工厂模式去创建的</span></span><br><span class="line">    <span class="keyword">private</span> MyService mySerice = MyServiceFactory.getMyService();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyServiceFactory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MyService <span class="title">getMyService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> MyServiceImpl();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><p>spring默认对每个bean都走的单例模式，确保一个类在系统运行期间只有一个实例对象，只有一个bean</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyService</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Myservice myService; <span class="comment">// 禁止指令重排序</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> stativ MyService <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (myService == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">synchronized</span>(MyService<span class="class">.<span class="keyword">class</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (myService == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    myService = <span class="keyword">new</span> MyService();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">return</span> myService;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h4><p>AOP的核心模式，如果要对一些类的方法切入一些增强的代码，会创建一些动态代理的对象，让你对那些目标对象的访问，先经过动态代理对象，动态代理对象先执行一些增强的代码，再调用你的目标对象。在设计模式里，就是代理模式的体现和运用，实现一些增强的访问。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue前端开发环境</title>
+    <url>/2019/07/20/Vue%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th style="text-align:left">技术</th>
+<th>版本</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">node</td>
+<td>v10.16.0</td>
+<td>node编译环境</td>
+</tr>
+<tr>
+<td style="text-align:left">npm</td>
+<td>6.9.0</td>
+<td>npm包管理工具</td>
+</tr>
+<tr>
+<td style="text-align:left">Vue</td>
+<td>2.9.6</td>
+<td>前端框架</td>
+</tr>
+<tr>
+<td style="text-align:left">Vue-router</td>
+<td>3.0.2</td>
+<td>前端路由框架</td>
+</tr>
+<tr>
+<td style="text-align:left">Vuex</td>
+<td>3.1.0</td>
+<td>vue状态管理组件</td>
+</tr>
+<tr>
+<td style="text-align:left">Vue-cli</td>
+<td>————</td>
+<td>Vue脚手架</td>
+</tr>
+<tr>
+<td style="text-align:left">Element-ui</td>
+<td>2.7.0</td>
+<td>前端UI框架</td>
+</tr>
+<tr>
+<td style="text-align:left">Echarts</td>
+<td>4.2.1</td>
+<td>数据可视化框架</td>
+</tr>
+<tr>
+<td style="text-align:left">Uni-app</td>
+<td>————</td>
+<td>跨平台前端框架</td>
+</tr>
+<tr>
+<td style="text-align:left">Mockjs</td>
+<td>1.0.1-beta3</td>
+<td>模拟后端数据</td>
+</tr>
+<tr>
+<td style="text-align:left">Axios</td>
+<td>0.18.0</td>
+<td>基于Promise的Http库</td>
+</tr>
+<tr>
+<td style="text-align:left">Js-cookie</td>
+<td>2.2.0</td>
+<td>Cookie组件</td>
+</tr>
+<tr>
+<td style="text-align:left">Jsonlint</td>
+<td>1.6.3</td>
+<td>Json解析组件</td>
+</tr>
+<tr>
+<td style="text-align:left">screenfull</td>
+<td>4.2.0</td>
+<td>全屏组件</td>
+</tr>
+<tr>
+<td style="text-align:left">Xlsx</td>
+<td>0.14.1</td>
+<td>Excel表导出组件</td>
+</tr>
+<tr>
+<td style="text-align:left">Webpack</td>
+<td>————</td>
+<td>模板打包器</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 安装vue</span><br><span class="line"><span class="meta">$</span> npm install vue@2.1.6</span><br><span class="line"><span class="meta">#</span> 全局安装 vue-cli</span><br><span class="line"><span class="meta">$</span> npm install --global vue-cli</span><br><span class="line"><span class="meta">#</span> 创建一个基于 webpack 模板的新项目my-project</span><br><span class="line"><span class="meta">$</span> vue init webpack my-project</span><br><span class="line"><span class="meta">#</span> 进入项目目录</span><br><span class="line"><span class="meta">$</span> cd my-project</span><br><span class="line"><span class="meta">#</span> 安装依赖</span><br><span class="line"><span class="meta">$</span> npm install</span><br><span class="line"><span class="meta">#</span> 运行项目</span><br><span class="line"><span class="meta">$</span> npm run dev</span><br><span class="line"><span class="meta">#</span> 卸载旧版本，在安装新版本。</span><br><span class="line">npm uninstall vue-cli -g </span><br><span class="line">npm install --global vue-cli</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vuforia开发入门一准备工作</title>
+    <url>/2018/04/03/Vuforia%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%80%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="Vuforia开发入门"><a href="#Vuforia开发入门" class="headerlink" title="Vuforia开发入门"></a>Vuforia开发入门</h2><h3 id="1、开发环境配置"><a href="#1、开发环境配置" class="headerlink" title="1、开发环境配置"></a>1、开发环境配置</h3><ul>
+<li>a) Android 环境配置 </li>
+<li>b) Unity3D 下载和安装 <h3 id="2、资源下载"><a href="#2、资源下载" class="headerlink" title="2、资源下载"></a>2、资源下载</h3></li>
+<li>a) <a href="https://developer.vuforia.com/" target="_blank" rel="noopener">官网注册</a></li>
+<li>b) <a href="https://developer.vuforia.com/downloads/sdk" target="_blank" rel="noopener">Samples资源下载</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>AR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2017/07/14/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><br><a id="more"></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>idea快捷键使用整理</title>
@@ -521,316 +916,24 @@ hexo s --port=4100
       </tags>
   </entry>
   <entry>
-    <title>Linux服务端开发环境部署及管理（一）</title>
-    <url>/2018/04/28/Linux%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E5%8F%8A%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="Linux服务端开发环境部署及管理（一）"><a href="#Linux服务端开发环境部署及管理（一）" class="headerlink" title="Linux服务端开发环境部署及管理（一）"></a>Linux服务端开发环境部署及管理（一）</h3><h5 id="Centos7-2-x64环境下Java-JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）"><a href="#Centos7-2-x64环境下Java-JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）" class="headerlink" title="Centos7.2 x64环境下Java JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）"></a>Centos7.2 x64环境下Java JDK、MySQL、Tomcat环境的搭建（基于腾讯云平台）</h5><p>腾讯云是个好东西，对于Linux平台不是很熟悉的人而言，开始学习时候很方便，提供各种方便的在线管理方式，如重装系统等。由于版本升级和系统兼容问题，开发中遇到的问题都很琐碎，大概是码农的日常了吧。</p>
-<ul>
-<li>官网下载JDK以后，上传至Linux下，安装并设置环境变量。</li>
-<li>java -version</li>
-<li>javac</li>
-<li>MySQL安装，由于MariaDB的出现，经常会出现系统兼容问题，据说在Centos7.0以后的版本中MySQL都不太兼容，所以需要特别注意。</li>
-<li>首先，需要先卸载系统预装的MariaDB，然后下载安装MySQL</li>
-<li>在Linux环境下，基本都是命令行操作，所以为了方便起见，建议学习过程中多多动手，多多总结。</li>
-<li>Tomcat，类似，安装完后，需要设置环境变量。</li>
-<li>启动Tomcat后，可以通过访问外网IP:端口号的方式检验是否安装成功。</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Vuforia开发入门一准备工作</title>
-    <url>/2018/04/03/Vuforia%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%80%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</url>
-    <content><![CDATA[<h2 id="Vuforia开发入门"><a href="#Vuforia开发入门" class="headerlink" title="Vuforia开发入门"></a>Vuforia开发入门</h2><h3 id="1、开发环境配置"><a href="#1、开发环境配置" class="headerlink" title="1、开发环境配置"></a>1、开发环境配置</h3><ul>
-<li>a) Android 环境配置 </li>
-<li>b) Unity3D 下载和安装 <h3 id="2、资源下载"><a href="#2、资源下载" class="headerlink" title="2、资源下载"></a>2、资源下载</h3></li>
-<li>a) <a href="https://developer.vuforia.com/" target="_blank" rel="noopener">官网注册</a></li>
-<li>b) <a href="https://developer.vuforia.com/downloads/sdk" target="_blank" rel="noopener">Samples资源下载</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>AR</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring设计模式</title>
-    <url>/2019/10/23/Spring%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h3 id="Spring设计模式"><a href="#Spring设计模式" class="headerlink" title="Spring设计模式"></a>Spring设计模式</h3><h4 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h4><p>spring ioc的核心设计模式的思想体现，本身就是一个大的工厂，把所有的bean实例都放在了spring 容器里（大工厂），如果要使用bean就直接找spring容器就好了，自己不用创建对象。</p>
+    <title>完美世界2018春招编程题</title>
+    <url>/2018/04/27/%E5%AE%8C%E7%BE%8E%E4%B8%96%E7%95%8C2018%E6%98%A5%E6%8B%9B%E7%BC%96%E7%A8%8B%E9%A2%98/</url>
+    <content><![CDATA[<ul>
+<li><ol>
+<li>题目描述：输入若干整数，以空格间隔，要求反转字符序列并打印输出。<br>如：</li>
+</ol>
+</li>
+<li><p>Input: 12 3 456 6789</p>
+</li>
+<li><p>Output: 6789 456 2 12</p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyController</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 原先每次都要自己new一个</span></span><br><span class="line">	<span class="keyword">private</span> MyService mySerice = <span class="keyword">new</span> MyService();</span><br><span class="line">    <span class="comment">// 使用spring @Autowire注解自动注入一个，实际底层是依靠的工厂模式去创建的</span></span><br><span class="line">    <span class="keyword">private</span> MyService mySerice = MyServiceFactory.getMyService();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyServiceFactory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MyService <span class="title">getMyService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> MyServiceImpl();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><p>spring默认对每个bean都走的单例模式，确保一个类在系统运行期间只有一个实例对象，只有一个bean</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyService</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Myservice myService; <span class="comment">// 禁止指令重排序</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> stativ MyService <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (myService == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">synchronized</span>(MyService<span class="class">.<span class="keyword">class</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (myService == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    myService = <span class="keyword">new</span> MyService();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">return</span> myService;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h4><p>AOP的核心模式，如果要对一些类的方法切入一些增强的代码，会创建一些动态代理的对象，让你对那些目标对象的访问，先经过动态代理对象，动态代理对象先执行一些增强的代码，再调用你的目标对象。在设计模式里，就是代理模式的体现和运用，实现一些增强的访问。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java核心技术001</title>
-    <url>/2018/08/02/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF001/</url>
-    <content><![CDATA[<h3 id="Java八大基本类型"><a href="#Java八大基本类型" class="headerlink" title="Java八大基本类型"></a>Java八大基本类型</h3><p>8种基本数据类型，其中4种整型，2种浮点类型，1种用于表示Unicode编码的字符单元的字符类型和1种用于表示真值的boolean类型。</p>
-<p>int / short / long / byte / float / double / char / boolean</p>
-<a id="more"></a>
-<p>1字节=8位，即1byte = 8bit，有符号整数，取值范围要先去掉符号位再计算数值大小</p>
-<ul>
-<li>整型</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>存储需求</th>
-<th>bit数</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>int</td>
-<td>4 byte</td>
-<td>32</td>
-<td>-2^31 ~ 2^31-1（有符号整数）</td>
-</tr>
-<tr>
-<td>short</td>
-<td>2 byte</td>
-<td>16</td>
-<td>-2^15 ~ 2^15-1</td>
-</tr>
-<tr>
-<td>long</td>
-<td>8 byte</td>
-<td>64</td>
-<td></td>
-</tr>
-<tr>
-<td>byte</td>
-<td>1 byte</td>
-<td>8</td>
-<td>－128～127</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>浮点型</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>存储</th>
-<th>bit</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>float</td>
-<td>4 byte</td>
-<td>32</td>
-<td>float类型的数值有一个后缀F(例如：3.14F)</td>
-</tr>
-<tr>
-<td>double</td>
-<td>8 byte</td>
-<td>64</td>
-<td>没有后缀F的浮点数值(如3.14)默认为double类型</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>char类型</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>存储</th>
-<th>bit</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>char</td>
-<td>2 byte</td>
-<td>16</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>boolean类型</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>存储</th>
-<th>bit</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>boolean</td>
-<td>1 byte</td>
-<td>8</td>
-<td>false、true</td>
-</tr>
-</tbody>
-</table>
-<p>Java有一个能够表示任意精度的数学包，通常称为“大数值”(big number)。虽然被称为大数值，但它并不是一种Java类型，而是一个Java对象。如果基本的整数和浮点数精度不能够满足需求，那么可以使用java.math包中的两个很有用的类：BigInteger，BigDecimal。这两个类可以处理包含<strong>任意长度数字序列</strong>的数值。BigInteger类实现了任意精度的整数运算，BigDecimal实现了任意精度的浮点数运算。具体的用法可以参见Java API。</p>
-<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><h4 id="long转int"><a href="#long转int" class="headerlink" title="long转int"></a>long转int</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">long</span> a = <span class="number">100L</span>;</span><br><span class="line"><span class="keyword">int</span> b = (<span class="keyword">int</span>)a;</span><br></pre></td></tr></table></figure>
-<h3 id="反射原理"><a href="#反射原理" class="headerlink" title="反射原理"></a>反射原理</h3><p>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法；这种动态获取的以及动态调用对象的方法的功能称为Java的反射机制。</p>
-<p>Java学习之反射机制及应用场景 - 对你说早安 - 博客园<a href="https://www.cnblogs.com/lzfsuifeng/p/9590705.html" target="_blank" rel="noopener">https://www.cnblogs.com/lzfsuifeng/p/9590705.html</a></p>
-<h3 id="反射机制提供了哪些功能？"><a href="#反射机制提供了哪些功能？" class="headerlink" title="反射机制提供了哪些功能？"></a>反射机制提供了哪些功能？</h3><ul>
-<li>在运行时判定任意一个对象所属的类</li>
-<li>在运行时判定任意一个类所具有的成员变量和方法；</li>
-<li>在运行时构造任意一个类的对象；</li>
-<li>在运行时调用任意一个对象的方法；</li>
-<li>生成动态代理；</li>
-</ul>
-<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>Java运行时的原理？</p>
-<p>动态代理</p>
-<ul>
-<li>逆向代码 ，例如反编译</li>
-<li>与注解相结合的框架 例如Retrofit</li>
-<li>单纯的反射机制应用框架 例如EventBus 2.x</li>
-<li>动态生成类框架 例如Gson</li>
-</ul>
-<h3 id="反射机制的优缺点："><a href="#反射机制的优缺点：" class="headerlink" title="反射机制的优缺点："></a>反射机制的优缺点：</h3><p> <strong>优点：</strong></p>
-<p>  运行期类型的判断，动态类加载，动态代理使用反射。</p>
-<p> <strong>缺点：</strong></p>
-<p>  性能是一个问题，反射相当于一系列解释操作，通知jvm要做的事情，性能比直接的java代码要慢很多。</p>
-<p>Java中的静态变量和静态代码块是在类加载的时候就执行的，实例化对象时，先声明并实例化变量再执行构造函数。如果子类继承父类，则先执行父类的静态变量和静态代码块，再执行子类的静态变量和静态代码块。同样，接着在执行父类和子类非静态代码块和构造函数。</p>
-<p>注意：（静态）变量和（静态）代码块的也是有执行顺序的，与代码书写的顺序一致。在（静态）代码块中可以使用（静态）变量，但是被使用的（静态）变量必须在（静态）代码块前面声明。</p>
-<p> 最后给出执行步骤：</p>
-<p><strong>1、父类静态变量和静态代码块（先声明的先执行）；</strong></p>
-<p><strong>2、子类静态变量和静态代码块（先声明的先执行）；</strong></p>
-<p><strong>3、父类的变量和代码块（先声明的先执行）；</strong></p>
-<p><strong>4、父类的构造函数；</strong></p>
-<p><strong>5、子类的变量和代码块（先声明的先执行）；</strong></p>
-<p><strong>6、子类的构造函数。</strong></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Spring容器的启动过程及生命周期</title>
-    <url>/2019/10/08/Spring%E5%AE%B9%E5%99%A8%E7%9A%84%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B%E5%8F%8A%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
-    <content><![CDATA[<h3 id="Spring容器的启动过程及生命周期"><a href="#Spring容器的启动过程及生命周期" class="headerlink" title="Spring容器的启动过程及生命周期"></a>Spring容器的启动过程及生命周期</h3><h3 id="Spring-Container启动过程"><a href="#Spring-Container启动过程" class="headerlink" title="Spring Container启动过程"></a>Spring Container启动过程</h3><blockquote>
-<p>创建和配置实例</p>
-<p>刷新实例</p>
-</blockquote>
-<h1 id="Spring容器的启动全流程"><a href="#Spring容器的启动全流程" class="headerlink" title="Spring容器的启动全流程"></a>Spring容器的启动全流程</h1><p>Spring容器的启动流程如下，这是我在看源码过程中自己总结的流程图，如有错误，还望评论区指点：</p>
-<p><img src="https://img2020.cnblogs.com/blog/1771072/202009/1771072-20200909164014978-2077560080.png" alt="img"></p>
-<p>接下来附上源码：</p>
-<blockquote>
-<p>为什么是refresh方法命名，而不是init命名呢？</p>
-<p>其实，在ApplicaitonContext建立起来之后，可以通过refresh进行重建，将原来的ac销毁，重新执行一次初始化操作，用refresh更加贴切。</p>
-</blockquote>
-<p>Bean的创建和销毁</p>
-<ul>
-<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#dogetbean全流程" target="_blank" rel="noopener">doGetBean全流程</a></li>
-<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#createbean" target="_blank" rel="noopener">createBean</a></li>
-<li>doCreateBean<ul>
-<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#createbeaninstance-创建实例" target="_blank" rel="noopener">createBeanInstance 创建实例</a></li>
-<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#populatebean-填充属性" target="_blank" rel="noopener">populateBean 填充属性</a></li>
-<li><a href="https://www.cnblogs.com/summerday152/p/13639896.html#initializebean-回调方法" target="_blank" rel="noopener">initializeBean 回调方法</a></li>
-</ul>
+</li>
+<li><p>源代码：<br>方法一、使用栈存储</p>
 </li>
 </ul>
-<a id="more"></a>
-<h3 id="循环依赖"><a href="#循环依赖" class="headerlink" title="循环依赖"></a>循环依赖</h3><p>N个类循环(嵌套)引，即N个Bean互相引用对方，最终形成<code>闭环</code>，表示对象之间的相互依赖关系</p>
-<p>如果在日常开发中我们用new对象的方式，若构造函数之间发生这种<strong>循环依赖</strong>的话，程序会在运行时一直循环调用<strong>最终导致内存溢出</strong>，StackOverflowError</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        B b = <span class="keyword">new</span> B();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        A a = <span class="keyword">new</span> A();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>无法解决构造器/构造方法的循环依赖，因为一开始就实例化了，初始化</p>
-<p>参考文章 <a href="https://cloud.tencent.com/developer/article/1497692" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1497692</a></p>
-<p>对于Spring解决循环依赖的认识</p>
-<p>// 循环依赖：调用某实例对象的方法时，方法内部又涉及到另一个类的实例化，而B当中又依赖了A，所以这时先返回一个半成品的B，等A完成了实例化之后，再返回B的实例化，最终初始化</p>
-<h5 id="1、构造器注入循环依赖"><a href="#1、构造器注入循环依赖" class="headerlink" title="1、构造器注入循环依赖"></a>1、构造器注入循环依赖</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">(B b)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">(A a)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>结果：项目启动失败抛出异常<code>BeanCurrentlyInCreationException</code></p>
-<p>构造器注入构成的循环依赖，此种循环依赖方式<strong>是无法解决的</strong>，只能抛出<code>BeanCurrentlyInCreationException</code>异常表示循环依赖。这也是构造器注入的最大劣势</p>
-<p><code>根本原因</code>：Spring解决循环依赖依靠的是Bean的“中间态”这个概念，而这个中间态指的是<code>已经实例化</code>，但还没初始化的状态。而构造器是完成实例化的东东（不存在中间态），所以构造器的循环依赖无法解决</p>
-<h5 id="2、field属性注入（setter方法注入）循环依赖"><a href="#2、field属性注入（setter方法注入）循环依赖" class="headerlink" title="2、field属性注入（setter方法注入）循环依赖"></a>2、field属性注入（setter方法注入）循环依赖</h5><p>这种方式是我们<strong>最最最最</strong>为常用的依赖注入方式（所以猜都能猜到它肯定不会有问题啦）：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> B b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> A a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>结果：项目启动成功，能够正常work</strong></p>
-<h5 id="3、prototype-field属性注入循环依赖"><a href="#3、prototype-field属性注入循环依赖" class="headerlink" title="3、prototype field属性注入循环依赖"></a>3、<code>prototype</code> field属性注入循环依赖</h5><p><code>prototype</code>在平时使用情况较少，但是也并不是不会使用到，因此此种方式也需要引起重视。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span><br><span class="line">@Service</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private B b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span><br><span class="line">@Service</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private A a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>结果：<strong>需要注意的是</strong>本例中<strong>启动时是不会报错的</strong>（因为非单例Bean<code>默认</code>不会初始化，而是使用时才会初始化），所以很简单咱们只需要手动<code>getBean()</code>或者在一个单例Bean内<code>@Autowired</code>一下它即可</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在单例Bean内注入</span></span><br><span class="line">    @Autowired</span><br><span class="line">    private A a;</span><br></pre></td></tr></table></figure>
-<p>这样子启动就报错：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'mytest.TestSpringBean'</span>: Unsatisfied dependency expressed through field <span class="string">'a'</span>; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'a'</span>: Unsatisfied dependency expressed through field <span class="string">'b'</span>; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'b'</span>: Unsatisfied dependency expressed through field <span class="string">'a'</span>; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: <span class="built_in">Error</span> creating bean <span class="keyword">with</span> name <span class="string">'a'</span>: Requested bean is currently <span class="keyword">in</span> creation: Is there an unresolvable circular reference?</span><br><span class="line"></span><br><span class="line">	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:<span class="number">596</span>)</span><br><span class="line">	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:<span class="number">90</span>)</span><br><span class="line">	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:<span class="number">374</span>)</span><br></pre></td></tr></table></figure>
-<p>如何解决？？？ 可能有的小伙伴看到网上有说使用<code>@Lazy</code>注解解决：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@Lazy</span><br><span class="line">@Autowired</span><br><span class="line">private A a;</span><br></pre></td></tr></table></figure>
-<p>此处负责任的告诉你这样是解决不了问题的(<strong>可能会掩盖问题</strong>)，<code>@Lazy</code>只是延迟初始化而已，当你真正使用到它（初始化）的时候，依旧会报如上异常。</p>
-<p>对于Spring循环依赖的情况总结如下：</p>
-<ol>
-<li>不能解决的情况： 1. 构造器注入循环依赖 2. <code>prototype</code> field属性注入循环依赖</li>
-<li>能解决的情况： 1. field属性注入（setter方法注入）循环依赖</li>
-</ol>
-<h2 id="Spring解决循环依赖的原理分析"><a href="#Spring解决循环依赖的原理分析" class="headerlink" title="Spring解决循环依赖的原理分析"></a>Spring解决循环依赖的原理分析</h2><p><strong><code>Spring的循环依赖的理论依据基于Java的引用传递</code></strong>，当获得对象的引用时，<strong>对象的属性是可以延后设置的</strong>。（但是构造器必须是在获取引用之前，毕竟你的引用是靠构造器给你生成的，儿子能先于爹出生？哈哈）</p>
-<h4 id="Spring创建Bean的流程"><a href="#Spring创建Bean的流程" class="headerlink" title="Spring创建Bean的流程"></a>Spring创建Bean的流程</h4><p>首先需要了解是Spring它创建Bean的流程，我把它的大致调用栈绘图如下： </p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-6158873/oepgq3cnb0.png?imageView2/2/w/1620" alt></p>
-<p> 对Bean的创建最为核心三个方法解释如下：</p>
-<ul>
-<li><code>createBeanInstance</code>：实例化，其实也就是调用对象的<strong>构造方法</strong>实例化对象</li>
-<li><code>populateBean</code>：填充属性，这一步主要是对bean的依赖属性进行注入(<code>@Autowired</code>)</li>
-<li><code>initializeBean</code>：回到一些形如<code>initMethod</code>、<code>InitializingBean</code>等方法</li>
-</ul>
-<p>从对<code>单例Bean</code>的初始化可以看出，循环依赖主要发生在<strong>第二步（populateBean）</strong>，也就是field属性注入的处理。</p>
-<h4 id="Spring容器的-39-三级缓存-39"><a href="#Spring容器的-39-三级缓存-39" class="headerlink" title="Spring容器的&#39;三级缓存&#39;"></a>Spring容器的<code>&#39;三级缓存&#39;</code></h4><p>在Spring容器的整个声明周期中，单例Bean有且仅有一个对象。这很容易让人想到可以用缓存来加速访问。 从源码中也可以看出Spring大量运用了Cache的手段，在循环依赖问题的解决过程中甚至不惜使用了“三级缓存”，这也便是它设计的精妙之处~</p>
-<p><code>三级缓存</code>其实它更像是Spring容器工厂的内的<code>术语</code>，采用三级缓存模式来解决循环依赖问题，这三级缓存分别指：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultSingletonBeanRegistry</span> <span class="keyword">extends</span> <span class="title">SimpleAliasRegistry</span> <span class="keyword">implements</span> <span class="title">SingletonBeanRegistry</span> </span>&#123;</span><br><span class="line">	...</span><br><span class="line">	<span class="comment">// 从上至下 分表代表这“三级缓存”</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; singletonObjects = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">256</span>); <span class="comment">//一级缓存</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; earlySingletonObjects = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>); <span class="comment">// 二级缓存</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, ObjectFactory&lt;?&gt;&gt; singletonFactories = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>); <span class="comment">// 三级缓存</span></span><br><span class="line">	...</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/** Names of beans that are currently in creation. */</span></span><br><span class="line">	<span class="comment">// 这个缓存也十分重要：它表示bean创建过程中都会在里面呆着~</span></span><br><span class="line">	<span class="comment">// 它在Bean开始创建时放值，创建完成时会将其移出~</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;String&gt; singletonsCurrentlyInCreation = Collections.newSetFromMap(<span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">16</span>));</span><br><span class="line"></span><br><span class="line">	<span class="comment">/** Names of beans that have already been created at least once. */</span></span><br><span class="line">	<span class="comment">// 当这个Bean被创建完成后，会标记为这个 注意：这里是set集合 不会重复</span></span><br><span class="line">	<span class="comment">// 至少被创建了一次的  都会放进这里~~~~</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Set&lt;String&gt; alreadyCreated = Collections.newSetFromMap(<span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">256</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注：<code>AbstractBeanFactory</code>继承自<code>DefaultSingletonBeanRegistry</code>~</p>
-<ol>
-<li><code>singletonObjects</code>：用于存放完全初始化好的 bean，<strong>从该缓存中取出的 bean 可以直接使用</strong></li>
-<li><code>earlySingletonObjects</code>：提前曝光的单例对象的cache，存放原始的 bean 对象（尚未填充属性），用于解决循环依赖</li>
-<li><code>singletonFactories</code>：单例对象工厂的cache，存放 bean 工厂对象，用于解决循环依赖</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《深入理解Java虚拟机》之Java内存模型</title>
-    <url>/2019/12/03/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E3%80%8B%E4%B9%8BJava%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<h3 id="一、内存模型"><a href="#一、内存模型" class="headerlink" title="一、内存模型"></a>一、内存模型</h3><p>1.分为主内存和工作内存，分别对应虚拟机内存的堆内存、栈内存、方法区</p>
-<p>2.8大基本操作：lock-&gt;unlock, read-&gt;load-&gt;use-&gt;assign-&gt;store-&gt;write</p>
-<p>3.原子性、可见性、有序性</p>
-<h3 id="二、线程安全与高效并发："><a href="#二、线程安全与高效并发：" class="headerlink" title="二、线程安全与高效并发："></a>二、线程安全与高效并发：</h3><p>线程调度：</p>
-<p>1.内核线程（KLT）</p>
-<p>2.用户线程（UT）</p>
-<p>3.用户线程（UT）与轻量级进程（LWP)的混合模式</p>
-<p>高效并发：</p>
-<p>多线程环境下，线程资源的安全调用：</p>
-<p>先行发生原则：happens before原则：</p>
-<a id="more"></a>
-<h4 id="并发编程三要素："><a href="#并发编程三要素：" class="headerlink" title="并发编程三要素："></a>并发编程三要素：</h4><p>要想并发程序正确地执行，必须要保证原子性、可见性以及有序性。只要有一个没有被保证，就有可能会导致程序运行不正确。</p>
-<h6 id="实现更大范围操作的原子性"><a href="#实现更大范围操作的原子性" class="headerlink" title="实现更大范围操作的原子性"></a>实现更大范围操作的原子性</h6><p>可以通过synchronized和Lock来实现。由于synchronized和Lock能够保证任一时刻只有一个线程执行该代码块，那么自然就不存在原子性问题了，从而保证了原子性。</p>
-<h6 id="Java提供了volatile关键字来保证可见性"><a href="#Java提供了volatile关键字来保证可见性" class="headerlink" title="Java提供了volatile关键字来保证可见性"></a>Java提供了volatile关键字来保证可见性</h6><p>当一个共享变量被volatile修饰时，它会保证修改的值会立即被更新到主存，当有其他线程需要读取时，它会去内存中读取新值。</p>
-<p>通过synchronized和Lock也能够保证可见性，synchronized和Lock能保证同一时刻只有一个线程获取锁然后执行同步代码，并且在释放锁之前会将对变量的修改刷新到主存当中。因此可以保证可见性。</p>
-<p>java.util.concurrent.atomic包下提供了一些原子操作类，对基本数据类型的操作进行了封装，保证这些操作是原子性操作</p>
-<h6 id="CAS实现原子性操作"><a href="#CAS实现原子性操作" class="headerlink" title="CAS实现原子性操作"></a>CAS实现原子性操作</h6><p>Compare And Swap CAS实际上是利用处理器提供的CMPXCHG指令实现的，而处理器执行CMPXCHG指令是一个原子性操作。</p>
-<h4 id="Volatile"><a href="#Volatile" class="headerlink" title="Volatile"></a>Volatile</h4><p>保证可见性和禁止指令重排序</p>
-<h5 id="原理和实现机制"><a href="#原理和实现机制" class="headerlink" title="原理和实现机制"></a>原理和实现机制</h5><p>下面这段话摘自《深入理解Java虚拟机》：</p>
-<p>　　“观察加入volatile关键字和没有加入volatile关键字时所生成的汇编代码发现，加入volatile关键字时，会多出一个lock前缀指令”</p>
-<p>　　lock前缀指令实际上相当于一个内存屏障（也成内存栅栏），内存屏障会提供3个功能：</p>
-<p>　　1）它确保指令重排序时不会把其后面的指令排到内存屏障之前的位置，也不会把前面的指令排到内存屏障的后面；即在执行到内存屏障这句指令时，在它前面的操作已经全部完成；</p>
-<p>　　2）它会强制将对缓存的修改操作立即写入主存；</p>
-<p>　　3）如果是写操作，它会导致其他CPU中对应的缓存行无效。</p>
-]]></content>
-      <tags>
-        <tag>Java, JVM</tag>
-      </tags>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int a[20];</span><br><span class="line">    int i = 0;</span><br><span class="line">    string ss, st;</span><br><span class="line">    stack&lt;string&gt; s1;</span><br><span class="line">    char c;</span><br><span class="line">    do&#123;</span><br><span class="line">        c = getchar();</span><br><span class="line">        if(c &gt;= &apos;0&apos; &amp;&amp; c &lt;= &apos;9&apos;)&#123;</span><br><span class="line">            ss += c;</span><br><span class="line">        &#125;else if(c == &apos; &apos; || c == &apos;\n&apos;)&#123;</span><br><span class="line">         </span><br><span class="line">   s1.push(ss);</span><br><span class="line">            ss = &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;while(c != &apos;\n&apos;);</span><br><span class="line"></span><br><span class="line">    while(!s1.empty())&#123;</span><br><span class="line">        st = s1.top();</span><br><span class="line">        s1.pop();</span><br><span class="line">        cout &lt;&lt; st;</span><br><span class="line">        if(!s1.empty())&#123;</span><br><span class="line">            cout &lt;&lt; &quot; &quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法一、使用数组变换存储</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;	</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int a[20];</span><br><span class="line">    int i = 0;</span><br><span class="line">    char c;</span><br><span class="line">    string str = &quot;&quot;;</span><br><span class="line">    do&#123;</span><br><span class="line">        c=getchar();</span><br><span class="line">        if(c&gt;=&apos;0&apos;&amp;&amp;c&lt;=&apos;9&apos;)&#123;</span><br><span class="line">            str += c;</span><br><span class="line">        &#125;else if(c ==&apos; &apos; || c == &apos;\n&apos;)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i++] = atoi(str.c_str()); //atoi：将字符串转化为char*对象，再转换成一个整数值</span><br><span class="line">            str = &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;while(c!=&apos;\n&apos;);</span><br><span class="line"></span><br><span class="line">    for(int j = 0; j &lt; i; j++)&#123;</span><br><span class="line">        cout &lt;&lt; a[i-j-1];</span><br><span class="line">        if(i-j-1 != 0)&#123;</span><br><span class="line">            cout &lt;&lt; &quot; &quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>《深入理解Java虚拟机》之虚拟机类加载机制</title>
@@ -878,234 +981,6 @@ hexo s --port=4100
       <tags>
         <tag>Java</tag>
         <tag>JVM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《深入理解Java虚拟机》之内存划分与溢出异常</title>
-    <url>/2019/12/05/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E3%80%8B%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%92%E5%88%86%E4%B8%8E%E6%BA%A2%E5%87%BA%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<h2 id="虚拟机内存管理"><a href="#虚拟机内存管理" class="headerlink" title="虚拟机内存管理"></a>虚拟机内存管理</h2><p>JVM所管理的内存包括以下几个运行时数据区域：</p>
-<p>不同虚拟机实现可能略微有所不同，但都会遵从 Java 虚拟机规范，Java 8 虚拟机规范规定，Java 虚拟机所管理的内存将会包括以下几个区域：</p>
-<ul>
-<li>程序计数器（Program Counter Register）</li>
-<li>Java 虚拟机栈（Java Virtual Machine Stacks）</li>
-<li>本地方法栈（Native Method Stack）</li>
-<li>Java 堆（Java Heap）</li>
-<li>方法区（Methed Area）</li>
-</ul>
-<a id="more"></a>
-<p><strong>① 程序计数器</strong></p>
-<p>程序计数器（Program Counter Register）是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。在虚拟机的概念模型里，字节码解析器的工作是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。</p>
-<p>由于 JVM 的多线程是通过线程轮流切换并分配处理器执行时间的方式来实现的，也就是任何时刻，一个处理器（或者说一个内核）都只会执行一条线程中的指令。因此为了线程切换后能恢复到正确的执行位置，每个线程都有独立的程序计数器。</p>
-<p>如果线程正在执行 Java 中的方法，程序计数器记录的就是正在执行虚拟机字节码指令的地址，如果是 Native 方法，这个计数器就为空（undefined），因此该内存区域是唯一一个在 Java 虚拟机规范中没有规定 OutOfMemoryError 的区域。</p>
-<p><strong>② Java 虚拟机栈</strong></p>
-<p>Java 虚拟机栈（Java Virtual Machine Stacks）描述的是 Java 方法执行的内存模型，每个方法在执行的同时都会创建一个栈帧（Stack Frame）用于存储局部变量表、操作数栈、动态链接、方法出口等信息，每个方法从调用直至执行完成的过程，都对应着一个栈帧在虚拟机栈中入栈到出栈的过程。Java虚拟机规范中规定了2种异常状况：</p>
-<ul>
-<li>如果线程请求的栈深度大于虚拟机所允许的栈深度就会抛出 StackOverflowError 异常。</li>
-<li>如果虚拟机是可以动态扩展的，如果扩展时无法申请到足够的内存就会抛出 OutOfMemoryError 异常。</li>
-</ul>
-<p><strong>③ 本地方法栈</strong></p>
-<p>本地方法栈（Native Method Stack）与虚拟机栈的作用是一样的，只不过虚拟机栈是服务 Java 方法的，而本地方法栈是为虚拟机调用 Native 方法服务的。</p>
-<p>在 Java 虚拟机规范中对于本地方法栈没有特殊的要求，虚拟机可以自由的实现它，因此在 Sun HotSpot 虚拟机直接把本地方法栈和虚拟机栈合二为一了。</p>
-<p><strong>④ Java 堆</strong></p>
-<p>Java 堆（Java Heap）是 JVM 中内存最大的一块，是被所有线程共享的，在虚拟机启动时候创建，Java 堆唯一的目的就是存放对象实例，几乎所有的对象实例都在这里分配内存，随着JIT编译器的发展和逃逸分析技术的逐渐成熟，栈上分配、标量替换优化的技术将会导致一些微妙的变化，所有的对象都分配在堆上渐渐变得不那么绝对了。</p>
-<p>如果在堆中没有内存完成实例分配，并且堆不可以再扩展时，将会抛出 OutOfMemoryError。 Java 虚拟机规范规定，Java 堆可以处在物理上不连续的内存空间中，只要逻辑上连续即可，就像我们的磁盘空间一样。在实现上也可以是固定大小的，也可以是可扩展的，不过当前主流的虚拟机都是可扩展的，通过 -Xmx 和 -Xms 控制。</p>
-<ul>
-<li>Java堆是GC收集器管理的主要区域。</li>
-</ul>
-<p><strong>⑤ 方法区</strong></p>
-<p>方法区（Methed Area）用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码等数据。</p>
-<p>很多人把方法区称作“永久代”（Permanent Generation），本质上两者并不等价，只是 HotSpot 虚拟机垃圾回收器团队把 GC 分代收集扩展到了方法区，或者说是用来永久代来实现方法区而已，这样能省去专门为方法区编写内存管理的代码，但是在 JDK 8 也移除了“永久代”，使用 Native Memory 来实现方法区。</p>
-<p>当方法无法满足内存分配需求时会抛出 OutOfMemoryError 异常。</p>
-<hr>
-<h3 id="相关问题："><a href="#相关问题：" class="headerlink" title="相关问题："></a>相关问题：</h3><h4 id="1-什么是-JVM？它有什么作用？"><a href="#1-什么是-JVM？它有什么作用？" class="headerlink" title="1.什么是 JVM？它有什么作用？"></a>1.什么是 JVM？它有什么作用？</h4><p>答：JVM 是 Java Virtual Machine（Java 虚拟机）的缩写，顾名思义它是一个虚拟计算机，也是 Java 程序能够实现跨平台的基础。它的作用是加载 Java 程序，把字节码翻译成机器码再交由 CPU 执行的一个虚拟计算器。</p>
-<h4 id="2-JVM-主要组成部分有哪些？"><a href="#2-JVM-主要组成部分有哪些？" class="headerlink" title="2.JVM 主要组成部分有哪些？"></a>2.JVM 主要组成部分有哪些？</h4><p>答：JVM 主要组成部分如下：</p>
-<ul>
-<li>类加载器（ClassLoader）</li>
-<li>运行时数据区（Runtime Data Area）</li>
-<li>执行引擎（Execution Engine）</li>
-<li>本地库接口（Native Interface）</li>
-</ul>
-<h4 id="3-JVM-是如何工作的？"><a href="#3-JVM-是如何工作的？" class="headerlink" title="3.JVM 是如何工作的？"></a>3.JVM 是如何工作的？</h4><p>答：首先程序在执行之前先要把 Java 代码（.java）转换成字节码（.class），JVM 通过类加载器（ClassLoader）把字节码加载到内存中，但字节码文件是 JVM 的一套指令集规范，并不能直接交给底层操作系统去执行，因此需要特定的命令解析器执行引擎（Execution Engine） 将字节码翻译成底层机器码，再交由 CPU 去执行，CPU 执行的过程中需要调用本地库接口（Native Interface）来完成整个程序的运行。</p>
-<h4 id="4-变量存储？"><a href="#4-变量存储？" class="headerlink" title="4.变量存储？"></a>4.变量存储？</h4><p>栈区存放函数的参数值，局部变量的值等；堆区存放的是程序员创建的对象；全局区存放全局变量和静态变量；常量区存放常量字符串</p>
-<h4 id="5-内存溢出和内存泄漏的区别是什么？"><a href="#5-内存溢出和内存泄漏的区别是什么？" class="headerlink" title="5.内存溢出和内存泄漏的区别是什么？"></a>5.内存溢出和内存泄漏的区别是什么？</h4><p>答：内存溢出和内存泄漏的区别如下：</p>
-<ul>
-<li>内存溢出是指程序申请内存时，没有足够的内存，就会报错 OutOfMemoryError；</li>
-<li>内存泄漏是指垃圾对象无法回收，可以使用 Memory Analyzer 等工具排除内存泄漏。</li>
-</ul>
-<hr>
-<p>对象的创建：使用Serial、ParNew等带Compact过程的收集器时，系统采用的分配算法是指针碰撞，而使用CMS这种基于Mark-Swap算法的收集器时，通常采用空闲列表</p>
-<p>不同内存分区存放不同数据类型的不清晰的认识：                                                                </p>
-<p>Java内存：堆内存、栈内存、方法区</p>
-<p>堆内存：基本数据类型，引用类型</p>
-<p>栈内存：递归无终止条件会导致StackOverFlowError，栈空间的耗尽</p>
-<p>方法区：函数，方法名</p>
-]]></content>
-      <tags>
-        <tag>Java, JVM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>写文章咯！</title>
-    <url>/2018/03/06/%E5%86%99%E6%96%87%E7%AB%A0%E5%92%AF%EF%BC%81/</url>
-    <content><![CDATA[<h1 id="写文章咯！"><a href="#写文章咯！" class="headerlink" title="写文章咯！"></a>写文章咯！</h1><h2 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h2><h3 id="这个是三级标题哦"><a href="#这个是三级标题哦" class="headerlink" title="这个是三级标题哦"></a>这个是三级标题哦</h3><ul>
-<li>列表1</li>
-<li>列表2<br>  a 子列表<br>  b 子列表</li>
-<li>列表3<a id="more"></a>
-</li>
-</ul>
-<hr>
-<hr>
-<p><a href="https://kanson.wang" target="_blank" rel="noopener">Kanson乐园</a><br><img src="/uploads/avator.jpg" alt="kanson乐园"><br><em>字体是斜线的哟</em><br><strong>字体是不是加粗了呢</strong></p>
-<p><code>&lt;html&gt; 哈哈 &lt;/html&gt;</code></p>
-<p>···</p>
-<p><html><br>    <head><meta name="generator" content="Hexo 3.9.0"><br>        <title>我是标题哦</title><br>        </head><body></body><br>    <br></html><br>···</p>
-<blockquote>
-<p>我的内容是引用的哦</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue前端开发环境</title>
-    <url>/2019/07/20/Vue%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th style="text-align:left">技术</th>
-<th>版本</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">node</td>
-<td>v10.16.0</td>
-<td>node编译环境</td>
-</tr>
-<tr>
-<td style="text-align:left">npm</td>
-<td>6.9.0</td>
-<td>npm包管理工具</td>
-</tr>
-<tr>
-<td style="text-align:left">Vue</td>
-<td>2.9.6</td>
-<td>前端框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Vue-router</td>
-<td>3.0.2</td>
-<td>前端路由框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Vuex</td>
-<td>3.1.0</td>
-<td>vue状态管理组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Vue-cli</td>
-<td>————</td>
-<td>Vue脚手架</td>
-</tr>
-<tr>
-<td style="text-align:left">Element-ui</td>
-<td>2.7.0</td>
-<td>前端UI框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Echarts</td>
-<td>4.2.1</td>
-<td>数据可视化框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Uni-app</td>
-<td>————</td>
-<td>跨平台前端框架</td>
-</tr>
-<tr>
-<td style="text-align:left">Mockjs</td>
-<td>1.0.1-beta3</td>
-<td>模拟后端数据</td>
-</tr>
-<tr>
-<td style="text-align:left">Axios</td>
-<td>0.18.0</td>
-<td>基于Promise的Http库</td>
-</tr>
-<tr>
-<td style="text-align:left">Js-cookie</td>
-<td>2.2.0</td>
-<td>Cookie组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Jsonlint</td>
-<td>1.6.3</td>
-<td>Json解析组件</td>
-</tr>
-<tr>
-<td style="text-align:left">screenfull</td>
-<td>4.2.0</td>
-<td>全屏组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Xlsx</td>
-<td>0.14.1</td>
-<td>Excel表导出组件</td>
-</tr>
-<tr>
-<td style="text-align:left">Webpack</td>
-<td>————</td>
-<td>模板打包器</td>
-</tr>
-</tbody>
-</table>
-<a id="more"></a>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 安装vue</span><br><span class="line"><span class="meta">$</span> npm install vue@2.1.6</span><br><span class="line"><span class="meta">#</span> 全局安装 vue-cli</span><br><span class="line"><span class="meta">$</span> npm install --global vue-cli</span><br><span class="line"><span class="meta">#</span> 创建一个基于 webpack 模板的新项目my-project</span><br><span class="line"><span class="meta">$</span> vue init webpack my-project</span><br><span class="line"><span class="meta">#</span> 进入项目目录</span><br><span class="line"><span class="meta">$</span> cd my-project</span><br><span class="line"><span class="meta">#</span> 安装依赖</span><br><span class="line"><span class="meta">$</span> npm install</span><br><span class="line"><span class="meta">#</span> 运行项目</span><br><span class="line"><span class="meta">$</span> npm run dev</span><br><span class="line"><span class="meta">#</span> 卸载旧版本，在安装新版本。</span><br><span class="line">npm uninstall vue-cli -g </span><br><span class="line">npm install --global vue-cli</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>完美世界2018春招编程题</title>
-    <url>/2018/04/27/%E5%AE%8C%E7%BE%8E%E4%B8%96%E7%95%8C2018%E6%98%A5%E6%8B%9B%E7%BC%96%E7%A8%8B%E9%A2%98/</url>
-    <content><![CDATA[<ul>
-<li><ol>
-<li>题目描述：输入若干整数，以空格间隔，要求反转字符序列并打印输出。<br>如：</li>
-</ol>
-</li>
-<li><p>Input: 12 3 456 6789</p>
-</li>
-<li><p>Output: 6789 456 2 12</p>
-<a id="more"></a>
-</li>
-<li><p>源代码：<br>方法一、使用栈存储</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int a[20];</span><br><span class="line">    int i = 0;</span><br><span class="line">    string ss, st;</span><br><span class="line">    stack&lt;string&gt; s1;</span><br><span class="line">    char c;</span><br><span class="line">    do&#123;</span><br><span class="line">        c = getchar();</span><br><span class="line">        if(c &gt;= &apos;0&apos; &amp;&amp; c &lt;= &apos;9&apos;)&#123;</span><br><span class="line">            ss += c;</span><br><span class="line">        &#125;else if(c == &apos; &apos; || c == &apos;\n&apos;)&#123;</span><br><span class="line">         </span><br><span class="line">   s1.push(ss);</span><br><span class="line">            ss = &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;while(c != &apos;\n&apos;);</span><br><span class="line"></span><br><span class="line">    while(!s1.empty())&#123;</span><br><span class="line">        st = s1.top();</span><br><span class="line">        s1.pop();</span><br><span class="line">        cout &lt;&lt; st;</span><br><span class="line">        if(!s1.empty())&#123;</span><br><span class="line">            cout &lt;&lt; &quot; &quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>方法一、使用数组变换存储</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;	</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int a[20];</span><br><span class="line">    int i = 0;</span><br><span class="line">    char c;</span><br><span class="line">    string str = &quot;&quot;;</span><br><span class="line">    do&#123;</span><br><span class="line">        c=getchar();</span><br><span class="line">        if(c&gt;=&apos;0&apos;&amp;&amp;c&lt;=&apos;9&apos;)&#123;</span><br><span class="line">            str += c;</span><br><span class="line">        &#125;else if(c ==&apos; &apos; || c == &apos;\n&apos;)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i++] = atoi(str.c_str()); //atoi：将字符串转化为char*对象，再转换成一个整数值</span><br><span class="line">            str = &quot;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;while(c!=&apos;\n&apos;);</span><br><span class="line"></span><br><span class="line">    for(int j = 0; j &lt; i; j++)&#123;</span><br><span class="line">        cout &lt;&lt; a[i-j-1];</span><br><span class="line">        if(i-j-1 != 0)&#123;</span><br><span class="line">            cout &lt;&lt; &quot; &quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
-    <title>视觉领域的部分国内公司</title>
-    <url>/2018/03/09/%E8%A7%86%E8%A7%89%E9%A2%86%E5%9F%9F%E7%9A%84%E9%83%A8%E5%88%86%E5%9B%BD%E5%86%85%E5%85%AC%E5%8F%B8/</url>
-    <content><![CDATA[<p>##初创公司</p>
-<p><a href="http://www.tuputech.com/" target="_blank" rel="noopener">图普科技</a><br><a href="http://www.faceplusplus.com.cn/" target="_blank" rel="noopener">Face++</a><br><a href="http://www.linkface.cn/index.html" target="_blank" rel="noopener">Linkface</a><br><a href="http://www.minieye.cc/cn/" target="_blank" rel="noopener">Minieye</a><br><a href="http://www.cogtu.com/?lang=zh" target="_blank" rel="noopener">知图Cogtu</a><br><a href="http://www.sensetime.com/cn" target="_blank" rel="noopener">商汤科技Sensetime</a><br><a href="http://www.hiscene.com/" target="_blank" rel="noopener">亮风台Hiscene</a><br><a href="http://www.zhangying.mobi/index.html" target="_blank" rel="noopener">掌赢科技</a><br><a href="http://www.deepglint.com/" target="_blank" rel="noopener">格灵深瞳DeepPG</a></p>
-<a id="more"></a>
-<p><a href="http://www.lagou.com/gongsi/j114187.html" target="_blank" rel="noopener">凌感科技usens</a><br><a href="http://www.tusimple.com/" target="_blank" rel="noopener">图森TuSimple</a><br><a href="http://www.seetatech.com/" target="_blank" rel="noopener">中科视拓Seetatech(山世光)</a><br><a href>第四范式</a></p>
-<p>##上市公司：</p>
-<p><a href="http://idl.baidu.com/" target="_blank" rel="noopener">百度DL实验室</a><br><a href="http://youtu.qq.com/" target="_blank" rel="noopener">腾讯优图</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_Upgrade/429476" target="_blank" rel="noopener">阿里高德</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/225254" target="_blank" rel="noopener">暴风魔镜</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/224449" target="_blank" rel="noopener">搜狗</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222651" target="_blank" rel="noopener">乐视tv</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222379" target="_blank" rel="noopener">奇虎360</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/223133/a" target="_blank" rel="noopener">京东实验室</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222007" target="_blank" rel="noopener">阿里巴巴</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/220225" target="_blank" rel="noopener">联想研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/225976" target="_blank" rel="noopener">华为研究院</a></p>
-<p>##知名外企：</p>
-<p><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222548" target="_blank" rel="noopener">佳能信息</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/223437" target="_blank" rel="noopener">索尼研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/220654" target="_blank" rel="noopener">富士通研发中心</a><br><a href="https://careers.microsoft.com/?rg=cn" target="_blank" rel="noopener">微软研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/221175" target="_blank" rel="noopener">英特尔研究院</a><br><a href="http://www.yingjiesheng.com/job-001-742-124.html" target="_blank" rel="noopener">三星研究院</a></p>
-]]></content>
-      <tags>
-        <tag>收藏</tag>
       </tags>
   </entry>
   <entry>
@@ -1218,41 +1093,127 @@ hexo s --port=4100
       </tags>
   </entry>
   <entry>
-    <title>进程、线程、协程的区别和通信方式</title>
-    <url>/2020/10/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E3%80%81%E5%8D%8F%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>进程，是操作系统资源分配（CPU时间片、内存空间）的最小单位。</p>
-<p><strong>进程通信：</strong><br>每个进程各自有不同的用户地址空间,任何一个进程的全局变量在另一个进程中都看不到，所以进程之间要交换数据必须通过<code>内核</code>,在内核中开辟一块缓冲区,进程A把数据从用户空间拷到内核缓冲区,进程B再从内核缓冲区把数据读走,内核提供的这种机制称为进程间通信。</p>
-<a id="more"></a>
-<p>进程间通信有4种方式，以下从简单到复杂的方式出场:</p>
-<h4 id="1-管道-pipe"><a href="#1-管道-pipe" class="headerlink" title="1.管道(pipe)"></a>1.管道(pipe)</h4><p>  管道是一种具有两个端点的通信通道，一个管道实际上就是只存在在内存中的文件，对这个文件操作需要两个已经打开文件进行，他们代表管道的两端，也叫两个句槟，管道是一种特殊的文件，不属于一种文件系统，而是一种独立的文件系统，有自己的数据结构，根据管道的使用范围划分为无名管道和命名管道。<br>无名管道用于父进程和子进程之间，通常父进程创建管道，然后由通信的子进程继承父进程的读端点句柄和写端点句柄，或者父进程有读写句柄的子进程，这些子进程可以使用管道直接通信，不需要通过父进程。<br>命名管道，命名管道是为了解决无名管道只能在父子进程间通信而设计的，命名管道是建立在实际的磁盘介质或文件系统(而不是只存在内存中)，任何进程可以通过文件名或路径建立与该文件的联系，命名换到需要一种FIFO文件(有先进先出的原则)，虽然FIFO文件的inode节点在磁盘上，但仅是一个节点而已，文件的数据还是存在于内存缓冲页面中，和普通管道相同。</p>
-<h4 id="2-信号"><a href="#2-信号" class="headerlink" title="2.信号"></a>2.信号</h4><p>  信号，用于接受某种事件发生，除了用于进程间通信之外，进程还可以发送信号给进程本身。除了系统内核和root之外，只有具备相同id的进程才可以信号进行通信。</p>
-<h4 id="3-消息队列"><a href="#3-消息队列" class="headerlink" title="3.消息队列"></a>3.消息队列</h4><p>  消息队列是消息的链表，包括Posix消息队列和system v消息队列(Posix常用于线程，system常用于进程)，有权限的进程可以向消息队列中添加消息，有读权限的进程可以读走消息队列的消息。<br>消息队列克服了信号承载信息量少，管道只能承载无格式字节流及缓冲区大小受限等缺陷。</p>
-<h4 id="4-共享内存"><a href="#4-共享内存" class="headerlink" title="4.共享内存"></a>4.共享内存</h4><p>  共享内存使多个进程可以访问同一块内存空间，是最快的IPC形式，是针对其他通信方式运行效率低而设计的，往往与其他进程结合使用，如与信号量结合，来达到进程间的同步与互斥。传递文件最好用共享内存的方式。 </p>
-<p>linux常用的进程间的通讯方式<br>（1）、管道(pipe)：管道可用于具有亲缘关系的进程间的通信，是一种半双工的方式，数据只能单向流动，允许一个进程和另一个与它有共同祖先的进程之间进行通信。<br>（2）、命名管道(named pipe)：命名管道克服了管道没有名字的限制，同时除了具有管道的功能外（也是半双工），它还允许无亲缘关系进程间的通信。命名管道在文件系统中有对应的文件名。命名管道通过命令mkfifo或系统调用mkfifo来创建。<br>（3）、信号（signal）：信号是比较复杂的通信方式，用于通知接收进程有某种事件发生了，除了进程间通信外，进程还可以发送信号给进程本身；linux除了支持Unix早期信号语义函数sigal外，还支持语义符合Posix.1标准的信号函数sigaction（实际上，该函数是基于BSD的，BSD为了实现可靠信号机制，又能够统一对外接口，用sigaction函数重新实现了signal函数）。<br>（4）、消息队列：消息队列是消息的链接表，包括Posix消息队列system V消息队列。有足够权限的进程可以向队列中添加消息，被赋予读权限的进程则可以读走队列中的消息。消息队列克服了信号承载信息量少，管道只能承载无格式字节流以及缓冲区大小受限等缺<br>（5）、共享内存：使得多个进程可以访问同一块内存空间，是最快的可用IPC形式。是针对其他通信机制运行效率较低而设计的。往往与其它通信机制，如信号量结合使用，来达到进程间的同步及互斥。<br>（6）、内存映射：内存映射允许任何多个进程间通信，每一个使用该机制的进程通过把一个共享的文件映射到自己的进程地址空间来实现它。<br>（7）、信号量（semaphore）：主要作为进程间以及同一进程不同线程之间的同步手段。</p>
-<p>（8）、套接字（Socket）：更为一般的进程间通信机制，可用于不同机器之间的进程间通信。起初是由Unix系统的BSD分支开发出来的，但现在一般可以移植到其它类Unix系统上：Linux和System V的变种都支持套接字。</p>
-<h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><p>线程是CPU调度、程序执行的最小单位。线程间通信主要通过等待/通知机制…</p>
-<h3 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h3><p>协程由程序自身控制子程序执行，有极高的执行效率，是比线程更轻量级的存在。</p>
+    <title>写文章咯！</title>
+    <url>/2018/03/06/%E5%86%99%E6%96%87%E7%AB%A0%E5%92%AF%EF%BC%81/</url>
+    <content><![CDATA[<h1 id="写文章咯！"><a href="#写文章咯！" class="headerlink" title="写文章咯！"></a>写文章咯！</h1><h2 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h2><h3 id="这个是三级标题哦"><a href="#这个是三级标题哦" class="headerlink" title="这个是三级标题哦"></a>这个是三级标题哦</h3><ul>
+<li>列表1</li>
+<li>列表2<br>  a 子列表<br>  b 子列表</li>
+<li>列表3<a id="more"></a>
+</li>
+</ul>
+<hr>
+<hr>
+<p><a href="https://kanson.wang" target="_blank" rel="noopener">Kanson乐园</a><br><img src="/uploads/avator.jpg" alt="kanson乐园"><br><em>字体是斜线的哟</em><br><strong>字体是不是加粗了呢</strong></p>
+<p><code>&lt;html&gt; 哈哈 &lt;/html&gt;</code></p>
+<p>···</p>
+<p><html><br>    <head><meta name="generator" content="Hexo 3.9.0"><br>        <title>我是标题哦</title><br>        </head><body></body><br>    <br></html><br>···</p>
+<blockquote>
+<p>我的内容是引用的哦</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>操作系统</tag>
+        <tag>导航</tag>
+        <tag>分享</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2017/07/14/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><br><a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    <title>《深入理解Java虚拟机》之内存划分与溢出异常</title>
+    <url>/2019/12/05/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E3%80%8B%E4%B9%8B%E5%86%85%E5%AD%98%E5%88%92%E5%88%86%E4%B8%8E%E6%BA%A2%E5%87%BA%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<h2 id="虚拟机内存管理"><a href="#虚拟机内存管理" class="headerlink" title="虚拟机内存管理"></a>虚拟机内存管理</h2><p>JVM所管理的内存包括以下几个运行时数据区域：</p>
+<p>不同虚拟机实现可能略微有所不同，但都会遵从 Java 虚拟机规范，Java 8 虚拟机规范规定，Java 虚拟机所管理的内存将会包括以下几个区域：</p>
+<ul>
+<li>程序计数器（Program Counter Register）</li>
+<li>Java 虚拟机栈（Java Virtual Machine Stacks）</li>
+<li>本地方法栈（Native Method Stack）</li>
+<li>Java 堆（Java Heap）</li>
+<li>方法区（Methed Area）</li>
+</ul>
+<a id="more"></a>
+<p><strong>① 程序计数器</strong></p>
+<p>程序计数器（Program Counter Register）是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。在虚拟机的概念模型里，字节码解析器的工作是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。</p>
+<p>由于 JVM 的多线程是通过线程轮流切换并分配处理器执行时间的方式来实现的，也就是任何时刻，一个处理器（或者说一个内核）都只会执行一条线程中的指令。因此为了线程切换后能恢复到正确的执行位置，每个线程都有独立的程序计数器。</p>
+<p>如果线程正在执行 Java 中的方法，程序计数器记录的就是正在执行虚拟机字节码指令的地址，如果是 Native 方法，这个计数器就为空（undefined），因此该内存区域是唯一一个在 Java 虚拟机规范中没有规定 OutOfMemoryError 的区域。</p>
+<p><strong>② Java 虚拟机栈</strong></p>
+<p>Java 虚拟机栈（Java Virtual Machine Stacks）描述的是 Java 方法执行的内存模型，每个方法在执行的同时都会创建一个栈帧（Stack Frame）用于存储局部变量表、操作数栈、动态链接、方法出口等信息，每个方法从调用直至执行完成的过程，都对应着一个栈帧在虚拟机栈中入栈到出栈的过程。Java虚拟机规范中规定了2种异常状况：</p>
+<ul>
+<li>如果线程请求的栈深度大于虚拟机所允许的栈深度就会抛出 StackOverflowError 异常。</li>
+<li>如果虚拟机是可以动态扩展的，如果扩展时无法申请到足够的内存就会抛出 OutOfMemoryError 异常。</li>
+</ul>
+<p><strong>③ 本地方法栈</strong></p>
+<p>本地方法栈（Native Method Stack）与虚拟机栈的作用是一样的，只不过虚拟机栈是服务 Java 方法的，而本地方法栈是为虚拟机调用 Native 方法服务的。</p>
+<p>在 Java 虚拟机规范中对于本地方法栈没有特殊的要求，虚拟机可以自由的实现它，因此在 Sun HotSpot 虚拟机直接把本地方法栈和虚拟机栈合二为一了。</p>
+<p><strong>④ Java 堆</strong></p>
+<p>Java 堆（Java Heap）是 JVM 中内存最大的一块，是被所有线程共享的，在虚拟机启动时候创建，Java 堆唯一的目的就是存放对象实例，几乎所有的对象实例都在这里分配内存，随着JIT编译器的发展和逃逸分析技术的逐渐成熟，栈上分配、标量替换优化的技术将会导致一些微妙的变化，所有的对象都分配在堆上渐渐变得不那么绝对了。</p>
+<p>如果在堆中没有内存完成实例分配，并且堆不可以再扩展时，将会抛出 OutOfMemoryError。 Java 虚拟机规范规定，Java 堆可以处在物理上不连续的内存空间中，只要逻辑上连续即可，就像我们的磁盘空间一样。在实现上也可以是固定大小的，也可以是可扩展的，不过当前主流的虚拟机都是可扩展的，通过 -Xmx 和 -Xms 控制。</p>
+<ul>
+<li>Java堆是GC收集器管理的主要区域。</li>
+</ul>
+<p><strong>⑤ 方法区</strong></p>
+<p>方法区（Methed Area）用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码等数据。</p>
+<p>很多人把方法区称作“永久代”（Permanent Generation），本质上两者并不等价，只是 HotSpot 虚拟机垃圾回收器团队把 GC 分代收集扩展到了方法区，或者说是用来永久代来实现方法区而已，这样能省去专门为方法区编写内存管理的代码，但是在 JDK 8 也移除了“永久代”，使用 Native Memory 来实现方法区。</p>
+<p>当方法无法满足内存分配需求时会抛出 OutOfMemoryError 异常。</p>
+<hr>
+<h3 id="相关问题："><a href="#相关问题：" class="headerlink" title="相关问题："></a>相关问题：</h3><h4 id="1-什么是-JVM？它有什么作用？"><a href="#1-什么是-JVM？它有什么作用？" class="headerlink" title="1.什么是 JVM？它有什么作用？"></a>1.什么是 JVM？它有什么作用？</h4><p>答：JVM 是 Java Virtual Machine（Java 虚拟机）的缩写，顾名思义它是一个虚拟计算机，也是 Java 程序能够实现跨平台的基础。它的作用是加载 Java 程序，把字节码翻译成机器码再交由 CPU 执行的一个虚拟计算器。</p>
+<h4 id="2-JVM-主要组成部分有哪些？"><a href="#2-JVM-主要组成部分有哪些？" class="headerlink" title="2.JVM 主要组成部分有哪些？"></a>2.JVM 主要组成部分有哪些？</h4><p>答：JVM 主要组成部分如下：</p>
+<ul>
+<li>类加载器（ClassLoader）</li>
+<li>运行时数据区（Runtime Data Area）</li>
+<li>执行引擎（Execution Engine）</li>
+<li>本地库接口（Native Interface）</li>
+</ul>
+<h4 id="3-JVM-是如何工作的？"><a href="#3-JVM-是如何工作的？" class="headerlink" title="3.JVM 是如何工作的？"></a>3.JVM 是如何工作的？</h4><p>答：首先程序在执行之前先要把 Java 代码（.java）转换成字节码（.class），JVM 通过类加载器（ClassLoader）把字节码加载到内存中，但字节码文件是 JVM 的一套指令集规范，并不能直接交给底层操作系统去执行，因此需要特定的命令解析器执行引擎（Execution Engine） 将字节码翻译成底层机器码，再交由 CPU 去执行，CPU 执行的过程中需要调用本地库接口（Native Interface）来完成整个程序的运行。</p>
+<h4 id="4-变量存储？"><a href="#4-变量存储？" class="headerlink" title="4.变量存储？"></a>4.变量存储？</h4><p>栈区存放函数的参数值，局部变量的值等；堆区存放的是程序员创建的对象；全局区存放全局变量和静态变量；常量区存放常量字符串</p>
+<h4 id="5-内存溢出和内存泄漏的区别是什么？"><a href="#5-内存溢出和内存泄漏的区别是什么？" class="headerlink" title="5.内存溢出和内存泄漏的区别是什么？"></a>5.内存溢出和内存泄漏的区别是什么？</h4><p>答：内存溢出和内存泄漏的区别如下：</p>
+<ul>
+<li>内存溢出是指程序申请内存时，没有足够的内存，就会报错 OutOfMemoryError；</li>
+<li>内存泄漏是指垃圾对象无法回收，可以使用 Memory Analyzer 等工具排除内存泄漏。</li>
+</ul>
+<hr>
+<p>对象的创建：使用Serial、ParNew等带Compact过程的收集器时，系统采用的分配算法是指针碰撞，而使用CMS这种基于Mark-Swap算法的收集器时，通常采用空闲列表</p>
+<p>不同内存分区存放不同数据类型的不清晰的认识：                                                                </p>
+<p>Java内存：堆内存、栈内存、方法区</p>
+<p>堆内存：基本数据类型，引用类型</p>
+<p>栈内存：递归无终止条件会导致StackOverFlowError，栈空间的耗尽</p>
+<p>方法区：函数，方法名</p>
 ]]></content>
+      <tags>
+        <tag>Java, JVM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《深入理解Java虚拟机》之Java内存模型</title>
+    <url>/2019/12/03/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E3%80%8B%E4%B9%8BJava%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<h3 id="一、内存模型"><a href="#一、内存模型" class="headerlink" title="一、内存模型"></a>一、内存模型</h3><p>1.分为主内存和工作内存，分别对应虚拟机内存的堆内存、栈内存、方法区</p>
+<p>2.8大基本操作：lock-&gt;unlock, read-&gt;load-&gt;use-&gt;assign-&gt;store-&gt;write</p>
+<p>3.原子性、可见性、有序性</p>
+<h3 id="二、线程安全与高效并发："><a href="#二、线程安全与高效并发：" class="headerlink" title="二、线程安全与高效并发："></a>二、线程安全与高效并发：</h3><p>线程调度：</p>
+<p>1.内核线程（KLT）</p>
+<p>2.用户线程（UT）</p>
+<p>3.用户线程（UT）与轻量级进程（LWP)的混合模式</p>
+<p>高效并发：</p>
+<p>多线程环境下，线程资源的安全调用：</p>
+<p>先行发生原则：happens before原则：</p>
+<a id="more"></a>
+<h4 id="并发编程三要素："><a href="#并发编程三要素：" class="headerlink" title="并发编程三要素："></a>并发编程三要素：</h4><p>要想并发程序正确地执行，必须要保证原子性、可见性以及有序性。只要有一个没有被保证，就有可能会导致程序运行不正确。</p>
+<h6 id="实现更大范围操作的原子性"><a href="#实现更大范围操作的原子性" class="headerlink" title="实现更大范围操作的原子性"></a>实现更大范围操作的原子性</h6><p>可以通过synchronized和Lock来实现。由于synchronized和Lock能够保证任一时刻只有一个线程执行该代码块，那么自然就不存在原子性问题了，从而保证了原子性。</p>
+<h6 id="Java提供了volatile关键字来保证可见性"><a href="#Java提供了volatile关键字来保证可见性" class="headerlink" title="Java提供了volatile关键字来保证可见性"></a>Java提供了volatile关键字来保证可见性</h6><p>当一个共享变量被volatile修饰时，它会保证修改的值会立即被更新到主存，当有其他线程需要读取时，它会去内存中读取新值。</p>
+<p>通过synchronized和Lock也能够保证可见性，synchronized和Lock能保证同一时刻只有一个线程获取锁然后执行同步代码，并且在释放锁之前会将对变量的修改刷新到主存当中。因此可以保证可见性。</p>
+<p>java.util.concurrent.atomic包下提供了一些原子操作类，对基本数据类型的操作进行了封装，保证这些操作是原子性操作</p>
+<h6 id="CAS实现原子性操作"><a href="#CAS实现原子性操作" class="headerlink" title="CAS实现原子性操作"></a>CAS实现原子性操作</h6><p>Compare And Swap CAS实际上是利用处理器提供的CMPXCHG指令实现的，而处理器执行CMPXCHG指令是一个原子性操作。</p>
+<h4 id="Volatile"><a href="#Volatile" class="headerlink" title="Volatile"></a>Volatile</h4><p>保证可见性和禁止指令重排序</p>
+<h5 id="原理和实现机制"><a href="#原理和实现机制" class="headerlink" title="原理和实现机制"></a>原理和实现机制</h5><p>下面这段话摘自《深入理解Java虚拟机》：</p>
+<p>　　“观察加入volatile关键字和没有加入volatile关键字时所生成的汇编代码发现，加入volatile关键字时，会多出一个lock前缀指令”</p>
+<p>　　lock前缀指令实际上相当于一个内存屏障（也成内存栅栏），内存屏障会提供3个功能：</p>
+<p>　　1）它确保指令重排序时不会把其后面的指令排到内存屏障之前的位置，也不会把前面的指令排到内存屏障的后面；即在执行到内存屏障这句指令时，在它前面的操作已经全部完成；</p>
+<p>　　2）它会强制将对缓存的修改操作立即写入主存；</p>
+<p>　　3）如果是写操作，它会导致其他CPU中对应的缓存行无效。</p>
+]]></content>
+      <tags>
+        <tag>Java, JVM</tag>
+      </tags>
   </entry>
   <entry>
     <title>构建你的深度学习环境（一）</title>
@@ -1265,6 +1226,22 @@ hexo s --port=4100
 <li>4.eixt()退出python环境。</li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>视觉领域的部分国内公司</title>
+    <url>/2018/03/09/%E8%A7%86%E8%A7%89%E9%A2%86%E5%9F%9F%E7%9A%84%E9%83%A8%E5%88%86%E5%9B%BD%E5%86%85%E5%85%AC%E5%8F%B8/</url>
+    <content><![CDATA[<p>##初创公司</p>
+<p><a href="http://www.tuputech.com/" target="_blank" rel="noopener">图普科技</a><br><a href="http://www.faceplusplus.com.cn/" target="_blank" rel="noopener">Face++</a><br><a href="http://www.linkface.cn/index.html" target="_blank" rel="noopener">Linkface</a><br><a href="http://www.minieye.cc/cn/" target="_blank" rel="noopener">Minieye</a><br><a href="http://www.cogtu.com/?lang=zh" target="_blank" rel="noopener">知图Cogtu</a><br><a href="http://www.sensetime.com/cn" target="_blank" rel="noopener">商汤科技Sensetime</a><br><a href="http://www.hiscene.com/" target="_blank" rel="noopener">亮风台Hiscene</a><br><a href="http://www.zhangying.mobi/index.html" target="_blank" rel="noopener">掌赢科技</a><br><a href="http://www.deepglint.com/" target="_blank" rel="noopener">格灵深瞳DeepPG</a></p>
+<a id="more"></a>
+<p><a href="http://www.lagou.com/gongsi/j114187.html" target="_blank" rel="noopener">凌感科技usens</a><br><a href="http://www.tusimple.com/" target="_blank" rel="noopener">图森TuSimple</a><br><a href="http://www.seetatech.com/" target="_blank" rel="noopener">中科视拓Seetatech(山世光)</a><br><a href>第四范式</a></p>
+<p>##上市公司：</p>
+<p><a href="http://idl.baidu.com/" target="_blank" rel="noopener">百度DL实验室</a><br><a href="http://youtu.qq.com/" target="_blank" rel="noopener">腾讯优图</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_Upgrade/429476" target="_blank" rel="noopener">阿里高德</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/225254" target="_blank" rel="noopener">暴风魔镜</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/224449" target="_blank" rel="noopener">搜狗</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222651" target="_blank" rel="noopener">乐视tv</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222379" target="_blank" rel="noopener">奇虎360</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/223133/a" target="_blank" rel="noopener">京东实验室</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222007" target="_blank" rel="noopener">阿里巴巴</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/220225" target="_blank" rel="noopener">联想研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/225976" target="_blank" rel="noopener">华为研究院</a></p>
+<p>##知名外企：</p>
+<p><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/222548" target="_blank" rel="noopener">佳能信息</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/223437" target="_blank" rel="noopener">索尼研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/220654" target="_blank" rel="noopener">富士通研发中心</a><br><a href="https://careers.microsoft.com/?rg=cn" target="_blank" rel="noopener">微软研究院</a><br><a href="http://www.newsmth.net/nForum/#!article/Career_PHD/221175" target="_blank" rel="noopener">英特尔研究院</a><br><a href="http://www.yingjiesheng.com/job-001-742-124.html" target="_blank" rel="noopener">三星研究院</a></p>
+]]></content>
+      <tags>
+        <tag>收藏</tag>
+      </tags>
   </entry>
   <entry>
     <title>微服务组件清单</title>
@@ -1433,6 +1410,29 @@ hexo s --port=4100
 ]]></content>
       <tags>
         <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>进程、线程、协程的区别和通信方式</title>
+    <url>/2020/10/02/%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E3%80%81%E5%8D%8F%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>进程，是操作系统资源分配（CPU时间片、内存空间）的最小单位。</p>
+<p><strong>进程通信：</strong><br>每个进程各自有不同的用户地址空间,任何一个进程的全局变量在另一个进程中都看不到，所以进程之间要交换数据必须通过<code>内核</code>,在内核中开辟一块缓冲区,进程A把数据从用户空间拷到内核缓冲区,进程B再从内核缓冲区把数据读走,内核提供的这种机制称为进程间通信。</p>
+<a id="more"></a>
+<p>进程间通信有4种方式，以下从简单到复杂的方式出场:</p>
+<h4 id="1-管道-pipe"><a href="#1-管道-pipe" class="headerlink" title="1.管道(pipe)"></a>1.管道(pipe)</h4><p>  管道是一种具有两个端点的通信通道，一个管道实际上就是只存在在内存中的文件，对这个文件操作需要两个已经打开文件进行，他们代表管道的两端，也叫两个句槟，管道是一种特殊的文件，不属于一种文件系统，而是一种独立的文件系统，有自己的数据结构，根据管道的使用范围划分为无名管道和命名管道。<br>无名管道用于父进程和子进程之间，通常父进程创建管道，然后由通信的子进程继承父进程的读端点句柄和写端点句柄，或者父进程有读写句柄的子进程，这些子进程可以使用管道直接通信，不需要通过父进程。<br>命名管道，命名管道是为了解决无名管道只能在父子进程间通信而设计的，命名管道是建立在实际的磁盘介质或文件系统(而不是只存在内存中)，任何进程可以通过文件名或路径建立与该文件的联系，命名换到需要一种FIFO文件(有先进先出的原则)，虽然FIFO文件的inode节点在磁盘上，但仅是一个节点而已，文件的数据还是存在于内存缓冲页面中，和普通管道相同。</p>
+<h4 id="2-信号"><a href="#2-信号" class="headerlink" title="2.信号"></a>2.信号</h4><p>  信号，用于接受某种事件发生，除了用于进程间通信之外，进程还可以发送信号给进程本身。除了系统内核和root之外，只有具备相同id的进程才可以信号进行通信。</p>
+<h4 id="3-消息队列"><a href="#3-消息队列" class="headerlink" title="3.消息队列"></a>3.消息队列</h4><p>  消息队列是消息的链表，包括Posix消息队列和system v消息队列(Posix常用于线程，system常用于进程)，有权限的进程可以向消息队列中添加消息，有读权限的进程可以读走消息队列的消息。<br>消息队列克服了信号承载信息量少，管道只能承载无格式字节流及缓冲区大小受限等缺陷。</p>
+<h4 id="4-共享内存"><a href="#4-共享内存" class="headerlink" title="4.共享内存"></a>4.共享内存</h4><p>  共享内存使多个进程可以访问同一块内存空间，是最快的IPC形式，是针对其他通信方式运行效率低而设计的，往往与其他进程结合使用，如与信号量结合，来达到进程间的同步与互斥。传递文件最好用共享内存的方式。 </p>
+<p>linux常用的进程间的通讯方式<br>（1）、管道(pipe)：管道可用于具有亲缘关系的进程间的通信，是一种半双工的方式，数据只能单向流动，允许一个进程和另一个与它有共同祖先的进程之间进行通信。<br>（2）、命名管道(named pipe)：命名管道克服了管道没有名字的限制，同时除了具有管道的功能外（也是半双工），它还允许无亲缘关系进程间的通信。命名管道在文件系统中有对应的文件名。命名管道通过命令mkfifo或系统调用mkfifo来创建。<br>（3）、信号（signal）：信号是比较复杂的通信方式，用于通知接收进程有某种事件发生了，除了进程间通信外，进程还可以发送信号给进程本身；linux除了支持Unix早期信号语义函数sigal外，还支持语义符合Posix.1标准的信号函数sigaction（实际上，该函数是基于BSD的，BSD为了实现可靠信号机制，又能够统一对外接口，用sigaction函数重新实现了signal函数）。<br>（4）、消息队列：消息队列是消息的链接表，包括Posix消息队列system V消息队列。有足够权限的进程可以向队列中添加消息，被赋予读权限的进程则可以读走队列中的消息。消息队列克服了信号承载信息量少，管道只能承载无格式字节流以及缓冲区大小受限等缺<br>（5）、共享内存：使得多个进程可以访问同一块内存空间，是最快的可用IPC形式。是针对其他通信机制运行效率较低而设计的。往往与其它通信机制，如信号量结合使用，来达到进程间的同步及互斥。<br>（6）、内存映射：内存映射允许任何多个进程间通信，每一个使用该机制的进程通过把一个共享的文件映射到自己的进程地址空间来实现它。<br>（7）、信号量（semaphore）：主要作为进程间以及同一进程不同线程之间的同步手段。</p>
+<p>（8）、套接字（Socket）：更为一般的进程间通信机制，可用于不同机器之间的进程间通信。起初是由Unix系统的BSD分支开发出来的，但现在一般可以移植到其它类Unix系统上：Linux和System V的变种都支持套接字。</p>
+<h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><p>线程是CPU调度、程序执行的最小单位。线程间通信主要通过等待/通知机制…</p>
+<h3 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h3><p>协程由程序自身控制子程序执行，有极高的执行效率，是比线程更轻量级的存在。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
       </tags>
   </entry>
 </search>
